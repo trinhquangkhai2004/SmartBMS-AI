@@ -5,10 +5,15 @@
 > **Nhóm thực hiện:** Trịnh Quang Khải · Lê Thanh Lâm · Nguyễn Quang Trường · Đoàn Anh Khoa  
 
 
+[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.14-3776AB?logo=python&logoColor=white)](#2-công-nghệ-sử-dụng-tech-stack)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.141.1-009688?logo=fastapi&logoColor=white)](#2-công-nghệ-sử-dụng-tech-stack)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.57.0-FF4B4B?logo=streamlit&logoColor=white)](#2-công-nghệ-sử-dụng-tech-stack)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-F7931E?logo=scikitlearn&logoColor=white)](#2-công-nghệ-sử-dụng-tech-stack)
+[![Docker](https://img.shields.io/badge/Docker-Hardened_D11-2496ED?logo=docker&logoColor=white)](#2-công-nghệ-sử-dụng-tech-stack)
 [![Phase 1 Software](https://img.shields.io/badge/Phase_1_Software-110_pytest_PASS-brightgreen)](phase1_bms_software/docs/VERIFICATION.md)
 [![Phase 2 SoC](https://img.shields.io/badge/Phase_2_SoC-ER4__NOT__ASSESSABLE-orange)](phase2_soc_delivery/results/p26_diagnostic_report.md)
 [![Phase 3 SoH](https://img.shields.io/badge/Phase_3_SoH-ER5__PASS_%7C_P3.8_INFERENCE__VERIFIED-blue)](phase3_soh_delivery/reports/P3_7_TEST_SUMMARY.md)
-[![Hardware Validated](https://img.shields.io/badge/Hardware_Validated-False_(Software_%26_Dataset_Only)-lightgrey)](#7-giới-hạn-hiện-tại-và-công-việc-tiếp-theo)
+[![Hardware Validated](https://img.shields.io/badge/Hardware_Validated-False_(Software_%26_Dataset_Only)-lightgrey)](#8-giới-hạn-hiện-tại-và-công-việc-tiếp-theo)
 
 ---
 
@@ -27,9 +32,23 @@
 
 ---
 
-## 2. Kiến trúc hệ thống và sơ đồ khối mạch mục tiêu
+## 2. Công nghệ sử dụng (Tech Stack)
 
-### 2.1. Kiến trúc tổng thể hệ thống (F1–F5 & Ranh giới triển khai)
+| Lớp / Thành phần | Công nghệ & phiên bản đã kiểm chứng | Vai trò trong hệ thống |
+|---|---|---|
+| **Backend API & Lưu trữ** *(Phase 1)* | Python `3.14.2` (hỗ trợ `3.11+`), **FastAPI** `0.141.1`, **Pydantic v2** `2.13.4`, **Uvicorn** `0.54.0`, **SQLite** (`WAL`, `BEGIN IMMEDIATE`), **httpx** `0.28.1` | Tiếp nhận telemetry JSON v1.0 nghiêm ngặt, chống trùng lặp SHA-256, lưu chuỗi thời gian & lịch sử chuyển trạng thái cảnh báo |
+| **Giao diện giám sát (F5)** *(Phase 1 & 3)* | **Streamlit** `1.57.0` (`@st.fragment` HTTP Periodic Polling), Vega-Lite | Hiển thị trực quan V/I/T, trạng thái `LIVE`/`STALE`, che mờ cảm biến lỗi, tách bạch `CURRENT_VALID` vs `HELD_STALE` |
+| **Ước lượng SoC (F2)** *(Phase 2)* | **NumPy** `1.26.4`, **SciPy** `1.15.3`, Jupyter Notebook | Mô hình mạch tương đương `1RC ECM`, hiệu chuẩn OCV, **Extended Kalman Filter (EKF)** & **Coulomb Counting** |
+| **Ước lượng SoH (F3)** *(Phase 3)* | Python `3.11.9`, **scikit-learn** `1.6.1`, **XGBoost** `3.0.5`, **PyArrow** `22.0.0` (Parquet), **Joblib** `1.5.2`, **PyYAML** `6.0.3`, **JSON Schema Draft 2020-12** | Trích xuất 4 đặc trưng sạc (`p35-r1`), huấn luyện/suy luận **Random Forest** & đối chứng Ridge/XGBoost, lớp bảo vệ OOD/sigma/jump/stale (`EvaluationGuard`) |
+| **Cô lập & Toàn vẹn dữ liệu** | **Docker** (`linux/amd64`, `--network=none`, `--read-only`, `cap-drop=ALL`, `no-new-privileges`), **SHA-256** | Chuyển đổi an toàn tệp nguồn `.pkl` sang Parquet/JSON (`D11`), xác thực chữ ký băm toàn bộ model/schema/policy trước khi nạp |
+| **Kiểm thử tự động** | **pytest** `9.1.1` (`filterwarnings=error`), Python **unittest**, `psutil` `7.1.3`, `threadpoolctl` `3.6.0` | 110 test Phase 1 (kèm Uvicorn subprocess & Streamlit AppTest), test tương thích Phase 2, 73 test Phase 3 & đo tài nguyên/độ trễ |
+| **Phần cứng mục tiêu** *(Thiết kế trong Logbook — chưa tích hợp)* | **ESP32-S3**, **ADS1115** / **BQ76905EVM** (`I²C`), **INA226** (`I²C`), **DS18B20** (`1-Wire`), 2x cell **Lishen 18650** (2S1P), Module bảo vệ 2S, Sạc CC/CV 2S | Kiến trúc phần cứng đích cho giai đoạn tích hợp thực nghiệm sau (`hardware_validated = false`) |
+
+---
+
+## 3. Kiến trúc hệ thống và sơ đồ khối mạch mục tiêu
+
+### 3.1. Kiến trúc tổng thể hệ thống (F1–F5 & Ranh giới triển khai)
 
 Sơ đồ dưới đây thể hiện kiến trúc tổng thể theo Logbook §2.2–§2.3, tách bạch rõ **khối phần cứng mục tiêu (chưa tích hợp)** và **các khối phần mềm / thuật toán đã triển khai trong repo**:
 
@@ -62,7 +81,7 @@ flowchart LR
   end
 ```
 
-### 2.2. Sơ đồ khối mạch đo lường và bảo vệ mục tiêu 2S1P (Logbook §2.3.1)
+### 3.2. Sơ đồ khối mạch đo lường và bảo vệ mục tiêu 2S1P (Logbook §2.3.1)
 
 Dựa trên kết quả lựa chọn linh kiện bằng AHP trong Logbook §2.3.1 & §2.3.6 (Bảng 2.13–2.18, Bảng 2.23), kiến trúc mạch đo lường và bảo vệ mục tiêu cho cấu hình **2S1P** gồm:
 
@@ -99,7 +118,7 @@ flowchart TB
 
 > **Ghi chú kỹ thuật:** Sơ đồ trên phản ánh đúng cấu trúc khối và giao tiếp (`I²C`, `1-Wire`, `Wi-Fi`) đã chốt bằng AHP trong Logbook §2.3. Các thông số chi tiết cấp schematic như giá trị điện trở chia áp, giá trị điện trở shunt, gán chân GPIO cụ thể và mạch cách ly đất chưa được chốt trong Logbook cũng như chưa kiểm nghiệm trên phần cứng thật, nên không được bịa thêm trong tài liệu này.
 
-### 2.3. Luồng dữ liệu phần mềm và ranh giới F2 / F3 (Quyết định D09)
+### 3.3. Luồng dữ liệu phần mềm và ranh giới F2 / F3 (Quyết định D09)
 
 ```mermaid
 flowchart LR
@@ -126,7 +145,7 @@ flowchart LR
 
 ---
 
-## 3. Đối chiếu Yêu cầu Kỹ thuật (ER1–ER7) từ Logbook
+## 4. Đối chiếu Yêu cầu Kỹ thuật (ER1–ER7) từ Logbook
 
 | Mã ER | Yêu cầu mục tiêu (Logbook §5.3) | Trạng thái hiện tại trong repo | Ghi chú bằng chứng |
 |---|---|---|---|
@@ -140,9 +159,9 @@ flowchart LR
 
 ---
 
-## 4. Kết quả chi tiết từng Phase đã thực hiện
+## 5. Kết quả chi tiết từng Phase đã thực hiện
 
-### 4.1. Phase 1 — Phần mềm BMS Prototype ([`phase1_bms_software/`](phase1_bms_software/README.md))
+### 5.1. Phase 1 — Phần mềm BMS Prototype ([`phase1_bms_software/`](phase1_bms_software/README.md))
 
 - **Kiến trúc:** FastAPI + SQLite (`1 worker`, chế độ `WAL`, giao dịch nguyên tử `BEGIN IMMEDIATE`) + công cụ phát lại JSONL (`replay.runner`) + giao diện Streamlit polling (`dashboard/app.py`).
 - **Tính năng đã kiểm chứng:**
@@ -151,7 +170,7 @@ flowchart LR
   - Các bộ ước lượng `SoCEstimator` / `SoHEstimator` ở Phase 1 giữ đúng stub `NotReadyEstimator` (`NOT_READY`, `value_pct = null`).
 - **Bằng chứng kiểm thử:** **110 / 110 pytest PASS** trên Windows / Python `3.14.2` (`AT-01`–`AT-20` về luồng phần mềm, bao gồm Uvicorn subprocess và Streamlit AppTest; xem [VERIFICATION.md](phase1_bms_software/docs/VERIFICATION.md)).
 
-### 4.2. Phase 2 — Ước lượng SoC bằng ECM / EKF ([`phase2_soc_delivery/`](phase2_soc_delivery/PHASE1_COMPATIBILITY.md))
+### 5.2. Phase 2 — Ước lượng SoC bằng ECM / EKF ([`phase2_soc_delivery/`](phase2_soc_delivery/PHASE1_COMPATIBILITY.md))
 
 - **Miền dữ liệu:** Bộ dữ liệu **CALCE SP20-2** ở 25 °C (dung lượng khóa `2.028344937765965 Ah`, mô hình OCV đơn điệu trên `[0, 1]` tắt ngoại suy, mô hình mạch tương đương `1RC ECM`).
 - **Kết quả tập phát triển P2.5 (`FULL_DYNAMIC`, 100% độ phủ):**
@@ -168,7 +187,7 @@ flowchart LR
   - Theo quy tắc độ phủ 100% cho từng lượt của giao thức P2.6, trạng thái nghiệm thu được giữ trung thực là **`ER4_NOT_ASSESSABLE`** (`test_exposed = true`, `scientific_release = false`), yêu cầu quay lại `P2.3` dưới kiểm soát thay đổi cho phiên bản tiếp theo ([p26_diagnostic_report.md](phase2_soc_delivery/results/p26_diagnostic_report.md)).
 - **Tương thích Phase 1:** Đã triển khai và kiểm thử `src/phase1_adapter.py` khớp chữ ký `SoCEstimator.estimate` và schema `EstimationResult` của Phase 1 mà không làm thay đổi mã nguồn Phase 1 ([PHASE1_COMPATIBILITY.md](phase2_soc_delivery/PHASE1_COMPATIBILITY.md)).
 
-### 4.3. Phase 3 — Ước lượng SoH bằng Random Forest ([`phase3_soh_delivery/`](phase3_soh_delivery/reports/P3_7_TEST_SUMMARY.md))
+### 5.3. Phase 3 — Ước lượng SoH bằng Random Forest ([`phase3_soh_delivery/`](phase3_soh_delivery/reports/P3_7_TEST_SUMMARY.md))
 
 - **Nguồn dữ liệu & nhãn (`D01`–`D05`):**
   - **RT-Batt v2 / HUST** (`DOI: 10.17632/nsc7hnsg4s.2`, giấy phép `CC BY 4.0`, cell LFP `A123_APR18650M1A` 1.1 Ah ở 30 °C): 77 cell gốc, 146.122 chu kỳ, 91.736.659 hàng tín hiệu được chuyển đổi an toàn qua container Docker cô lập (`D11`, image `d11-r1`).
@@ -200,7 +219,7 @@ flowchart LR
 
 ---
 
-## 5. Cấu trúc kho lưu trữ
+## 6. Cấu trúc kho lưu trữ
 
 ```text
 SmartBMS-AI/
@@ -234,9 +253,9 @@ SmartBMS-AI/
 
 ---
 
-## 6. Hướng dẫn cài đặt và chạy nhanh (Windows PowerShell)
+## 7. Hướng dẫn cài đặt và chạy nhanh (Windows PowerShell)
 
-### 6.1. Chạy thử Prototype Phần mềm Phase 1
+### 7.1. Chạy thử Prototype Phần mềm Phase 1
 
 ```powershell
 # 1. Tạo môi trường ảo và cài thư viện (Python 3.11+, đã kiểm chứng trên 3.14.2)
@@ -258,7 +277,7 @@ Copy-Item .env.example .env
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-### 6.2. Chạy kiểm thử tương thích Phase 2 SoC
+### 7.2. Chạy kiểm thử tương thích Phase 2 SoC
 
 ```powershell
 Set-Location 'phase2_soc_delivery'
@@ -270,7 +289,7 @@ $env:PYTHONPATH = (Resolve-Path '..\phase1_bms_software').Path
 ..\phase1_bms_software\.venv\Scripts\python.exe -B -m pytest -W error -p no:cacheprovider -q tests/test_phase1_adapter.py
 ```
 
-### 6.3. Chạy kiểm thử Phase 3 SoH
+### 7.3. Chạy kiểm thử Phase 3 SoH
 
 ```powershell
 Set-Location 'phase3_soh_delivery'
@@ -286,7 +305,7 @@ $env:PYTHONPATH = "$PWD;$PWD\scripts"
 
 ---
 
-## 7. Giới hạn hiện tại và công việc tiếp theo
+## 8. Giới hạn hiện tại và công việc tiếp theo
 
 - **Phần cứng & an toàn vật lý (`hardware_validated = false`):** Chưa có firmware ESP32-S3, chưa hiệu chuẩn cảm biến `ADS1115`/`INA226`/`DS18B20`, chưa tích hợp mạch bảo vệ 2S và chưa kiểm chứng trên cell **Lishen 18650 2S1P**.
 - **Phase 2 SoC (`ER4_NOT_ASSESSABLE`):** Cần quay lại `P2.3` dưới kiểm soát thay đổi để xử lý hành vi dự đoán EKF tại biên cuối xả (`z_pred < 0`) và xác minh lại chuẩn dựng SoC tham chiếu trên tập kiểm thử độc lập mới.
