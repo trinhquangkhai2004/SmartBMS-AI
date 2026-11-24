@@ -1,0 +1,23 @@
+test_accepts_source_verified_transition_without_step_renumbering (test_ekf.StreamingEKFTests.test_accepts_source_verified_transition_without_step_renumbering) ... ok
+test_default_denial_source_integrity_gates_and_audit (test_ekf.StreamingEKFTests.test_default_denial_source_integrity_gates_and_audit) ... ok
+test_duplicate_transition_and_no_extra_charge (test_ekf.StreamingEKFTests.test_duplicate_transition_and_no_extra_charge) ... ok
+test_finite_psd_and_run_isolation (test_ekf.StreamingEKFTests.test_finite_psd_and_run_isolation) ... ok
+test_first_observation_and_current_alignment (test_ekf.StreamingEKFTests.test_first_observation_and_current_alignment) ... ok
+test_missing_voltage_same_time_keeps_status_and_missing_temperature_degrades (test_ekf.StreamingEKFTests.test_missing_voltage_same_time_keeps_status_and_missing_temperature_degrades) ... ok
+test_nonfinite_reset_backwards_and_missing_current (test_ekf.StreamingEKFTests.test_nonfinite_reset_backwards_and_missing_current) ... ok
+test_pchip_derivative_jacobians_and_plateau (test_ekf.StreamingEKFTests.test_pchip_derivative_jacobians_and_plateau) ... ok
+test_physical_projection_and_separate_ocv_domain (test_ekf.StreamingEKFTests.test_physical_projection_and_separate_ocv_domain) ... ok
+test_same_time_current_change_is_kept_for_next_interval (test_ekf.StreamingEKFTests.test_same_time_current_change_is_kept_for_next_interval) ... ok
+test_unobserved_gap_requires_prior_and_verified_rest_decays (test_ekf.StreamingEKFTests.test_unobserved_gap_requires_prior_and_verified_rest_decays) ... ok
+test_verified_constant_load_and_active_current_domain (test_ekf.StreamingEKFTests.test_verified_constant_load_and_active_current_domain) ... ok
+test_voltage_flag_does_not_change_kalman_gain_or_covariance (test_ekf.StreamingEKFTests.test_voltage_flag_does_not_change_kalman_gain_or_covariance) ... ok
+test_convergence_resets_on_missing_or_gap (test_ekf_replay.ReplayTests.test_convergence_resets_on_missing_or_gap) ... ok
+test_dev_selection_full_window_coverage_precedes_error (test_ekf_replay.ReplayTests.test_dev_selection_full_window_coverage_precedes_error) ... ok
+test_first_voltage_used_in_polarization_prior_is_not_corrected_twice (test_ekf_replay.ReplayTests.test_first_voltage_used_in_polarization_prior_is_not_corrected_twice) ... ok
+test_grid_and_paired_baseline_inputs (test_ekf_replay.ReplayTests.test_grid_and_paired_baseline_inputs) ... ok
+test_noise_consistent_and_reproducible_at_duplicates (test_ekf_replay.ReplayTests.test_noise_consistent_and_reproducible_at_duplicates) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.196s
+
+OK

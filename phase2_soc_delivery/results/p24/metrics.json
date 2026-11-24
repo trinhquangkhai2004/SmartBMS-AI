@@ -1,0 +1,240 @@
+{
+  "milestone": "P2.4",
+  "gate": "PASS",
+  "scenario": "nominal_development",
+  "ER4": "NOT_EVALUATED",
+  "test_exposed": false,
+  "p22_delivery_sha256": "101934ecc5a9bd89c8877a426a7346d1e89d3ffb752eef4ecdc365638ff8cd89",
+  "reference_kind": "Arbin capacity-derived, same current source",
+  "integration": "Previous discharge-positive current; left ZOH, dt=0 adds zero",
+  "warning": "Measured voltage < 3.2976 V; telemetry only",
+  "percentage_point_error": "100 * (estimated fraction - reference fraction)",
+  "runs": {
+    "11_05_2015_SP20-2_DST_50SOC": {
+      "role": "identification",
+      "start_row": 2803,
+      "end_row": 9500,
+      "raw_rows": 6698,
+      "merged_duplicate_metadata_rows": 0,
+      "effective_events": 6698,
+      "covered_effective_events": 6698,
+      "voltage_measurement_updates_used": 0,
+      "integrated_positive_dt_intervals": 6697,
+      "clock_event_counts": {
+        "FIRST": 1,
+        "MEASUREMENT": 6697
+      },
+      "prior_soc_fraction": 0.5069004189528865,
+      "prior_source": "historical_preconditioning_through_dynamic_start",
+      "model_capacity_ah": 2.028344937765965,
+      "final_soc_fraction": 0.010764878306476433,
+      "reset_count": 0,
+      "projection_count": 0,
+      "invalid_count": 0,
+      "out_of_range_count": 0,
+      "estimator_wall_time_s": 0.00044809999963035807,
+      "trajectory_sha256": "621472eecb12c5df54d94aba51323786cb53dd2b73cfee11d10b57b4d295938b",
+      "flagged_count": 283,
+      "missing_voltage_count": 0,
+      "flagged_fraction": 0.042251418333830996,
+      "FULL_DYNAMIC": {
+        "numerator": 6698,
+        "denominator": 6698,
+        "missing_count": 0,
+        "MAE_pp": 0.12521795203504746,
+        "RMSE_pp": 0.14478357336763148,
+        "P95_abs_pp": 0.20692425214412502,
+        "MAX_abs_pp": 0.23305742923626638
+      },
+      "NON_FLAGGED": {
+        "numerator": 6415,
+        "denominator": 6415,
+        "missing_count": 0,
+        "MAE_pp": 0.12317745304199611,
+        "RMSE_pp": 0.14339251823421734,
+        "P95_abs_pp": 0.20781024517436505,
+        "MAX_abs_pp": 0.23305742923626638
+      },
+      "FLAGGED": {
+        "numerator": 283,
+        "denominator": 283,
+        "missing_count": 0,
+        "MAE_pp": 0.17147166595880872,
+        "RMSE_pp": 0.1733468069067876,
+        "P95_abs_pp": 0.19642987961291103,
+        "MAX_abs_pp": 0.19665026371618044
+      }
+    },
+    "11_05_2015_SP20-2_DST_80SOC": {
+      "role": "identification",
+      "start_row": 1916,
+      "end_row": 12560,
+      "raw_rows": 10645,
+      "merged_duplicate_metadata_rows": 0,
+      "effective_events": 10645,
+      "covered_effective_events": 10645,
+      "voltage_measurement_updates_used": 0,
+      "integrated_positive_dt_intervals": 10644,
+      "clock_event_counts": {
+        "FIRST": 1,
+        "MEASUREMENT": 10644
+      },
+      "prior_soc_fraction": 0.8027683762351273,
+      "prior_source": "historical_preconditioning_through_dynamic_start",
+      "model_capacity_ah": 2.028344937765965,
+      "final_soc_fraction": 0.01459519338639137,
+      "reset_count": 0,
+      "projection_count": 0,
+      "invalid_count": 0,
+      "out_of_range_count": 0,
+      "estimator_wall_time_s": 0.0002702000001590932,
+      "trajectory_sha256": "e04697834c64e22133c48131b0f4f95fc271d6e72f776d184aa945e663be6fd2",
+      "flagged_count": 276,
+      "missing_voltage_count": 0,
+      "flagged_fraction": 0.025927665570690466,
+      "FULL_DYNAMIC": {
+        "numerator": 10645,
+        "denominator": 10645,
+        "missing_count": 0,
+        "MAE_pp": 0.061276163852591034,
+        "RMSE_pp": 0.07382642503361828,
+        "P95_abs_pp": 0.11997375905435925,
+        "MAX_abs_pp": 0.14925073514417964
+      },
+      "NON_FLAGGED": {
+        "numerator": 10369,
+        "denominator": 10369,
+        "missing_count": 0,
+        "MAE_pp": 0.06019894893125795,
+        "RMSE_pp": 0.07288452579031131,
+        "P95_abs_pp": 0.11953959114376911,
+        "MAX_abs_pp": 0.14925073514417964
+      },
+      "FLAGGED": {
+        "numerator": 276,
+        "denominator": 276,
+        "missing_count": 0,
+        "MAE_pp": 0.10174587950223846,
+        "RMSE_pp": 0.10315941018918683,
+        "P95_abs_pp": 0.12507061006480358,
+        "MAX_abs_pp": 0.12527398735076023
+      }
+    },
+    "11_06_2015_SP20-2_FUDS_80SOC": {
+      "role": "validation",
+      "start_row": 2583,
+      "end_row": 13680,
+      "raw_rows": 11098,
+      "merged_duplicate_metadata_rows": 0,
+      "effective_events": 11098,
+      "covered_effective_events": 11098,
+      "voltage_measurement_updates_used": 0,
+      "integrated_positive_dt_intervals": 11097,
+      "clock_event_counts": {
+        "FIRST": 1,
+        "MEASUREMENT": 11097
+      },
+      "prior_soc_fraction": 0.8027674412526686,
+      "prior_source": "historical_preconditioning_through_dynamic_start",
+      "model_capacity_ah": 2.028344937765965,
+      "final_soc_fraction": 0.015537614454891435,
+      "reset_count": 0,
+      "projection_count": 0,
+      "invalid_count": 0,
+      "out_of_range_count": 0,
+      "estimator_wall_time_s": 0.00029850000100850593,
+      "trajectory_sha256": "054b7f3d237993d2d9d612ff5e91fe7b474d2ab5bf36651d612bd2699f2ebbb9",
+      "flagged_count": 270,
+      "missing_voltage_count": 0,
+      "flagged_fraction": 0.024328707875292847,
+      "FULL_DYNAMIC": {
+        "numerator": 11098,
+        "denominator": 11098,
+        "missing_count": 0,
+        "MAE_pp": 0.0959312081666161,
+        "RMSE_pp": 0.10908734754058147,
+        "P95_abs_pp": 0.1773654666111485,
+        "MAX_abs_pp": 0.22622018305420433
+      },
+      "NON_FLAGGED": {
+        "numerator": 10828,
+        "denominator": 10828,
+        "missing_count": 0,
+        "MAE_pp": 0.09445714406179419,
+        "RMSE_pp": 0.10762843972785258,
+        "P95_abs_pp": 0.17625709954854185,
+        "MAX_abs_pp": 0.21429719373894374
+      },
+      "FLAGGED": {
+        "numerator": 270,
+        "denominator": 270,
+        "missing_count": 0,
+        "MAE_pp": 0.15504663826665996,
+        "RMSE_pp": 0.15677873398637635,
+        "P95_abs_pp": 0.20013188312629376,
+        "MAX_abs_pp": 0.22622018305420433
+      }
+    },
+    "11_09_2015_SP20-2_FUDS_50SOC": {
+      "role": "validation",
+      "start_row": 2309,
+      "end_row": 9307,
+      "raw_rows": 6999,
+      "merged_duplicate_metadata_rows": 0,
+      "effective_events": 6999,
+      "covered_effective_events": 6999,
+      "voltage_measurement_updates_used": 0,
+      "integrated_positive_dt_intervals": 6998,
+      "clock_event_counts": {
+        "FIRST": 1,
+        "MEASUREMENT": 6998
+      },
+      "prior_soc_fraction": 0.5069310405606724,
+      "prior_source": "historical_preconditioning_through_dynamic_start",
+      "model_capacity_ah": 2.028344937765965,
+      "final_soc_fraction": 0.011574554579296403,
+      "reset_count": 0,
+      "projection_count": 0,
+      "invalid_count": 0,
+      "out_of_range_count": 0,
+      "estimator_wall_time_s": 0.0005385000004025642,
+      "trajectory_sha256": "120b796962757425272a7a4b53993db90ef3d301c1a580742223b4c8a6e0892d",
+      "flagged_count": 324,
+      "missing_voltage_count": 0,
+      "flagged_fraction": 0.04629232747535362,
+      "FULL_DYNAMIC": {
+        "numerator": 6999,
+        "denominator": 6999,
+        "missing_count": 0,
+        "MAE_pp": 0.05473204693987408,
+        "RMSE_pp": 0.06578932118933624,
+        "P95_abs_pp": 0.11943603759868414,
+        "MAX_abs_pp": 0.16363931638182505
+      },
+      "NON_FLAGGED": {
+        "numerator": 6675,
+        "denominator": 6675,
+        "missing_count": 0,
+        "MAE_pp": 0.0541996261460457,
+        "RMSE_pp": 0.06530818593816429,
+        "P95_abs_pp": 0.1187456431438283,
+        "MAX_abs_pp": 0.16363931638182505
+      },
+      "FLAGGED": {
+        "numerator": 324,
+        "denominator": 324,
+        "missing_count": 0,
+        "MAE_pp": 0.06570090125717169,
+        "RMSE_pp": 0.0750180618843729,
+        "P95_abs_pp": 0.1210998746043837,
+        "MAX_abs_pp": 0.12967746329697327
+      }
+    }
+  },
+  "python": "3.11.9",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pyarrow": "26.0.1"
+  },
+  "completed_utc": "2026-11-19T09:55:15.934279+00:00"
+}

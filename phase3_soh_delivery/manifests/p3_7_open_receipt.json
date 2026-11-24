@@ -1,0 +1,44 @@
+{
+  "opened_at": "2026-11-22T16:07:51+07:00",
+  "exposure_count": 1,
+  "status": "OPENED",
+  "evaluator": "Codex",
+  "approval": {
+    "reviewer": "Trịnh Quang Khải",
+    "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+    "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+    "approved_at": "2026-11-22T15:57:44+07:00",
+    "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+    "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+  },
+  "signed_freeze": {
+    "path": "manifests/p3_model_freeze.json",
+    "sha256": "934ca32afcc4a13b83bba5e08d30edbf6912fad448fa92c23617199495c631c7"
+  },
+  "d07": {
+    "path": "configs/p3_er5_evaluation.json",
+    "sha256": "838e663ef5e2c3bce9826c103b7e5693d4187fdabb5c4c5f70c250f34556a203"
+  },
+  "split": {
+    "path": "manifests/p3_split_manifest.json",
+    "sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a"
+  },
+  "preflight": {
+    "path": "manifests/p3_7_preflight.json",
+    "sha256": "1a3e1117673e994ddc0afc604631b8a1ba9f46573afc3fce59289d9b23b9a229"
+  },
+  "label_source": {
+    "path": "data/processed/soh_labels.parquet",
+    "sha256": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2"
+  },
+  "guard_sha256": "7d5f5e1c6ca879448f3f8941c39fd33278b77985923f5231a8211db1c6bfe3b2",
+  "evaluation_revision": "p37-r1",
+  "code_hashes": {
+    "scripts/p37_governance.py": "2393cf9b4fd0285616afa4048a76d6d91ad8a4f67b08fa03d241e296f0a26925",
+    "scripts/evaluate_p37.py": "f1ccf8befaf2cb64fec6abbba995938bdc681e14d2796239fb180ebb1a04aff3",
+    "scripts/p37_metrics.py": "8a5f7a7e0819a375b89bfeaaa12f0e04d2052acc19203914c1e92506ba67ed9e",
+    "scripts/report_p37.py": "6d3fbfa20e677085189f107b49d0fbb42206fb1fe99d180b7760ac38a1830237",
+    "tests/test_p37.py": "af8bcb82fe958444129f9f4ab28455ba94e090e69d26c0ade1df227eab485b3d"
+  },
+  "evaluator_sha256": "f1ccf8befaf2cb64fec6abbba995938bdc681e14d2796239fb180ebb1a04aff3"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-11-22T16:07:47+07:00",
+  "code_hashes": {
+    "scripts/p37_governance.py": "2393cf9b4fd0285616afa4048a76d6d91ad8a4f67b08fa03d241e296f0a26925",
+    "scripts/evaluate_p37.py": "f1ccf8befaf2cb64fec6abbba995938bdc681e14d2796239fb180ebb1a04aff3",
+    "scripts/p37_metrics.py": "8a5f7a7e0819a375b89bfeaaa12f0e04d2052acc19203914c1e92506ba67ed9e",
+    "scripts/report_p37.py": "6d3fbfa20e677085189f107b49d0fbb42206fb1fe99d180b7760ac38a1830237",
+    "tests/test_p37.py": "af8bcb82fe958444129f9f4ab28455ba94e090e69d26c0ade1df227eab485b3d"
+  },
+  "files": {
+    "manifests/p3_model_freeze.json": "934ca32afcc4a13b83bba5e08d30edbf6912fad448fa92c23617199495c631c7",
+    "configs/p3_er5_evaluation.json": "838e663ef5e2c3bce9826c103b7e5693d4187fdabb5c4c5f70c250f34556a203",
+    "reports/P3_7_TEST_LOG.txt": "32ee0399a5c59b4d86a4a91cde55c82f646f5e93338887c1a0aff02282be16ce"
+  },
+  "development_rehearsal_cell": "1-1",
+  "development_rows": 1499,
+  "candidate_bindings": 36,
+  "heldout_values_read": 0
+}

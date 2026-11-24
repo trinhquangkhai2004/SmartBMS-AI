@@ -1,0 +1,1365 @@
+{
+  "spec_version": "1.2",
+  "milestones": [
+    {
+      "milestone_id": "P3.0",
+      "status": "IN_PROGRESS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "C:/Users/quang/Downloads/PBL5_PHASE3_SOH_RT_BATT_TRAINING_PLAN_SPEC_v1.2_2026-11-20.md",
+          "sha256": "ff6219a53f79f1f431683e59a7adc92938f717b80d453bf3692e9d03179a7fe9"
+        },
+        {
+          "path": "../Tai_lieu/Logbook_PBL5_F2_v1.2_2026-11-19.docx",
+          "sha256": "61b9d86e7ff668fa7e6895b296da1759da604d78de5d21ee7da3e2302e53f7ec"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "decisions/P3_DATASET_CHANGE_RECORD.md",
+          "sha256": "e4d3602a6d5d1f2a9a3fc3d0152f15e721ae610b6ac2603de0b29b9e9646c2b2"
+        },
+        {
+          "path": "configs/p3_scope.yaml",
+          "sha256": "9c987b86ada090561ca356f542834d57155f169c6ad2ae5a48f296df56b6e81b"
+        },
+        {
+          "path": "reports/p3_rq2_traceability.md",
+          "sha256": "3a8471030b83838f457e14b52d273af4b057ec15955804d6397ba5c42c506de7"
+        },
+        {
+          "path": "decisions/P3_APPROVAL_REGISTER.md",
+          "sha256": "3e641c766042353767d8537cde8619c8d63389aaf05aaee2e057f74b34a66d0b"
+        },
+        {
+          "path": "decisions/P3_0_D01_REVIEW.md",
+          "sha256": "6b4f5ece2dda68e411197a7c7162a4fdaec2b1dff94c2b4da63d5c9978a23dee"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.0 document review",
+          "status": "CHECKED",
+          "evidence": "Logbook Table 2.20 and spec v1.2 checked; requester confirmed F2/F3 scope and reported D01 group approval."
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D01",
+          "reviewer": null,
+          "approval_evidence": "Requester reported in chat: D01 was approved by the group.",
+          "review_packet": "decisions/P3_0_D01_REVIEW.md",
+          "status": "GROUP_APPROVAL_REPORTED",
+          "evidence_recorded_at": "2026-11-20T13:27:02.5945288+07:00",
+          "approved_revision": null,
+          "group_approved_at": null,
+          "record_revision": "D01-r2"
+        },
+        {
+          "id": "D09",
+          "status": "SCOPE_CONFIRMED_BY_REQUESTER",
+          "revision": "D09-v1",
+          "evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "verification_test": "P3-IT-02",
+          "verification_status": "NOT_RUN"
+        }
+      ],
+      "blocker": "Formal P3.0 closeout needs the original D01 approval metadata. Group approval has been reported by the requester.",
+      "next_gate": "Record actual D01 reviewer, approval timestamp, approved revision and original evidence."
+    },
+    {
+      "milestone_id": "P3.1",
+      "status": "PASS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "data/raw/rt_batt/v2/our_data.zip",
+          "sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "checksums.sha256",
+          "sha256": "9079f9279af16b3945fe897b13c6e3e64e7aba1c0306dfcc0229b1150b952f60"
+        },
+        {
+          "path": "manifests/rt_batt_download_receipt.json",
+          "sha256": "be32fb4858f12042e11d5f80191e981bc3692be2273a034887ca6524d7ff57ac"
+        },
+        {
+          "path": "manifests/rt_batt_source_manifest.json",
+          "sha256": "5a27b29cb0eb15eaf12ed88143b741dea86ad75a73184c59a3ee4a259cd97cb5"
+        },
+        {
+          "path": "manifests/p3_pickle_opcode_inventory.json",
+          "sha256": "589982125b6b9c01e3a8b790a1765ae2c682771889a961dc02451ab91b2446a7"
+        },
+        {
+          "path": "manifests/p3_conversion_route.json",
+          "sha256": "a1bc6400aca4734e986b29c257518de9756bc8a22bf07249ba99e41798501e73"
+        },
+        {
+          "path": "reports/P3_1_SOURCE_AUDIT.md",
+          "sha256": "b84b2b4ca07ecd2be8777bce72b79f5fee7ffc089b24f735a21967c7976d64c8"
+        },
+        {
+          "path": "reports/P3_1_PICKLE_SECURITY.md",
+          "sha256": "7f40d9eb611e3a90b92f1a5ab42f1c06a70c22a476e2eb46a5e40bfaab3714a1"
+        },
+        {
+          "path": "reports/P3_1_TEST_LOG.txt",
+          "sha256": "1856e925c267ce70358e95a3cbc67b6531fdf8f4489312af30d426e1e98bcd85"
+        },
+        {
+          "path": "conversion/secure_source_converter.py",
+          "sha256": "64e56ef00e724fbde068553e3d4ac31e0729b48c1728577f379814a275601ea7"
+        },
+        {
+          "path": "conversion/requirements-linux-amd64.lock",
+          "sha256": "b45604177f2f90a25494ebe8642d82dd49c7e10a00af79ae32d8cc79e5a9f9ff"
+        },
+        {
+          "path": "conversion/Dockerfile",
+          "sha256": "2e3ab4ec82abefc291e23fc3e7b60cef25f7bb01a7a77829059c80e5747b7d0e"
+        },
+        {
+          "path": "conversion/Dockerfile.dockerignore",
+          "sha256": "eb36e7bbcc444216e2c716725801afc2f10ddb1c6d20391d49d2bf9d9a7d67cc"
+        },
+        {
+          "path": "conversion/test_secure_source_converter.py",
+          "sha256": "c114e5de1ace253ec48e69cdbb7c64c09b6cba6119284dfd95fb2d6af2a42494"
+        },
+        {
+          "path": "reports/P3_1_D11_CANDIDATE_TEST_LOG.txt",
+          "sha256": "9c9b2be885d9f34fc8f8409cfedbccab2bb9540d4b35aabd037105a99fca7d4f"
+        },
+        {
+          "path": "conversion/verify_staging.py",
+          "sha256": "45e6b1cc66426054b8330b3f32119f30f51794cad5fb06c63559039cf1db4b68"
+        },
+        {
+          "path": "manifests/p3_d11_approval_snapshot.json",
+          "sha256": "715f77e9dd4b48cd3ff453af2ab6b9c47330d0696e8626e1f20507eb2b495415"
+        },
+        {
+          "path": "manifests/p3_conversion_execution.json",
+          "sha256": "176e0cc500888499ab9e158d4326eb7b9bc6dee91177a473f05c8cf6fa39427c"
+        },
+        {
+          "path": "reports/P3_1_CONVERSION_LOG.txt",
+          "sha256": "eef17dc087a95ee8c5978426179434af96924952be569ddc9510bb2c5888e1ba"
+        },
+        {
+          "path": "manifests/p3_staging_readback.json",
+          "sha256": "58e2b02cc85ee3351cfd6d465547364435215064cbadfa61668f31f16549d5cf"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3-DT-01",
+          "status": "PASS",
+          "evidence": "Publisher size/SHA, archive directory rules, quotas and ZIP CRC across 78 entries."
+        },
+        {
+          "id": "P3-DT-02",
+          "status": "PASS",
+          "evidence": "Static ZIP/pickle audit, 9 synthetic tests, denied unexpected benign global, isolated real conversion, clean readback, verified schema, counts, SHA-256 and no pickle files in staging."
+        },
+        {
+          "id": "P3-DT-04",
+          "status": "NOT_APPLICABLE_COLAB_ROUTE",
+          "evidence": "Local Docker used. Readback from clean Docker container with no ZIP, Drive, or writable host mounts."
+        },
+        {
+          "id": "source_audit_unit_tests",
+          "status": "PASS",
+          "pass": 11,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_1_TEST_LOG.txt"
+        },
+        {
+          "id": "D11 upstream cross-check",
+          "status": "PASS",
+          "evidence": "10 globals found in upstream sources; converter image verification pending."
+        },
+        {
+          "id": "D11 candidate container",
+          "status": "PASS_SYNTHETIC_ONLY",
+          "pass": 9,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_1_D11_CANDIDATE_TEST_LOG.txt"
+        },
+        {
+          "id": "Independent staging readback",
+          "status": "PASS_SYNTHETIC_ONLY",
+          "evidence": "Readback on synthetic Parquet/JSON matched schema, row counts and hashes. Modified file rejected."
+        },
+        {
+          "id": "Clean readback of all staging",
+          "status": "PASS",
+          "evidence": "manifests/p3_staging_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D11",
+          "reviewer": "Reviewer D11 do người dùng xác nhận, chưa có tên",
+          "approval_evidence": "Người dùng xác nhận trong chat: D11 đã được reviewer chấp thuận. Câu hỏi nêu rõ LOCAL_DOCKER_HARDENED, image d11-r1 và ID kết thúc 69eaa.",
+          "record": "manifests/p3_conversion_route.json",
+          "status": "APPROVED_AS_REPORTED_BY_REQUESTER",
+          "recorded_at": "2026-11-20T13:42:00.6881485+07:00"
+        }
+      ],
+      "blocker": null,
+      "next_gate": "Begin P3.2 using only verified staging. Trace one charge and next discharge first; audit dataset-wide quality and pairing separately."
+    },
+    {
+      "milestone_id": "P3.2",
+      "status": "PASS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "data/staging/rt_batt_v2/1-1.parquet",
+          "sha256": "083884c7cacb9c8bd3435e2b3b26444fa2617b999a9de224f826f75a9595cccb"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/1-1.json",
+          "sha256": "2e4954c2e57847908f8573ca799723c506165926ffdb0f389807469e60f033db"
+        },
+        {
+          "path": "manifests/p3_staging_readback.json",
+          "sha256": "58e2b02cc85ee3351cfd6d465547364435215064cbadfa61668f31f16549d5cf"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        },
+        {
+          "path": "configs/rt_batt_protocol_reference.json",
+          "sha256": "565967c34859d43ee8113e044a6c647a05d32f2cf36e99adcf36e7a8563b14c0"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "reports/P3_2_FIRST_CELL_TRACE.md",
+          "sha256": "59cecb3315e3989590aeb8f1aa24d847069f852489e4b6b23151778e1269ce64"
+        },
+        {
+          "path": "manifests/p3_2_first_cell_trace.json",
+          "sha256": "88f5e8d22787a8af93f938a96d52c39c0f08f15936e885724b7a799a2671caf1"
+        },
+        {
+          "path": "scripts/trace_staged_charge_discharge.py",
+          "sha256": "dbf3fd875b26781862d4ddc18f42c484fbddb992d1fbc96e31a534a110667da8"
+        },
+        {
+          "path": "data/processed/canonical_cycles.parquet",
+          "sha256": "c7269d2a7e6c1a98f059b1fcfbf79bffb593135f0cff948c04c54accb7e2b7cb"
+        },
+        {
+          "path": "configs/rt_batt_schema_mapping.yaml",
+          "sha256": "cb48ae48a8752e6f0f354f6e2cbc85b72c70fe53449fe48990786a7ae628037e"
+        },
+        {
+          "path": "manifests/cell_cycle_inventory.csv",
+          "sha256": "72cad61dbd56e9fe1b0e50564cb47a5817f21523ec0c088f0b8a68e127acca22"
+        },
+        {
+          "path": "manifests/protocol_inventory.csv",
+          "sha256": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b"
+        },
+        {
+          "path": "reports/rejected_records.csv",
+          "sha256": "7baa0ceb15517f241dc3b23f3b75da942647a1aafddd43ed81d65d5041a9417f"
+        },
+        {
+          "path": "reports/P3_2_DATA_QUALITY.md",
+          "sha256": "a93220b12054fa907a740f79a5396c53e53576ab1e52d30ce73e7fd030ab53f8"
+        },
+        {
+          "path": "reports/P3_2_UT_09.log",
+          "sha256": "60e104907bd66c86d7dd04a6a7ae566e0a4a590eaa1aedb48887f35e94c6c9ec"
+        },
+        {
+          "path": "reports/P3_2_1_1_cycle_capacity.csv",
+          "sha256": "ab446acc4b05d6a9586860e66968346cecd72254b45668dbd9c3385d1b25a31f"
+        },
+        {
+          "path": "manifests/p3_2_readback.json",
+          "sha256": "aefe73bf481b99cc605d46ad1f02c59f7487da781dd8595b7eca9bafc40836fd"
+        },
+        {
+          "path": "manifests/p3_2_audit_summary.json",
+          "sha256": "ec33e63aae06a72a8d7c89fd16d68a1ceb32e3f751525ab148e91a18ca1228c5"
+        },
+        {
+          "path": "scripts/audit_rt_batt_cycles.py",
+          "sha256": "96dd6f7da643a1f43e80de746e49526b1ec09046bd0e84d43d7fe70c9b767fac"
+        },
+        {
+          "path": "scripts/check_p32_output.py",
+          "sha256": "44c7c2875ba69ee81c20d4983fc357e74f60bf7b019d2c86b522afb353bb1db7"
+        },
+        {
+          "path": "scripts/render_p32_report.py",
+          "sha256": "4e49197bab30e48cade7ec2e7f63f26ab833e82946fa742fb3373f1bf799f67e"
+        },
+        {
+          "path": "tests/test_p32.py",
+          "sha256": "0e085cfe77e043eb0f025baca80f760d86bf7fc8b28ce1000b49bcb51ac90b32"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "First staged cell charge-discharge trace",
+          "status": "PASS_ONE_CELL",
+          "evidence": "manifests/p3_2_first_cell_trace.json"
+        },
+        {
+          "id": "UT-09 / P3-DT-03",
+          "status": "PASS",
+          "pass": 9,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_2_UT_09.log"
+        },
+        {
+          "id": "Cell 1-1 deterministic rerun with different batch sizes",
+          "status": "PASS",
+          "evidence": "reports/P3_2_1_1_cycle_capacity.csv"
+        },
+        {
+          "id": "Independent full canonical readback",
+          "status": "PASS",
+          "evidence": "manifests/p3_2_readback.json"
+        },
+        {
+          "id": "Full 77-cell deterministic replay",
+          "status": "PASS",
+          "evidence": "manifests/p3_2_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D03",
+          "status": "EVIDENCE_READY_PENDING_P3_3_REVIEW",
+          "evidence": "Full P3.2 pairing audit, keyed capacity cross-check and temporal evidence; selection of Q_observed pending review."
+        }
+      ],
+      "blocker": null,
+      "next_gate": "P3.3 reviewer to approve pairing and observed capacity for eligible cycles, then audit commissioning Q_ref and guard feature/label availability."
+    },
+    {
+      "milestone_id": "P3.3",
+      "status": "PASS",
+      "release_status": "APPROVED_V1",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "manifests/p3_2_readback.json",
+          "sha256": "aefe73bf481b99cc605d46ad1f02c59f7487da781dd8595b7eca9bafc40836fd"
+        },
+        {
+          "path": "manifests/cell_cycle_inventory.csv",
+          "sha256": "72cad61dbd56e9fe1b0e50564cb47a5817f21523ec0c088f0b8a68e127acca22"
+        },
+        {
+          "path": "manifests/protocol_inventory.csv",
+          "sha256": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "configs/p3_soh_reference_policy.yaml",
+          "sha256": "911037d6dbbca64581eeb1e5f6d74524f80a37c47e48fb407444047a686c5d61"
+        },
+        {
+          "path": "manifests/cycle_label_pairing.parquet",
+          "sha256": "90bfc1606761b8bd39750414ea168cc772ce8a5ff233ed5cc39b70e289e7d227"
+        },
+        {
+          "path": "data/processed/soh_labels.parquet",
+          "sha256": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2"
+        },
+        {
+          "path": "reports/P3_3_COMMISSIONING.md",
+          "sha256": "647b2f4846ef4d476d2c524061535ba9c2c28ce4f0457ac8348f02f7751124dc"
+        },
+        {
+          "path": "reports/P3_3_LABEL_AUDIT.md",
+          "sha256": "a0b40923b28ba98f5c51fabe8a7f7e81f6499ebe875264be979899c7923926c9"
+        },
+        {
+          "path": "reports/P3_3_TEST_LOG.txt",
+          "sha256": "2c3896e2609fe4c7b86736f3c4aaa5cf10bc5b479861eb399419b4ef696caae4"
+        },
+        {
+          "path": "manifests/p3_3_readback.json",
+          "sha256": "7009b0f56d2ca157d19df4fe1a68ed0c4e9979042b8b0c28855196033271a2b1"
+        },
+        {
+          "path": "manifests/p3_3_audit_summary.json",
+          "sha256": "5e4f35a5adf4583c84c507ad0183c52a10408659dbc14354bc5ca88c50da0e97"
+        },
+        {
+          "path": "scripts/build_p33_labels.py",
+          "sha256": "166c13caf79629eab4a27079c83c0a28971537fc1272f3e9e6f70eaff2645297"
+        },
+        {
+          "path": "scripts/check_p33_output.py",
+          "sha256": "b9489dcb5ea54e869aa103173ca52f0b80666b1af50568b4d8821d5a4da1a835"
+        },
+        {
+          "path": "scripts/render_p33_reports.py",
+          "sha256": "490ead1550384aa67be04044f9ee596436097e7ddc11a938fe42e21fa23a6b9a"
+        },
+        {
+          "path": "tests/test_p33.py",
+          "sha256": "8dcc70475016b0237cd666aa6c35782494e902d986d3830d13ffdc330f2e800b"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.3 commissioning and label builder",
+          "status": "PASS",
+          "pass": 10,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_3_TEST_LOG.txt"
+        },
+        {
+          "id": "Independent all-key and temporal label readback",
+          "status": "PASS",
+          "evidence": "manifests/p3_3_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D02",
+          "status": "APPROVED",
+          "evidence": "reports/P3_3_COMMISSIONING.md",
+          "approval_evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "recorded_at": "2026-11-20T20:05:38+07:00"
+        },
+        {
+          "id": "D03",
+          "status": "APPROVED",
+          "evidence": "reports/P3_3_LABEL_AUDIT.md",
+          "approval_evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "recorded_at": "2026-11-20T20:05:38+07:00"
+        }
+      ],
+      "blocker": null,
+      "next_gate": "P3.4: freeze the 76-cell grouped split, development folds and test exposure ledger for D05 review."
+    },
+    {
+      "milestone_id": "P3.4",
+      "status": "PASS",
+      "release_status": "FROZEN_P34_R1",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "configs/p3_soh_reference_policy.yaml",
+          "sha256": "911037d6dbbca64581eeb1e5f6d74524f80a37c47e48fb407444047a686c5d61"
+        },
+        {
+          "path": "data/processed/soh_labels.parquet",
+          "sha256": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2"
+        },
+        {
+          "path": "manifests/protocol_inventory.csv",
+          "sha256": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b"
+        },
+        {
+          "path": "data/processed/canonical_cycles.parquet",
+          "sha256": "c7269d2a7e6c1a98f059b1fcfbf79bffb593135f0cff948c04c54accb7e2b7cb"
+        },
+        {
+          "path": "manifests/p3_4_presplit_milestone_snapshot.json",
+          "sha256": "1e81325b9d5117fc2589307c9f03e1473207c9aa5210dc56baef2283679a0ad0"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "configs/p3_split_policy.yaml",
+          "sha256": "ac23c1af90e519d1cdcb173d69fe8a77e33f09fde15eadd66c0695d49ea56d72"
+        },
+        {
+          "path": "manifests/p3_split_manifest.json",
+          "sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a"
+        },
+        {
+          "path": "manifests/p3_cv_fold_manifest.json",
+          "sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274"
+        },
+        {
+          "path": "reports/P3_4_PROTOCOL_BALANCE.md",
+          "sha256": "f9a4d8610cd5a64648433dad52f5561bc67c057b7688260877bb55cbe5e8dc3b"
+        },
+        {
+          "path": "reports/P3_4_LEAKAGE_AUDIT.md",
+          "sha256": "abb810826952b2bce0c828dab3d9b077cd7d6e24c773e80902410998de3fd368"
+        },
+        {
+          "path": "reports/test_exposure_ledger.md",
+          "sha256": "15d307e3091f515472f17e6fcf49afbb1f9de450bf17869463f2cc8c9ed0ace6",
+          "d05_approved_snapshot_sha256": "2e548b41de3cc1fd85d929562050e851826fdae82fa30788293d539aa740bff4",
+          "signed_snapshot_sha256": "60024743e0c3e67f3daae144e1f922ead3596d68f56a62308429bb6f2dcc4ed8"
+        },
+        {
+          "path": "manifests/p3_eligible_cells.csv",
+          "sha256": "787f15c335439b8f2f4f7ce54e510c8d7b4fd19f648df55e638741e18c2dd5dd"
+        },
+        {
+          "path": "manifests/p3_4_audit_summary.json",
+          "sha256": "2542c5f1b9644dc502bd0455e2ccd65998344dac444ffcfbfc3fd0d791eba8a5"
+        },
+        {
+          "path": "manifests/p3_4_replay.json",
+          "sha256": "72c73181ce85c7bf87f5e54bc8061d7241b77b9c8681a04f2a28e36a3b5aa11a"
+        },
+        {
+          "path": "reports/P3_4_TEST_LOG.txt",
+          "sha256": "ea9043bcea7e95dda53435145d8f63109b031f9462a9f8287fa540f6a5b6c256"
+        },
+        {
+          "path": "scripts/build_p34_split.py",
+          "sha256": "0be4229d5639dac3f61ea9b002774d425b052086f11ae881d235e3fa5eb695f5"
+        },
+        {
+          "path": "scripts/render_p34_reports.py",
+          "sha256": "b829a8ec8087bab1cb23e9cd1d3314055d2461f87b14b3e75f5c0980d7de8e13"
+        },
+        {
+          "path": "tests/test_p34.py",
+          "sha256": "1e2d226130e6326177ab43375efb3f3b24b6f4b3e63eca6c9bbb57e96dc1d482"
+        },
+        {
+          "path": "configs/p34_runtime/Dockerfile",
+          "sha256": "7a313473c44274f4a2ea85fa4c3dff3e001bb79dbb01f0fe1e714fb32e125945"
+        },
+        {
+          "path": "configs/p34_runtime/requirements-linux-amd64.lock",
+          "sha256": "647a491b2008aa20c87954e1c2944cabb62c027b645bc8daef29330bbd106751"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.4 grouped split unit checks",
+          "status": "PASS",
+          "pass": 5,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_4_TEST_LOG.txt"
+        },
+        {
+          "id": "Full label key and canonical cell ID reconciliation",
+          "status": "PASS",
+          "evidence": "manifests/p3_4_audit_summary.json"
+        },
+        {
+          "id": "Exact eligibility, outer split and inner fold replay",
+          "status": "PASS",
+          "evidence": "manifests/p3_4_replay.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D05",
+          "status": "APPROVED_WITH_CONDITIONS",
+          "evidence": "reports/P3_4_LEAKAGE_AUDIT.md",
+          "split_sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a",
+          "fold_sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274",
+          "conditions_status": "FULFILLED",
+          "approval_source": "decisions/P3_APPROVAL_REGISTER.md",
+          "recorded_at": "2026-11-20T20:44:08+07:00",
+          "reviewer": "Người dùng trực tiếp duyệt trong chat"
+        }
+      ],
+      "blocker": null,
+      "next_gate": "P3.5 on 57 development cells only. P3.7 evaluation UNOPENED."
+    },
+    {
+      "milestone_id": "P3.5",
+      "status": "PASS",
+      "release_status": "FEATURES_LOCKED",
+      "revision": "p35-r1",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "manifests/p3_split_manifest.json",
+          "sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a"
+        },
+        {
+          "path": "manifests/p3_cv_fold_manifest.json",
+          "sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "configs/p3_feature_policy.yaml",
+          "sha256": "5f2d92d8c405a258dcceffc09a82dc68ce986d92bcefc5edf5c8df459ba4590d"
+        },
+        {
+          "path": "artifacts/soh/feature_schema.json",
+          "sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc"
+        },
+        {
+          "path": "data/features/soh_feature_table.parquet",
+          "sha256": "1fd788eb75a1045f4d28ad6b87c87f3e93bf6ef2b3aa1884dd11cda338527188"
+        },
+        {
+          "path": "reports/P3_5_HI_WINDOW_AUDIT.md",
+          "sha256": "a6a7d88456325277aa99dadb03880b34804916b5c6e75356b4cc0f8851c3a1f1"
+        },
+        {
+          "path": "reports/P3_5_FEATURE_AVAILABILITY.md",
+          "sha256": "62c77b688fcfb6017fba36ee1d50648dc5d78502286de10b9bc91a7f8441513a"
+        },
+        {
+          "path": "reports/P3_5_FEATURE_LEAKAGE.md",
+          "sha256": "3c9362c15bd90423043d87ff46599834fc53b736262f69f45eec878e5ac37c51"
+        },
+        {
+          "path": "manifests/p3_5_readback.json",
+          "sha256": "c50d3914bec2db39a41d9fee7ac7d4727d529ff4faca5af38891f0e0b53f9eee"
+        },
+        {
+          "path": "manifests/p3_5_development_audit.json",
+          "sha256": "c205b7f0c776a7695eed6c2183f6fbaaedf37c29e9b7533cad9016ca17527c40"
+        },
+        {
+          "path": "reports/P3_5_UT_010.log",
+          "sha256": "8ba0d52c4a5e131b94378a6af8653b24c1cacfd234caadf57440fcf3133c5a78"
+        },
+        {
+          "path": "scripts/build_p35_features.py",
+          "sha256": "863ceb24a5552207234cc02ace44032a573f0e0e3311acd972e380218441b620"
+        },
+        {
+          "path": "scripts/review_p35_features.py",
+          "sha256": "eb744f08382a65bfea2a37771cc5b4bef36bfe726a490444df527943d409090b"
+        },
+        {
+          "path": "src/soh/feature_extractor.py",
+          "sha256": "397555190fc21c0120b139cec0438590c44a154c2e6657339f1e971cdc4953d0"
+        },
+        {
+          "path": "tests/test_p35.py",
+          "sha256": "5ddb31348be5ace055fefff857a1be0e59327b76f621d3865ac3a239fae59b5f"
+        },
+        {
+          "path": "scripts/audit_p35_gate.py",
+          "sha256": "c2f55ada48e507435e8d25d4b3aa4211047435f338948214535a7dec00d51be1"
+        },
+        {
+          "path": "manifests/p3_5_SHA256SUMS.txt",
+          "sha256": "3202f671b12d5dad6c40d44ca6645790883abd15ea27643fa34a80e80cd0f12e"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "UT-010 / UT-10",
+          "status": "PASS",
+          "passed": 11,
+          "evidence": "reports/P3_5_UT_010.log"
+        },
+        {
+          "id": "Development readback and integration cross-check",
+          "status": "PASS",
+          "evidence": "manifests/p3_5_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D04",
+          "status": "APPROVED",
+          "revision": "p35-r1",
+          "reviewer_name": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approved_at": "2026-11-22T11:11:00+07:00",
+          "recorded_at": "2026-11-22T11:26:09+07:00",
+          "approval_evidence": "codex://threads/01a1f732-e6c8-7212-8549-7f676a3526e3",
+          "approval_turn_id": "01a20173-4194-7f01-bd39-00617814135a",
+          "approval_message_id": "01a20173-4223-70f0-8d0d-ed3bc58febe3",
+          "primary_features": [
+            "delta_q_350_358_ah",
+            "q_cc_ah",
+            "q_cv_ah",
+            "q_cv_over_q_cc"
+          ],
+          "excluded": [
+            "IC",
+            "thermal"
+          ],
+          "evidence": {
+            "development_rows": 106733,
+            "development_cells": 57,
+            "primary_coverage_per_cell": 1.0,
+            "ut010_passed": 11,
+            "ut010_total": 11,
+            "checked_files": 14,
+            "checksum_manifest_sha256": "3202f671b12d5dad6c40d44ca6645790883abd15ea27643fa34a80e80cd0f12e"
+          },
+          "identity_confirmed_at": "2026-11-22T15:57:44+07:00",
+          "identity_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb"
+        }
+      ],
+      "blocker": null,
+      "next_gate": "P3.6 development-only training on frozen p35-r1 and p34-r1. P3.7 held-out UNOPENED."
+    },
+    {
+      "milestone_id": "P3.6",
+      "status": "PASS",
+      "release_status": "MODEL_FROZEN",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "manifests/p3_split_manifest.json",
+          "sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a"
+        },
+        {
+          "path": "manifests/p3_cv_fold_manifest.json",
+          "sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274"
+        },
+        {
+          "path": "configs/p3_soh_reference_policy.yaml",
+          "sha256": "911037d6dbbca64581eeb1e5f6d74524f80a37c47e48fb407444047a686c5d61"
+        },
+        {
+          "path": "manifests/p3_5_SHA256SUMS.txt",
+          "sha256": "3202f671b12d5dad6c40d44ca6645790883abd15ea27643fa34a80e80cd0f12e"
+        },
+        {
+          "path": "configs/p3_feature_policy.yaml",
+          "sha256": "5f2d92d8c405a258dcceffc09a82dc68ce986d92bcefc5edf5c8df459ba4590d"
+        },
+        {
+          "path": "artifacts/soh/feature_schema.json",
+          "sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc"
+        },
+        {
+          "path": "data/features/soh_feature_table.parquet",
+          "sha256": "1fd788eb75a1045f4d28ad6b87c87f3e93bf6ef2b3aa1884dd11cda338527188"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "manifests/p3_6_input_readback.json",
+          "sha256": "eac0204f8ca86cbf7d942c4aafb0eb94f8e24fa961ec71f856c3a913a2e89c39"
+        },
+        {
+          "path": "manifests/p3_6_training.json",
+          "sha256": "a9ac5d1e451b235a7165984c7ed599f42c9c21752ec0090b8a26f4b87171ce5e"
+        },
+        {
+          "path": "manifests/p3_6_resource_measurement.json",
+          "sha256": "780bf4b8569d0a451dc7bf4f2ccc2aef78e1107d3e662c5a17aa4185791d813b"
+        },
+        {
+          "path": "manifests/p3_6_guard_calibration.json",
+          "sha256": "c7a831f44555f88324fe6fb7cda4a7545b07cdb9d27a8a81368a87dd4103a5e0"
+        },
+        {
+          "path": "manifests/p3_6_preregistration.json",
+          "sha256": "43df3271bc99dbb9b0b5b7d3afd72669ae9e6573f362ad5a892df841656b993f"
+        },
+        {
+          "path": "artifacts/soh/feature_schema.json",
+          "sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc"
+        },
+        {
+          "path": "artifacts/soh/ood_policy.json",
+          "sha256": "bc85165b0349a0ca155251af602a19e9aae11735507446d2c4e31b58f1c5fcea"
+        },
+        {
+          "path": "artifacts/soh/model_card.md",
+          "sha256": "7832c1246e0aeacf1b7a9bf7e0798d4f3747d1f2b1e33744f33d2c929bb9adc5"
+        },
+        {
+          "path": "reports/P3_6_CV_VALIDATION.csv",
+          "sha256": "c350224c46ffbf298cfdfa313b8ec55137e71728b46e8b08751158418fc6ca54"
+        },
+        {
+          "path": "reports/P3_6_OOF_DEVELOPMENT.parquet",
+          "sha256": "234cc5c66a70f1cb46c50a5dd8edef7bdb927afde490b3e9aff1c905fbe64fea"
+        },
+        {
+          "path": "reports/P3_6_WEIGHT_ABLATION.md",
+          "sha256": "029b4e5ee5fba0228728bf46baad9872c85bcc9ffd60a429308d8a15398bc2cd"
+        },
+        {
+          "path": "reports/P3_6_MODEL_RESOURCE_BUDGET.md",
+          "sha256": "4fcb0980ec91c85fb4e2bb14775e1f9b7cdaf535b2b6649269a297ec5d5185f5"
+        },
+        {
+          "path": "reports/P3_6_XGB_REFIT_AUDIT.md",
+          "sha256": "25ba36583e403f3a1864c4ec8c2019d64abf39bad985a73b086a8bbb93f38722"
+        },
+        {
+          "path": "reports/P3_6_OOD_CALIBRATION.md",
+          "sha256": "f2c6a60883908d7c85ff756c1cd395cb8a7e5b375e2bc9f232466c89be1f4fe5"
+        },
+        {
+          "path": "reports/P3_6_TEST_LOG.txt",
+          "sha256": "15a1c1564cbdcbd6a4f6c538192d7d7f76c68436f8318e74085718a7642c59bb"
+        },
+        {
+          "path": "configs/p3_rf_training.yaml",
+          "sha256": "e4a1e002c25dc60385a41d81af0410a6501fe8f753c36cdc401a729b33968553"
+        },
+        {
+          "path": "configs/p3_xgb_training.yaml",
+          "sha256": "44ffc9f88e6fc6f781e99922a10ec3120efb88c81c7b523aad0d08ce9919d5ec"
+        },
+        {
+          "path": "configs/p3_training_requirements.txt",
+          "sha256": "9a66173397d9791a08da72b0c7dd6a88daf97a33e5c6a2bc2c651f9c1b800389"
+        },
+        {
+          "path": "src/soh/evaluation_guard.py",
+          "sha256": "7d5f5e1c6ca879448f3f8941c39fd33278b77985923f5231a8211db1c6bfe3b2"
+        },
+        {
+          "path": "tests/test_evaluation_guard.py",
+          "sha256": "d4da8c486c53ccb4588535bc5f4a83c08f7b6cbe3133bdf2b5cb1b37ef9c44a3"
+        },
+        {
+          "path": "tests/test_p36.py",
+          "sha256": "6003cadb3ea3de022cc5a3203fabecca1bd303a3b86e68c0dd11daf06ae8d22e"
+        },
+        {
+          "path": "scripts/p36_inputs.py",
+          "sha256": "9ea9379a0860910cc8c514a547523a8b252985451e135a3baea702025e9c07aa"
+        },
+        {
+          "path": "scripts/train_p36.py",
+          "sha256": "b1627ab5a815a906cfb67d8e94aea0b14125003ab513fd4f3594a79e63f9b03d"
+        },
+        {
+          "path": "scripts/calibrate_p36.py",
+          "sha256": "28df0536dda3316c29ae0c4ca406cb244297c4cbebb5712424857a95789d5196"
+        },
+        {
+          "path": "scripts/measure_p36.py",
+          "sha256": "f7cc344f6514163a96eb1b1180c8518149b546c7fcaabf48592028acab949c5c"
+        },
+        {
+          "path": "scripts/finalize_p36.py",
+          "sha256": "d86136cd9ff89235a39b5e5d89bcb12f99a1581157648e73f3a87919ece2c877"
+        },
+        {
+          "path": "scripts/verify_p36.py",
+          "sha256": "5cd65df8c4599ad9a8197b141431c8aed9ef5c05949e0935e33bd72f210ecf98"
+        },
+        {
+          "path": "reports/test_exposure_ledger.md",
+          "sha256": "15d307e3091f515472f17e6fcf49afbb1f9de450bf17869463f2cc8c9ed0ace6",
+          "signed_snapshot_sha256": "60024743e0c3e67f3daae144e1f922ead3596d68f56a62308429bb6f2dcc4ed8"
+        },
+        {
+          "path": "artifacts/soh/train_median_model.joblib",
+          "sha256": "0648eb3c6aa605acfc83d49e9dbe195bbcb6763aae96a69dff4d8d111eb6689f"
+        },
+        {
+          "path": "artifacts/soh/ridge_model.joblib",
+          "sha256": "5c1ff8ae96fc650ff91549265e79dddc98f1837b589c1041a5a9e2c42c90cc48"
+        },
+        {
+          "path": "artifacts/soh/rf_model.joblib",
+          "sha256": "9287ef0c874bb152390afa5c57c6ca1e982c42fb6d6a2a374fd8dd8905e3d9de"
+        },
+        {
+          "path": "artifacts/soh/rf_unweighted_model.joblib",
+          "sha256": "128dda5f486cd7e2697158f461badb953f79407c439e808388cb51b37c80664c"
+        },
+        {
+          "path": "artifacts/soh/xgb_model.joblib",
+          "sha256": "85fc6a0d6e170c562497ca959e889efe66e527d9f855641fb55aad03ba8bad87"
+        },
+        {
+          "path": "artifacts/soh/voltage_window_only_model.joblib",
+          "sha256": "582261a5219a3c8b9c5421b71a40d78cbbb81512cb6ff74ced210005c2f90222"
+        },
+        {
+          "path": "artifacts/soh/cc_cv_only_model.joblib",
+          "sha256": "e30bf691db76122e1ea8f820365ab7138fa41dc98f395239df3d120f1be6d6a9"
+        },
+        {
+          "path": "artifacts/soh/phase_and_ratio_model.joblib",
+          "sha256": "6aacee5c4e8b12e6dfe95c9cd4d244103d6ce5d59c411cdf2846053a30c6f91a"
+        },
+        {
+          "path": "manifests/p3_model_freeze.json",
+          "sha256": "934ca32afcc4a13b83bba5e08d30edbf6912fad448fa92c23617199495c631c7"
+        },
+        {
+          "path": "manifests/p36_r1_candidate_snapshot.json",
+          "sha256": "76654f841054f51796b86ec22e53fda5baf4826c69bbc97c0d5baadd1f9dbc9b"
+        },
+        {
+          "path": "configs/p3_er5_evaluation.json",
+          "sha256": "838e663ef5e2c3bce9826c103b7e5693d4187fdabb5c4c5f70c250f34556a203"
+        },
+        {
+          "path": "reports/P3_6_D12_D13_REVIEW_ADDENDUM.md",
+          "sha256": "c45868c3bbcecc8db417061fadc16c6f3ba48bfca9e93abb5c9552ff01522cdc"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.6 dev join and one-fold smoke",
+          "status": "PASS",
+          "evidence": "manifests/p3_6_input_readback.json"
+        },
+        {
+          "id": "P3.6 guard full OOF replay parity",
+          "status": "PASS",
+          "evidence": "manifests/p3_6_guard_calibration.json"
+        },
+        {
+          "id": "UT-011 / UT-11 reload parity and RF resource measurement",
+          "status": "PASS",
+          "evidence": "reports/P3_6_MODEL_RESOURCE_BUDGET.md"
+        },
+        {
+          "id": "P3.6 unit tests",
+          "status": "PASS",
+          "evidence": "reports/P3_6_TEST_LOG.txt"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D06",
+          "status": "APPROVED",
+          "evidence": "reports/P3_6_MODEL_RESOURCE_BUDGET.md",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+          "approved_at": "2026-11-22T15:57:44+07:00",
+          "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+          "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+        },
+        {
+          "id": "D08",
+          "status": "APPROVED",
+          "evidence": "reports/P3_6_WEIGHT_ABLATION.md",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+          "approved_at": "2026-11-22T15:57:44+07:00",
+          "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+          "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+        },
+        {
+          "id": "D12",
+          "status": "APPROVED",
+          "evidence": "reports/P3_6_D12_D13_REVIEW_ADDENDUM.md",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+          "approved_at": "2026-11-22T15:57:44+07:00",
+          "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+          "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+        },
+        {
+          "id": "D13",
+          "status": "APPROVED_WITH_CONDITIONS",
+          "evidence": "reports/P3_6_D12_D13_REVIEW_ADDENDUM.md",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+          "approved_at": "2026-11-22T15:57:44+07:00",
+          "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+          "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+        },
+        {
+          "id": "D15",
+          "status": "APPROVED",
+          "evidence": "reports/P3_6_XGB_REFIT_AUDIT.md",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+          "approved_at": "2026-11-22T15:57:44+07:00",
+          "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+          "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+        }
+      ],
+      "heldout_evaluation": "UNOPENED",
+      "next_gate": "D07 approved. One-time P3.7 evaluation with frozen p36-r1.",
+      "revision": "p36-r1",
+      "blocker": null,
+      "review_register": {
+        "path": "decisions/P3_APPROVAL_REGISTER.md",
+        "sha256": "3e641c766042353767d8537cde8619c8d63389aaf05aaee2e057f74b34a66d0b"
+      },
+      "signed_at": "2026-11-22T15:57:44+07:00"
+    },
+    {
+      "milestone_id": "P3.7",
+      "status": "PASS",
+      "release_status": "TEST_REPORTED",
+      "heldout_evaluation": "OPENED_ONCE",
+      "inputs": [
+        {
+          "path": "manifests/p3_model_freeze.json",
+          "sha256": "934ca32afcc4a13b83bba5e08d30edbf6912fad448fa92c23617199495c631c7"
+        },
+        {
+          "path": "configs/p3_er5_evaluation.json",
+          "sha256": "838e663ef5e2c3bce9826c103b7e5693d4187fdabb5c4c5f70c250f34556a203"
+        },
+        {
+          "path": "manifests/p3_split_manifest.json",
+          "sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a"
+        },
+        {
+          "path": "data/processed/soh_labels.parquet",
+          "sha256": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2"
+        },
+        {
+          "path": "manifests/cycle_label_pairing.parquet",
+          "sha256": "90bfc1606761b8bd39750414ea168cc772ce8a5ff233ed5cc39b70e289e7d227"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D07",
+          "status": "APPROVED",
+          "evidence": "configs/p3_er5_evaluation.json",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+          "approved_at": "2026-11-22T15:57:44+07:00",
+          "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+          "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+        },
+        {
+          "id": "D16",
+          "status": "APPROVED",
+          "evidence": "reports/P3_7_SOH_BAND_DIAGNOSTICS.csv",
+          "reviewer": "Trịnh Quang Khải",
+          "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+          "approval_evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "approved_at": "2026-11-23T10:48:49+07:00"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "reports/P3_7_HELDOUT_PREDICTIONS.parquet",
+          "sha256": "9788ecb4d652245ad1184fd283a5145bebc63ec489dc74c175310db17221105b"
+        },
+        {
+          "path": "manifests/p3_7_run_evidence.json",
+          "sha256": "01743e06ed8005b06c76f350e7e13a199add8967459d5db5b544e5cf3a61b4d4"
+        },
+        {
+          "path": "reports/P3_7_TEST_LOG.txt",
+          "sha256": "32ee0399a5c59b4d86a4a91cde55c82f646f5e93338887c1a0aff02282be16ce"
+        },
+        {
+          "path": "reports/P3_7_TEST_METRICS_PER_CELL.csv",
+          "sha256": "36e414368f35a4fb794c3de671bffb7455e444b5c3a19ef80d86239f53d191c7"
+        },
+        {
+          "path": "reports/P3_7_OOD_COVERAGE_BY_CELL.csv",
+          "sha256": "799e7bbefc0091f2ac11b400b1f3e804814747940a78279ffdc010d211bf9cf3"
+        },
+        {
+          "path": "reports/P3_7_SOH_BAND_DIAGNOSTICS.csv",
+          "sha256": "7aeefa602de32ca3da2ac903c6c18ed4ab70ba21b5b8ebd13df2a82ac5564398"
+        },
+        {
+          "path": "reports/P3_7_PROTOCOL_PERIOD_DIAGNOSTICS.csv",
+          "sha256": "8ce8e7e75c8027674ac014a654e7c919b5cc7af71568b6594e1af52bea14475b"
+        },
+        {
+          "path": "reports/P3_7_ABLATION.csv",
+          "sha256": "e5111d367cb53bca76e6f079b2313a7652f6a0750ce571e795665f7316fc273a"
+        },
+        {
+          "path": "reports/P3_7_TEST_SUMMARY.md",
+          "sha256": "bb3e6643849c5d145ee4eea9ad3151e1319f658962320d33e890d08a03578219"
+        },
+        {
+          "path": "reports/P3_7_FAILURE_ANALYSIS.md",
+          "sha256": "d147c225de2d8aae2e0a8600dbb1c9a9e316a1cdd0a15a2fbaf987872e37b4cb"
+        },
+        {
+          "path": "reports/P3_7_RUNTIME.md",
+          "sha256": "23369b5d027babe12531ee51322de6bc7b7e798b28dc0ea7ecca8f71287736fc"
+        },
+        {
+          "path": "manifests/p3_7_preflight.json",
+          "sha256": "1a3e1117673e994ddc0afc604631b8a1ba9f46573afc3fce59289d9b23b9a229"
+        },
+        {
+          "path": "manifests/p3_7_open_receipt.json",
+          "sha256": "5639ae3c3852ffbad692ee4d42d77a34b4f80168601d7f622547901bb7ccb056"
+        },
+        {
+          "path": "manifests/p3_7_same_session_recovery.json",
+          "sha256": "11abe6bd27cf9cc512c9871d3bdbfc1f4102498444970e9fb3ebb7528516f377"
+        },
+        {
+          "path": "manifests/p37_initial_evaluate_p37.py.txt",
+          "sha256": "f1ccf8befaf2cb64fec6abbba995938bdc681e14d2796239fb180ebb1a04aff3"
+        },
+        {
+          "path": "manifests/p37_initial_report_p37.py.txt",
+          "sha256": "6d3fbfa20e677085189f107b49d0fbb42206fb1fe99d180b7760ac38a1830237"
+        },
+        {
+          "path": "manifests/p3_7_evaluation_result.json",
+          "sha256": "73e4aafff181d8cb76cd4836628031d001ec0eb46292d637dce14db014ec97fd"
+        },
+        {
+          "path": "reports/test_exposure_ledger.md",
+          "sha256": "15d307e3091f515472f17e6fcf49afbb1f9de450bf17869463f2cc8c9ed0ace6"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.7 metrics fixtures and dev rehearsal",
+          "status": "PASS",
+          "evidence": "reports/P3_7_TEST_LOG.txt"
+        },
+        {
+          "id": "P3.7 one-use prediction capture",
+          "status": "PASS",
+          "evidence": "manifests/p3_7_run_evidence.json"
+        }
+      ],
+      "next_gate": "Proceed to P3.8 frozen inference packaging, online wall-clock stale policy (D13) and F5 integration. Do not reopen held-out.",
+      "exposure_receipt": {
+        "path": "manifests/p3_7_open_receipt.json",
+        "sha256": "5639ae3c3852ffbad692ee4d42d77a34b4f80168601d7f622547901bb7ccb056"
+      },
+      "same_receipt_recovery": {
+        "path": "manifests/p3_7_same_session_recovery.json",
+        "sha256": "11abe6bd27cf9cc512c9871d3bdbfc1f4102498444970e9fb3ebb7528516f377"
+      },
+      "er5": "ER5_PASS",
+      "audit_acceptance": {
+        "reviewer": "Trịnh Quang Khải",
+        "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+        "approved_at": "2026-11-23T10:48:49+07:00",
+        "same_session_recovery_accepted": true,
+        "hardware_validated": false,
+        "register": {
+          "path": "decisions/P3_APPROVAL_REGISTER.md",
+          "sha256": "f34ef3c57569f70222bff48af12df2142ddc238a73a19d962ac12c8b739bbf1e"
+        }
+      }
+    },
+    {
+      "milestone_id": "P3.8",
+      "status": "PASS",
+      "release_status": "INFERENCE_VERIFIED",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "artifacts/soh/rf_model.joblib",
+          "sha256": "9287ef0c874bb152390afa5c57c6ca1e982c42fb6d6a2a374fd8dd8905e3d9de"
+        },
+        {
+          "path": "artifacts/soh/feature_schema.json",
+          "sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc"
+        },
+        {
+          "path": "artifacts/soh/ood_policy.json",
+          "sha256": "bc85165b0349a0ca155251af602a19e9aae11735507446d2c4e31b58f1c5fcea"
+        },
+        {
+          "path": "src/soh/feature_extractor.py",
+          "sha256": "397555190fc21c0120b139cec0438590c44a154c2e6657339f1e971cdc4953d0"
+        },
+        {
+          "path": "src/soh/evaluation_guard.py",
+          "sha256": "7d5f5e1c6ca879448f3f8941c39fd33278b77985923f5231a8211db1c6bfe3b2"
+        },
+        {
+          "path": "manifests/p3_model_freeze.json",
+          "sha256": "934ca32afcc4a13b83bba5e08d30edbf6912fad448fa92c23617199495c631c7"
+        },
+        {
+          "path": "reports/P3_7_HELDOUT_PREDICTIONS.parquet",
+          "sha256": "9788ecb4d652245ad1184fd283a5145bebc63ec489dc74c175310db17221105b"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "contracts/soh_inference.schema.json",
+          "sha256": "7637e6cc1a660ffc48f4b279c3ce578a13d5eef7de4aabfd4193e145a003aa00"
+        },
+        {
+          "path": "artifacts/soh/model_manifest.json",
+          "sha256": "031e42f32c638692bf440b2d5de3038938a656b0c9821c0bb96f278add285099"
+        },
+        {
+          "path": "src/soh/ood.py",
+          "sha256": "16151e3fd77fac376dde779fbb3b53db831b53f64408ce94d83f2b8b298b78ee"
+        },
+        {
+          "path": "src/soh/inference.py",
+          "sha256": "69e2c97cb9ddb0801158b05f988e2810239028e414bcbb6e511ef9b195363ba1"
+        },
+        {
+          "path": "src/soh/output_validation.py",
+          "sha256": "2aeebf36b0fd0390751cc5e8c0b194e3cb6e69dbdc9d70dd48a352b41d49f485"
+        },
+        {
+          "path": "src/soh/f5_adapter.py",
+          "sha256": "09fe047a98446bfcbb0131a1231a481ad678fcb18ee2ba69b35a95b2deee7a98"
+        },
+        {
+          "path": "tests/test_p38.py",
+          "sha256": "911ad25e71ef5331065efd6d7a134632f5581f4defbd90f6ff6755f229d60a76"
+        },
+        {
+          "path": "scripts/verify_p38.py",
+          "sha256": "f4cd1d3ff66df2b1cb6a4f202173eb6fd6c8b4c877fdc0c317c560197c056a0e"
+        },
+        {
+          "path": "reports/P3_8_TEST_LOG.txt",
+          "sha256": "cbb316011d79b5ef9f78b7e0d47e3c5456666cae021c124fd0d74a07c6f134a9"
+        },
+        {
+          "path": "reports/P3_8_INTEGRATION_TEST.md",
+          "sha256": "df58e5f895feb175b063b6038d872a0a6951f2283cb74170612f887a94ae5bef"
+        },
+        {
+          "path": "manifests/p3_8_verification.json",
+          "sha256": "32e76a97227978b1c8d1c8b5e2519f617522d4efa273d6192fa64a0a0dbcd471"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "UT-011 / UT-11, UT-12, P3-MT-05, P3-IT-01, P3-IT-02, P3-IT-03, P3-SEC-01 (full suite)",
+          "status": "PASS",
+          "pass": 71,
+          "fail": 0,
+          "skip": 2,
+          "evidence": "reports/P3_8_TEST_LOG.txt"
+        },
+        {
+          "id": "Packaged F3.3/F3.4 vs P3.7 full 37,130-row parity & cell 1-1 E2E staging parity",
+          "status": "PASS",
+          "evidence": "manifests/p3_8_verification.json"
+        },
+        {
+          "id": "Phase 1 app.schemas.EstimationResult compatibility probe",
+          "status": "PASS",
+          "evidence": "manifests/p3_8_verification.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D09",
+          "status": "APPROVED_AND_VERIFIED_IN_P3_8",
+          "evidence": "reports/P3_8_INTEGRATION_TEST.md"
+        },
+        {
+          "id": "D13",
+          "status": "APPROVED",
+          "max_observation_age_seconds": 86400.0,
+          "max_future_skew_seconds": 5.0,
+          "evidence": "decisions/P3_APPROVAL_REGISTER.md"
+        }
+      ],
+      "hardware_validated": false,
+      "f3_to_f2_capacity_feedback": false,
+      "next_gate": "Proceed to P3.9 reproducibility & evidence handoff bundle. Keep hardware_validated=false and f3_to_f2_capacity_feedback=false; do not reopen held-out.",
+      "audit_acceptance": {
+        "reviewer": "Trịnh Quang Khải",
+        "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+        "approved_at": "2026-11-23T21:30:50+07:00",
+        "d13_online_approved": true,
+        "d13_max_observation_age_seconds": 86400.0,
+        "d13_max_future_skew_seconds": 5.0,
+        "scope": "RT-Batt v2 LFP 30C (A123_APR18650M1A)",
+        "hardware_validated": false,
+        "f3_to_f2_capacity_feedback": false,
+        "reviewed_verification_manifest": {
+          "path": "manifests/p3_8_verification.json",
+          "sha256": "32e76a97227978b1c8d1c8b5e2519f617522d4efa273d6192fa64a0a0dbcd471"
+        },
+        "register": {
+          "path": "decisions/P3_APPROVAL_REGISTER.md",
+          "sha256": "5499053017aea4c9b23199c75a2ca13c09aa3a9c6076d4d4114e5591707a5b3d"
+        }
+      }
+    },
+    {
+      "milestone_id": "P3.9",
+      "status": "IN_PROGRESS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "manifests/p3_8_verification.json",
+          "sha256": "32e76a97227978b1c8d1c8b5e2519f617522d4efa273d6192fa64a0a0dbcd471"
+        },
+        {
+          "path": "artifacts/soh/model_manifest.json",
+          "sha256": "031e42f32c638692bf440b2d5de3038938a656b0c9821c0bb96f278add285099"
+        },
+        {
+          "path": "manifests/p3_7_evaluation_result.json",
+          "sha256": "73e4aafff181d8cb76cd4836628031d001ec0eb46292d637dce14db014ec97fd"
+        },
+        {
+          "path": "decisions/P3_APPROVAL_REGISTER.md",
+          "sha256": "5499053017aea4c9b23199c75a2ca13c09aa3a9c6076d4d4114e5591707a5b3d"
+        }
+      ],
+      "outputs": [],
+      "tests_executed": [],
+      "hardware_validated": false,
+      "f3_to_f2_capacity_feedback": false,
+      "next_gate": "Compile P3.9 reproducibility & evidence handoff bundle, run clean-env verification, and submit for final Phase 3 closeout review."
+    }
+  ]
+}

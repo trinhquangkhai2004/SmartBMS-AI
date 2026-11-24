@@ -1,0 +1,7 @@
+**
+!conversion/
+!conversion/Dockerfile
+!conversion/requirements-linux-amd64.lock
+!conversion/secure_source_converter.py
+!scripts/
+!scripts/audit_rt_batt_source.py

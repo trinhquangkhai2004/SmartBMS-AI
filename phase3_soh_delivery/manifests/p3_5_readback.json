@@ -1,0 +1,68 @@
+{
+  "revision": "p35-r1",
+  "status": "PASS",
+  "inputs": [
+    {
+      "path": "manifests/p3_split_manifest.json",
+      "sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a"
+    },
+    {
+      "path": "manifests/p3_cv_fold_manifest.json",
+      "sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274"
+    }
+  ],
+  "signed_development_input_files_verified": 114,
+  "unique_keys": 106733,
+  "development_cells": 57,
+  "primary_features": [
+    "delta_q_350_358_ah",
+    "q_cc_ah",
+    "q_cv_ah",
+    "q_cv_over_q_cc"
+  ],
+  "primary_complete_rows": 106733,
+  "band_crosscheck_cells": 57,
+  "max_band_crosscheck_abs_ah": 2.0816681711721685e-17,
+  "ut010_passed": 11,
+  "heldout_signal_or_label_files_read": 0,
+  "outputs": [
+    {
+      "path": "configs/p3_feature_policy.yaml",
+      "sha256": "5f2d92d8c405a258dcceffc09a82dc68ce986d92bcefc5edf5c8df459ba4590d"
+    },
+    {
+      "path": "artifacts/soh/feature_schema.json",
+      "sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc"
+    },
+    {
+      "path": "data/features/soh_feature_table.parquet",
+      "sha256": "1fd788eb75a1045f4d28ad6b87c87f3e93bf6ef2b3aa1884dd11cda338527188"
+    },
+    {
+      "path": "reports/P3_5_HI_WINDOW_AUDIT.md",
+      "sha256": "a6a7d88456325277aa99dadb03880b34804916b5c6e75356b4cc0f8851c3a1f1"
+    },
+    {
+      "path": "reports/P3_5_FEATURE_AVAILABILITY.md",
+      "sha256": "62c77b688fcfb6017fba36ee1d50648dc5d78502286de10b9bc91a7f8441513a"
+    },
+    {
+      "path": "reports/P3_5_FEATURE_LEAKAGE.md",
+      "sha256": "3c9362c15bd90423043d87ff46599834fc53b736262f69f45eec878e5ac37c51"
+    }
+  ],
+  "ut010_real_parity": {
+    "sessions": 5,
+    "distinct_cells": 5,
+    "validation_folds": 5,
+    "features_per_session": 12,
+    "comparison": "exact_values_missing_reasons_end_charge_sample_index"
+  },
+  "stage_guard_audit": {
+    "sessions": 106733,
+    "fast_current_violations": 0,
+    "topup_current_violations": 0,
+    "cv_voltage_violations": 0,
+    "report": "reports/P3_5_FEATURE_AVAILABILITY.md"
+  }
+}

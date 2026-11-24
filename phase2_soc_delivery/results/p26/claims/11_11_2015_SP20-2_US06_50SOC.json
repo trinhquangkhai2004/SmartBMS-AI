@@ -1,0 +1,8 @@
+{
+  "run_id": "11_11_2015_SP20-2_US06_50SOC",
+  "lock_sha256": "6433b63f0538eeaea250c56b966e910f68f84aeb23ed5c93d1ced9b624a138d3",
+  "source_sha256": "a431e8649f39526cf86bdfec75938fd5f481496672b1c1b4cac8e2000f907b94",
+  "time_utc": "2026-11-19T10:01:33.972759+00:00",
+  "test_exposed": true,
+  "action": "open_workbook_once"
+}

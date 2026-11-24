@@ -1,0 +1,14 @@
+test_ambiguous_phases_and_counter_reset (test_p32.ParserTests.test_ambiguous_phases_and_counter_reset) ... ok
+test_batch_boundary_order_and_roundtrip (test_p32.ParserTests.test_batch_boundary_order_and_roundtrip) ... ok
+test_cross_cycle_requires_proven_clock (test_p32.ParserTests.test_cross_cycle_requires_proven_clock) ... ok
+test_integral_skips_gap_and_keeps_end_time (test_p32.ParserTests.test_integral_skips_gap_and_keeps_end_time) ... ok
+test_keyed_dq_and_two_cells_with_same_cycle (test_p32.ParserTests.test_keyed_dq_and_two_cells_with_same_cycle) ... ok
+test_nonfinite_missing_and_wrong_sign (test_p32.ParserTests.test_nonfinite_missing_and_wrong_sign) ... ok
+test_one_sign_flip_and_discharge_first_classification (test_p32.ParserTests.test_one_sign_flip_and_discharge_first_classification) ... ok
+test_real_reference_cycle_1 (test_p32.ParserTests.test_real_reference_cycle_1) ... ok
+test_timestamp_flags_keep_sample_coordinates (test_p32.ParserTests.test_timestamp_flags_keep_sample_coordinates) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.037s
+
+OK

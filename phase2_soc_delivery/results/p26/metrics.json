@@ -1,0 +1,25 @@
+{
+  "ER4": "ER4_NOT_ASSESSABLE",
+  "test_exposed": true,
+  "scientific_release": false,
+  "lock_sha256": "6433b63f0538eeaea250c56b966e910f68f84aeb23ed5c93d1ced9b624a138d3",
+  "runs": {
+    "11_11_2015_SP20-2_US06_50SOC": {
+      "ER4": "ER4_NOT_ASSESSABLE",
+      "receipt_sha256": "1ec295d7ae12f35a5cb4f2604f7f5e432a33ba213f427cb0848cba4c5a4ec677"
+    },
+    "11_11_2015_SP20-2_US06_80SOC": {
+      "ER4": "ER4_NOT_ASSESSABLE",
+      "receipt_sha256": "79608082a524c5cb8d6d4992b40823754df5c42d213f64729e56e7e78523273c"
+    },
+    "11_12_2015_SP20-2_BJDST_80SOC": {
+      "ER4": "ER4_NOT_ASSESSABLE",
+      "receipt_sha256": "e3754868c363a23a9a9a7ed84bd3421abfee1b1c637d2580836a6091cdcfa2e3"
+    },
+    "11_13_2015_SP20-2_BJDST_50SOC": {
+      "ER4": "ER4_NOT_ASSESSABLE",
+      "receipt_sha256": "4a68fdcb822ceb5e9bb923295f703a48651904248027103ccb374d39c8d590ca"
+    }
+  },
+  "next_action": "Return to P2.3 under change control"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "release_status": "DRAFT_PENDING_D02_D03_REVIEW",
+  "trace_rows": 146122,
+  "labels": 143863,
+  "cells_with_labels": 76,
+  "above_100_percent": 7110,
+  "disposition": {
+    "COMMISSIONING_WARMUP": 380,
+    "LABEL_DRAFT_READY": 143863,
+    "P32_PAIR_REVIEW": 4,
+    "QREF_COMMISSIONING_BLOCKED": 1875
+  },
+  "output_sha256": {
+    "p3_3_audit_summary.json": "5e4f35a5adf4583c84c507ad0183c52a10408659dbc14354bc5ca88c50da0e97",
+    "cycle_label_pairing.parquet": "90bfc1606761b8bd39750414ea168cc772ce8a5ff233ed5cc39b70e289e7d227",
+    "soh_labels.parquet": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2"
+  },
+  "verifier_sha256": "b9489dcb5ea54e869aa103173ca52f0b80666b1af50568b4d8821d5a4da1a835",
+  "checked_at_utc": "2026-11-20T12:19:21.8328723+00:00",
+  "readback_image_id": "sha256:611d52fe746196d5a771e5fb2b38e7660c623bb045f09933d3525796ced69eaa"
+}

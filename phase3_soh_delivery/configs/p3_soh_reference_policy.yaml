@@ -1,0 +1,48 @@
+schema_version: p3.3-release-v1
+milestone_status: PASS
+release_status: APPROVED_V1
+approved_decisions: [D02, D03]
+downstream_split_allowed: true
+training_allowed: false
+approved_labels_sha256: de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2
+approval_evidence: decisions/P3_APPROVAL_REGISTER.md
+target_semantics: cell_relative_operational_capacity
+target_formula: '100 * q_observed_ah / q_ref_ah'
+clip_above_100_percent: false
+d03:
+  status: APPROVED
+  geometry: same_cell_same_cycle_next_discharge_from_p32
+  prediction_event: feature_available_at
+  observation_event: label_observed_at
+  capacity_source: paired_dq_raw
+  capacity_conversion: 'paired_dq_raw / 1000'
+  units: Ah
+  dq_counter_numerical_match_tolerance_mah: 0.000001
+  current_integral_role: diagnostic_only
+  p32_review_pairs: keep_in_trace_exclude_from_v1_labels
+  cutoff_policy:
+    measured_end_voltage: record_last_discharge_sample
+    batteryml_reference_cutoff_v: 2.0
+    require_exact_match_to_cutoff_volts: false
+  chamber_temperature_c: 30
+  measured_temperature_channel: absent
+d02:
+  status: APPROVED
+  method: median
+  first_source_cycle_ids: [1, 2, 3, 4, 5]
+  must_be_consecutive: true
+  require_same_observed_discharge_profile: true
+  stage_current_comparison_tolerance_c: 0.15
+  require_p32_discharge_clock_without_large_gap: true
+  availability: fifth_reference_discharge_end
+  automatic_fallback: none
+  relative_spread_automatic_exclusion_threshold: null
+  excluded_cells_v1:
+    '7-5': BATTERYML_EARLY_CYCLE_REVIEW
+chronology:
+  compare_within_cell_by: [cycle_source_order, sample_index]
+  local_seconds_only_within_same_cycle: true
+  label_eligibility: 'qref_available_at <= feature_available_at < label_observed_at'
+feature_policy:
+  current_production_mode: zero_commissioning_features
+  offline_label_only: [q_observed_ah, q_ref_ah, paired_dq_raw, soh_ref_percent]

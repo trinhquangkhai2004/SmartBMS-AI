@@ -1,0 +1,25 @@
+revision: p35-r1
+domain: RT-Batt v2
+split_revision: p34-r1
+split_sha256: a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a
+fold_sha256: 45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274
+mode: zero_commissioning_features
+selection: complete_dev_coverage_then_lowest_macro_cell_mae_fixed_ridge_group_cv
+primary: [delta_q_350_358_ah, q_cc_ah, q_cv_ah, q_cv_over_q_cc]
+band_phase: lower_current_combined_charge_segment
+bands_v: [[3.45,3.55],[3.50,3.58],[3.45,3.60]]
+integration: piecewise_linear_current_and_voltage_trapezoid
+max_gap_s: max(30 seconds, 5 times median positive charge dt)
+cc_fast_a: 5.5
+cc_fast_tolerance_a: 0.165
+cc_topup_a: 1.1
+cc_topup_tolerance_a: 0.055
+cv_target_v: 3.6
+cv_tolerance_v: 0.005
+cv_entry_max_fraction_topup_current: 0.98
+cv_final_max_fraction_entry_current: 0.5
+cv_minimum_nonincreasing_step_fraction_with_0_01a_slack: 0.9
+ratio_epsilon_ah: 1.0e-8
+unknown_transition_intervals: omit_from_stage_integrals
+missing: null_and_reason
+training_imputation: train_fold_only_if_needed

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pbl5.local/contracts/soh_inference.schema.json",
+  "title": "PBL5 Phase 3 F3 SoH Inference Response Contract",
+  "description": "End-of-valid-charge single-cell capacity-based SoH inference output for F5 monitoring. Non-VALID responses must set soh_percent to null.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "cell_id",
+    "charge_operation_id",
+    "cycle_id",
+    "soh_percent",
+    "status",
+    "reason_codes",
+    "last_valid_soh_percent",
+    "last_valid_at",
+    "last_valid_cycle",
+    "last_valid_age_seconds",
+    "observed_at",
+    "model_version",
+    "feature_schema_version",
+    "training_domain",
+    "soh_reference_definition",
+    "baseline_version",
+    "display_mode",
+    "f3_to_f2_capacity_feedback",
+    "hardware_validated",
+    "diagnostics"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "const": "p3.8-v1"
+    },
+    "cell_id": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "charge_operation_id": {
+      "type": ["string", "null"]
+    },
+    "cycle_id": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "soh_percent": {
+      "type": ["number", "null"]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "VALID",
+        "MODEL_NOT_READY",
+        "INVALID_INPUT",
+        "INSUFFICIENT_HISTORY",
+        "MISSING_FEATURE",
+        "OUT_OF_DOMAIN",
+        "MODEL_UNCERTAIN",
+        "SOH_JUMP_ANOMALY",
+        "STALE",
+        "MODEL_SCHEMA_MISMATCH",
+        "INFERENCE_ERROR",
+        "NOT_VALIDATED_FOR_DEVICE",
+        "RESYNC_REVIEW_REQUIRED"
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "last_valid_soh_percent": {
+      "type": ["number", "null"]
+    },
+    "last_valid_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "last_valid_cycle": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "last_valid_age_seconds": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "observed_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "model_version": {
+      "type": ["string", "null"]
+    },
+    "feature_schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "training_domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "soh_reference_definition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "display_mode": {
+      "type": "string",
+      "enum": ["CURRENT_VALID", "HELD_STALE", "UNAVAILABLE"]
+    },
+    "f3_to_f2_capacity_feedback": {
+      "type": "boolean",
+      "const": false
+    },
+    "hardware_validated": {
+      "type": "boolean",
+      "const": false
+    },
+    "diagnostics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_soh_percent",
+        "sigma_trees_pp",
+        "feature_values",
+        "feature_missing_reasons",
+        "ood_violated_features",
+        "stale_mode",
+        "observation_age_seconds",
+        "previous_baseline_pp",
+        "confirmation_count",
+        "guard_status"
+      ],
+      "properties": {
+        "raw_soh_percent": { "type": ["number", "null"] },
+        "sigma_trees_pp": { "type": ["number", "null"] },
+        "feature_values": {
+          "type": "object",
+          "additionalProperties": { "type": ["number", "null"] }
+        },
+        "feature_missing_reasons": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "ood_violated_features": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "stale_mode": {
+          "type": "string",
+          "enum": ["ONLINE_WALL_CLOCK", "NOT_APPLICABLE_OFFLINE_CYCLE_REPLAY"]
+        },
+        "observation_age_seconds": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "previous_baseline_pp": { "type": ["number", "null"] },
+        "confirmation_count": { "type": ["integer", "null"], "minimum": 0 },
+        "guard_status": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "VALID" } } },
+      "then": {
+        "properties": {
+          "cell_id": { "type": "string", "minLength": 1 },
+          "soh_percent": { "type": "number" },
+          "display_mode": { "const": "CURRENT_VALID" }
+        }
+      },
+      "else": {
+        "properties": {
+          "soh_percent": { "type": "null" },
+          "display_mode": { "enum": ["HELD_STALE", "UNAVAILABLE"] }
+        }
+      }
+    }
+  ]
+}
+

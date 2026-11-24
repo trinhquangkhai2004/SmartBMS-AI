@@ -1,0 +1,862 @@
+{
+  "run_id": "11_13_2015_SP20-2_BJDST_50SOC",
+  "role": "held_out_test",
+  "source_start_row": 1439,
+  "source_end_row": 8384,
+  "test_exposed": true,
+  "ER4": "ER4_NOT_ASSESSABLE",
+  "reference": {
+    "anchor": {
+      "row": 1077,
+      "time_s": 10828.648601821908,
+      "source_sheet": "Channel_1-008",
+      "source_excel_row": 1079,
+      "charge_cc_rows": [
+        1,
+        672
+      ],
+      "charge_cv_rows": [
+        673,
+        1017
+      ],
+      "cv_end_current_a": -0.019847776740789413,
+      "cv_end_voltage_v": 4.199491024017334,
+      "rest_rows": [
+        1018,
+        1077
+      ],
+      "rest_duration_observed_s": 589.9937563237872,
+      "rest_step_time_end_s": 600.008862039529,
+      "anchor_fraction": 1.0,
+      "anchor_kind": "historical_prior",
+      "definition": "operational full after recorded CC-CV and rest; not exact physical 100%",
+      "absolute_soc_anchor_error_bound": null
+    },
+    "prior": {
+      "soc_fraction": 0.5068664995046224,
+      "prior_kind": "historical_prior",
+      "information_cutoff_row": 1439,
+      "counter_history_inclusive": true,
+      "same_prior_required_for_CC_EKF": true,
+      "voltage_rc_zero_justified": false
+    },
+    "quality": "PROVISIONAL",
+    "reference_flags": [
+      "OUT_OF_RANGE_REFERENCE"
+    ],
+    "unresolved_gaps": [],
+    "uncertainty": {
+      "absolute_soc_error_bound": null,
+      "assumptions": [
+        "operational full anchor is assigned 1 by definition, not measured exact physical SoC",
+        "unit Coulombic efficiency",
+        "single initial-capacity calibration used without future adjustment"
+      ],
+      "sensitivity": "delta_z approximately delta_anchor + delta_net_Ah/C - net_Ah*delta_C/C^2",
+      "independence": "Arbin counters are not independent of the current measurement"
+    },
+    "counter_roundoff_rows": [],
+    "source": {
+      "run_id": "11_13_2015_SP20-2_BJDST_50SOC",
+      "file": "11_13_2015_SP20-2_BJDST_50SOC.xls",
+      "file_sha256": "195126f2cd08bc3d8635da4d91cb7d067edaca57ea4ec67a8bc7b87dd5b4442d",
+      "archive_sha256": "df372646a75f495186a58c3f549baecf86e70e0478bf55a97e122bab10f5bf21",
+      "profile": "BJDST",
+      "role": "held_out_test",
+      "window_required": true,
+      "cell_id": "SP20-2",
+      "ecm_identification_permitted": false,
+      "validation_tuning_permitted": false,
+      "ocv_calibration_permitted": false,
+      "capacity_calibration_permitted": false,
+      "final_test_untouched": true,
+      "scoring_permitted": false
+    },
+    "source_provenance": {
+      "claimed_cell_id": "SP20-2",
+      "info_cell_ids": [
+        "SP20-2"
+      ],
+      "test_report_name": "11_13_2015_SP20-2_BJDST_50SOC",
+      "measurement_channel_ids": [
+        "1-008"
+      ],
+      "measurement_channel_cell": null,
+      "channel_cell_mapping": {},
+      "info_comments": [
+        ""
+      ],
+      "channel_evidence": [
+        {
+          "channel": "1-008",
+          "observation_sheets": [
+            "Channel_1-008"
+          ],
+          "info_excel_row": 5,
+          "comments_raw": ""
+        }
+      ],
+      "resolved_cell_id": "SP20-2",
+      "provenance_status": "RESOLVED_REPORT_AND_FILENAME",
+      "resolution_reason": "no channel-cell Comments mapping; specific report name and filename agree"
+    },
+    "reference_kind": "arbin_capacity_derived"
+  },
+  "scenarios": {
+    "nominal": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6917,
+          "denominator": 6946,
+          "missing_count": 29,
+          "MAE_pp": 0.3414837047774824,
+          "RMSE_pp": 0.515799628804163,
+          "P95_abs_pp": 1.4305029412345611,
+          "MAX_abs_pp": 1.6337711240806567
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.31164326530565883,
+          "RMSE_pp": 0.46645989866713056,
+          "P95_abs_pp": 1.2910115554048829,
+          "MAX_abs_pp": 1.6337711240806567
+        },
+        "FLAGGED": {
+          "numerator": 247,
+          "denominator": 276,
+          "missing_count": 29,
+          "MAE_pp": 1.1472963820125543,
+          "RMSE_pp": 1.2549043029531217,
+          "P95_abs_pp": 1.6079805810162728,
+          "MAX_abs_pp": 1.6329045028988216
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 0.054756365151975045,
+          "RMSE_pp": 0.0687799688633332,
+          "P95_abs_pp": 0.11762741294524676,
+          "MAX_abs_pp": 0.12600045734386112
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.05237919876313166,
+          "RMSE_pp": 0.0663655989406657,
+          "P95_abs_pp": 0.11743534629023734,
+          "MAX_abs_pp": 0.12600045734386112
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.11220455288235685,
+          "RMSE_pp": 0.11232123340652381,
+          "P95_abs_pp": 0.1182774660808239,
+          "MAX_abs_pp": 0.12486856191110673
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6917,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6916,
+      "status_counts": {
+        "VALID": 6917,
+        "OUT_OF_DOMAIN": 29
+      },
+      "projection_count": 30,
+      "invalid_count": 29,
+      "EKF_convergence_s": 0.0,
+      "CC_convergence_s": 0.0,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6916,
+      "voltage_innovation_mean_v": -9.62269023697472e-06,
+      "voltage_innovation_rmse_v": 0.015268836885737193,
+      "voltage_innovation_max_abs_v": 0.21729808423333896,
+      "worst_ekf_source_row": 8125,
+      "worst_ekf_timestamp_s": 21177.15273499369,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.11608779999914987,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.5068664995046224,
+      "initial_vrc_v": 0.024888900118927637,
+      "initial_voltage_corrections": 0,
+      "trajectory_sha256": "779b9705b7ef7547b081f86117eb9f253ed16e4f5d0c03498a29c9388bd68d49"
+    },
+    "prior_minus_20pp": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6917,
+          "denominator": 6946,
+          "missing_count": 29,
+          "MAE_pp": 0.8193102435158888,
+          "RMSE_pp": 1.9210959843997484,
+          "P95_abs_pp": 1.6408046034647743,
+          "MAX_abs_pp": 20.0
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.8072701108749405,
+          "RMSE_pp": 1.94142964494428,
+          "P95_abs_pp": 1.7463084149285153,
+          "MAX_abs_pp": 20.0
+        },
+        "FLAGGED": {
+          "numerator": 247,
+          "denominator": 276,
+          "missing_count": 29,
+          "MAE_pp": 1.1444425702977685,
+          "RMSE_pp": 1.2528891067005776,
+          "P95_abs_pp": 1.6057572803871318,
+          "MAX_abs_pp": 1.6309020012218531
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 20.054604428323653,
+          "RMSE_pp": 20.054648035232702,
+          "P95_abs_pp": 20.117627412945247,
+          "MAX_abs_pp": 20.126000457343864
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 20.05222097489364,
+          "RMSE_pp": 20.05226279970588,
+          "P95_abs_pp": 20.11743534629024,
+          "MAX_abs_pp": 20.126000457343864
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 20.112204552882357,
+          "RMSE_pp": 20.11220520417312,
+          "P95_abs_pp": 20.118277466080826,
+          "MAX_abs_pp": 20.124868561911107
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6917,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6916,
+      "status_counts": {
+        "VALID": 6917,
+        "OUT_OF_DOMAIN": 29
+      },
+      "projection_count": 30,
+      "invalid_count": 29,
+      "EKF_convergence_s": 145.60771969547568,
+      "CC_convergence_s": null,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6916,
+      "voltage_innovation_mean_v": 0.001268864171184205,
+      "voltage_innovation_rmse_v": 0.01576709749624534,
+      "voltage_innovation_max_abs_v": 0.21728316359329014,
+      "worst_ekf_source_row": 1439,
+      "worst_ekf_timestamp_s": 14430.672923786104,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.10963219999939611,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.30686649950462236,
+      "initial_vrc_v": -0.047075422624326624,
+      "initial_voltage_corrections": 0
+    },
+    "prior_minus_10pp": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6917,
+          "denominator": 6946,
+          "missing_count": 29,
+          "MAE_pp": 0.5629151103690857,
+          "RMSE_pp": 0.9816799689908211,
+          "P95_abs_pp": 1.524848009195664,
+          "MAX_abs_pp": 9.999999999999998
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.5413431748345169,
+          "RMSE_pp": 0.970148252137671,
+          "P95_abs_pp": 1.4917338165242864,
+          "MAX_abs_pp": 9.999999999999998
+        },
+        "FLAGGED": {
+          "numerator": 247,
+          "denominator": 276,
+          "missing_count": 29,
+          "MAE_pp": 1.145444705573836,
+          "RMSE_pp": 1.2535951528811808,
+          "P95_abs_pp": 1.6065366339721985,
+          "MAX_abs_pp": 1.6316039567132832
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 10.054604428323648,
+          "RMSE_pp": 10.054691405040227,
+          "P95_abs_pp": 10.117627412945245,
+          "MAX_abs_pp": 10.126000457343858
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 10.052220974893634,
+          "RMSE_pp": 10.052304406980294,
+          "P95_abs_pp": 10.117435346290234,
+          "MAX_abs_pp": 10.126000457343858
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 10.112204552882355,
+          "RMSE_pp": 10.112205848237123,
+          "P95_abs_pp": 10.118277466080823,
+          "MAX_abs_pp": 10.124868561911104
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6917,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6916,
+      "status_counts": {
+        "VALID": 6917,
+        "OUT_OF_DOMAIN": 29
+      },
+      "projection_count": 30,
+      "invalid_count": 29,
+      "EKF_convergence_s": 51.56187893265633,
+      "CC_convergence_s": null,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6916,
+      "voltage_innovation_mean_v": 0.0006851168911720847,
+      "voltage_innovation_rmse_v": 0.01539269420729469,
+      "voltage_innovation_max_abs_v": 0.21728839983157933,
+      "worst_ekf_source_row": 1439,
+      "worst_ekf_timestamp_s": 14430.672923786104,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.10575269999935699,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.4068664995046224,
+      "initial_vrc_v": -0.019561344318888008,
+      "initial_voltage_corrections": 0
+    },
+    "prior_plus_10pp": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6917,
+          "denominator": 6946,
+          "missing_count": 29,
+          "MAE_pp": 0.6120386682168907,
+          "RMSE_pp": 0.9885411739595036,
+          "P95_abs_pp": 1.5736425621447259,
+          "MAX_abs_pp": 9.999999999999998
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.5919978970472224,
+          "RMSE_pp": 0.9770832693508594,
+          "P95_abs_pp": 1.5570019528376906,
+          "MAX_abs_pp": 9.999999999999998
+        },
+        "FLAGGED": {
+          "numerator": 247,
+          "denominator": 276,
+          "missing_count": 29,
+          "MAE_pp": 1.1532206265233205,
+          "RMSE_pp": 1.2591255471470542,
+          "P95_abs_pp": 1.6126228726497902,
+          "MAX_abs_pp": 1.637085660234159
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 9.945395571676347,
+          "RMSE_pp": 9.945483503462452,
+          "P95_abs_pp": 9.996919437987408,
+          "MAX_abs_pp": 10.007043078907508
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 9.947779025106362,
+          "RMSE_pp": 9.94786333314094,
+          "P95_abs_pp": 9.99714194061403,
+          "MAX_abs_pp": 10.007043078907508
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 9.88779544711764,
+          "RMSE_pp": 9.887796771871212,
+          "P95_abs_pp": 9.894809837279439,
+          "MAX_abs_pp": 9.897016306574063
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6917,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6916,
+      "status_counts": {
+        "VALID": 6917,
+        "OUT_OF_DOMAIN": 29
+      },
+      "projection_count": 30,
+      "invalid_count": 29,
+      "EKF_convergence_s": 43.48376522205399,
+      "CC_convergence_s": null,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6916,
+      "voltage_innovation_mean_v": -0.0013961118157806644,
+      "voltage_innovation_rmse_v": 0.015551048047264659,
+      "voltage_innovation_max_abs_v": 0.2173291122594021,
+      "worst_ekf_source_row": 1439,
+      "worst_ekf_timestamp_s": 14430.672923786104,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.10491319999891857,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.6068664995046223,
+      "initial_vrc_v": 0.11486099715538822,
+      "initial_voltage_corrections": 0
+    },
+    "prior_plus_20pp": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6917,
+          "denominator": 6946,
+          "missing_count": 29,
+          "MAE_pp": 0.8737867867633557,
+          "RMSE_pp": 1.6723082642166178,
+          "P95_abs_pp": 2.094085774243572,
+          "MAX_abs_pp": 19.999999999999986
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.8632779863214453,
+          "RMSE_pp": 1.6855790284784962,
+          "P95_abs_pp": 2.121082133847673,
+          "MAX_abs_pp": 19.999999999999986
+        },
+        "FLAGGED": {
+          "numerator": 247,
+          "denominator": 276,
+          "missing_count": 29,
+          "MAE_pp": 1.1575669444457153,
+          "RMSE_pp": 1.262247119371094,
+          "P95_abs_pp": 1.6165162754617368,
+          "MAX_abs_pp": 1.6401620514369428
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 19.945395571676343,
+          "RMSE_pp": 19.945439417349785,
+          "P95_abs_pp": 19.99691943798741,
+          "MAX_abs_pp": 20.007043078907504
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 19.947779025106357,
+          "RMSE_pp": 19.94782106890317,
+          "P95_abs_pp": 19.99714194061403,
+          "MAX_abs_pp": 20.007043078907504
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 19.88779544711764,
+          "RMSE_pp": 19.887796105757406,
+          "P95_abs_pp": 19.89480983727944,
+          "MAX_abs_pp": 19.897016306574063
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6917,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6916,
+      "status_counts": {
+        "VALID": 6917,
+        "OUT_OF_DOMAIN": 29
+      },
+      "projection_count": 30,
+      "invalid_count": 29,
+      "EKF_convergence_s": 93.01462955960051,
+      "CC_convergence_s": null,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6916,
+      "voltage_innovation_mean_v": -0.0024663330294114045,
+      "voltage_innovation_rmse_v": 0.01633110914687721,
+      "voltage_innovation_max_abs_v": 0.21735188164313124,
+      "worst_ekf_source_row": 1439,
+      "worst_ekf_timestamp_s": 14430.672923786104,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.10736429999997199,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.7068664995046223,
+      "initial_vrc_v": 0.20314172631584348,
+      "initial_voltage_corrections": 0
+    },
+    "current_bias_minus": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6917,
+          "denominator": 6946,
+          "missing_count": 29,
+          "MAE_pp": 0.6119072881012821,
+          "RMSE_pp": 0.6899170190158556,
+          "P95_abs_pp": 1.438918210716978,
+          "MAX_abs_pp": 1.642642720862806
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.592014304279937,
+          "RMSE_pp": 0.6592857319150945,
+          "P95_abs_pp": 1.2808339561238018,
+          "MAX_abs_pp": 1.642642720862806
+        },
+        "FLAGGED": {
+          "numerator": 247,
+          "denominator": 276,
+          "missing_count": 29,
+          "MAE_pp": 1.1490983896736404,
+          "RMSE_pp": 1.2617463558055275,
+          "P95_abs_pp": 1.6139593235240939,
+          "MAX_abs_pp": 1.641835685559704
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 2.3449634339558245,
+          "RMSE_pp": 2.703205622087236,
+          "P95_abs_pp": 4.4489691195802585,
+          "MAX_abs_pp": 4.684613849285125
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 2.2569525982280356,
+          "RMSE_pp": 2.603927143476493,
+          "P95_abs_pp": 4.299773812387309,
+          "MAX_abs_pp": 4.6187584769593
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 4.4718919640440635,
+          "RMSE_pp": 4.476645200193839,
+          "P95_abs_pp": 4.674363166389297,
+          "MAX_abs_pp": 4.684613849285125
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6917,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6916,
+      "status_counts": {
+        "VALID": 6917,
+        "OUT_OF_DOMAIN": 29
+      },
+      "projection_count": 30,
+      "invalid_count": 29,
+      "EKF_convergence_s": 0.0,
+      "CC_convergence_s": 0.0,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6916,
+      "voltage_innovation_mean_v": -0.0025235323217625556,
+      "voltage_innovation_rmse_v": 0.015529855542554214,
+      "voltage_innovation_max_abs_v": 0.2210213046821754,
+      "worst_ekf_source_row": 8125,
+      "worst_ekf_timestamp_s": 21177.15273499369,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.10882970000056957,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.5068664995046224,
+      "initial_vrc_v": 0.028757463461119848,
+      "initial_voltage_corrections": 0
+    },
+    "current_bias_plus": {
+      "EKF": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6916,
+          "denominator": 6946,
+          "missing_count": 30,
+          "MAE_pp": 0.45161724029412076,
+          "RMSE_pp": 0.5895026313191598,
+          "P95_abs_pp": 1.4228458835491231,
+          "MAX_abs_pp": 1.6251148507969937
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 0.4258842884576101,
+          "RMSE_pp": 0.5501095993478563,
+          "P95_abs_pp": 1.300800582512197,
+          "MAX_abs_pp": 1.6251148507969937
+        },
+        "FLAGGED": {
+          "numerator": 246,
+          "denominator": 276,
+          "missing_count": 30,
+          "MAE_pp": 1.1493358937474771,
+          "RMSE_pp": 1.2508909575903688,
+          "P95_abs_pp": 1.6021998272585627,
+          "MAX_abs_pp": 1.6241896516706515
+        }
+      },
+      "CC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.039735099337748346,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 2.4541722906032732,
+          "RMSE_pp": 2.838390288862936,
+          "P95_abs_pp": 4.66887547166284,
+          "MAX_abs_pp": 4.912798604487801
+        },
+        "NON_FLAGGED": {
+          "numerator": 6670,
+          "denominator": 6670,
+          "missing_count": 0,
+          "MAE_pp": 2.361394548015445,
+          "RMSE_pp": 2.73412409416271,
+          "P95_abs_pp": 4.513978277216041,
+          "MAX_abs_pp": 4.858483482999221
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 4.69630106980912,
+          "RMSE_pp": 4.700839688961094,
+          "P95_abs_pp": 4.904262027965564,
+          "MAX_abs_pp": 4.912798604487801
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6916,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6915,
+      "status_counts": {
+        "VALID": 6916,
+        "OUT_OF_DOMAIN": 30
+      },
+      "projection_count": 30,
+      "invalid_count": 30,
+      "EKF_convergence_s": 0.0,
+      "CC_convergence_s": 0.0,
+      "first_warning_timestamp_s": 20444.862688212248,
+      "voltage_innovation_count": 6915,
+      "voltage_innovation_mean_v": 0.0026761439656118454,
+      "voltage_innovation_rmse_v": 0.015288754834308586,
+      "voltage_innovation_max_abs_v": 0.21357943201955187,
+      "worst_ekf_source_row": 8125,
+      "worst_ekf_timestamp_s": 21177.15273499369,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.1325089999991178,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.5068664995046224,
+      "initial_vrc_v": 0.021020336776735427,
+      "initial_voltage_corrections": 0
+    },
+    "vi_noise": {
+      "EKF": {
+        "flagged_count": 274,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.03944716383530089,
+        "FULL_DYNAMIC": {
+          "numerator": 6916,
+          "denominator": 6946,
+          "missing_count": 30,
+          "MAE_pp": 0.3335051489526007,
+          "RMSE_pp": 0.4997205419440245,
+          "P95_abs_pp": 1.4108101830694064,
+          "MAX_abs_pp": 1.6274203635191915
+        },
+        "NON_FLAGGED": {
+          "numerator": 6672,
+          "denominator": 6672,
+          "missing_count": 0,
+          "MAE_pp": 0.30425222674137026,
+          "RMSE_pp": 0.4503376452731243,
+          "P95_abs_pp": 1.2998896147599865,
+          "MAX_abs_pp": 1.6274203635191915
+        },
+        "FLAGGED": {
+          "numerator": 244,
+          "denominator": 274,
+          "missing_count": 30,
+          "MAE_pp": 1.1334047267941167,
+          "RMSE_pp": 1.2379907624814719,
+          "P95_abs_pp": 1.5948016887714322,
+          "MAX_abs_pp": 1.625520929317703
+        }
+      },
+      "CC": {
+        "flagged_count": 274,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.03944716383530089,
+        "FULL_DYNAMIC": {
+          "numerator": 6946,
+          "denominator": 6946,
+          "missing_count": 0,
+          "MAE_pp": 0.0636160285707352,
+          "RMSE_pp": 0.08289595812983114,
+          "P95_abs_pp": 0.1457713945934469,
+          "MAX_abs_pp": 0.1609337141826983
+        },
+        "NON_FLAGGED": {
+          "numerator": 6672,
+          "denominator": 6672,
+          "missing_count": 0,
+          "MAE_pp": 0.06032242144751525,
+          "RMSE_pp": 0.07938700088985154,
+          "P95_abs_pp": 0.14470949534423877,
+          "MAX_abs_pp": 0.1609337141826983
+        },
+        "FLAGGED": {
+          "numerator": 274,
+          "denominator": 274,
+          "missing_count": 0,
+          "MAE_pp": 0.1438165640675365,
+          "RMSE_pp": 0.14400662562318897,
+          "P95_abs_pp": 0.15393677169818654,
+          "MAX_abs_pp": 0.16014340964237705
+        }
+      },
+      "effective_event_count": 6946,
+      "covered_effective_events": 6916,
+      "merged_repeated_events": 0,
+      "voltage_corrections": 6915,
+      "status_counts": {
+        "VALID": 6916,
+        "OUT_OF_DOMAIN": 30
+      },
+      "projection_count": 30,
+      "invalid_count": 30,
+      "EKF_convergence_s": 0.0,
+      "CC_convergence_s": 0.0,
+      "first_warning_timestamp_s": 20440.831320333597,
+      "voltage_innovation_count": 6915,
+      "voltage_innovation_mean_v": -6.557572001550071e-05,
+      "voltage_innovation_rmse_v": 0.018231245055632617,
+      "voltage_innovation_max_abs_v": 0.22162216121387557,
+      "worst_ekf_source_row": 8127,
+      "worst_ekf_timestamp_s": 21179.168383369655,
+      "worst_ekf_warning": false,
+      "raw_rows": 6946,
+      "reset_after_initialization_count": 0,
+      "paired_replay_wall_seconds": 0.13751650000085647,
+      "status": "EXECUTED",
+      "seed": 20261115,
+      "prior_soc_fraction": 0.5068664995046224,
+      "initial_vrc_v": 0.025043462981443554,
+      "initial_voltage_corrections": 0
+    }
+  },
+  "lock_sha256": "6433b63f0538eeaea250c56b966e910f68f84aeb23ed5c93d1ced9b624a138d3",
+  "completed_utc": "2026-11-19T10:01:48.029493+00:00"
+}

@@ -1,0 +1,480 @@
+{
+  "spec_version": "1.2",
+  "milestones": [
+    {
+      "milestone_id": "P3.0",
+      "status": "IN_PROGRESS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "C:/Users/quang/Downloads/PBL5_PHASE3_SOH_RT_BATT_TRAINING_PLAN_SPEC_v1.2_2026-11-20.md",
+          "sha256": "ff6219a53f79f1f431683e59a7adc92938f717b80d453bf3692e9d03179a7fe9"
+        },
+        {
+          "path": "../Tai_lieu/Logbook_PBL5_F2_v1.2_2026-11-19.docx",
+          "sha256": "61b9d86e7ff668fa7e6895b296da1759da604d78de5d21ee7da3e2302e53f7ec"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "decisions/P3_DATASET_CHANGE_RECORD.md",
+          "sha256": "e4d3602a6d5d1f2a9a3fc3d0152f15e721ae610b6ac2603de0b29b9e9646c2b2"
+        },
+        {
+          "path": "configs/p3_scope.yaml",
+          "sha256": "9c987b86ada090561ca356f542834d57155f169c6ad2ae5a48f296df56b6e81b"
+        },
+        {
+          "path": "reports/p3_rq2_traceability.md",
+          "sha256": "3a8471030b83838f457e14b52d273af4b057ec15955804d6397ba5c42c506de7"
+        },
+        {
+          "path": "decisions/P3_APPROVAL_REGISTER.md",
+          "sha256": "8bb6c370a8927a5ad142fd7c72a2b0ccbc235a17f7c9736250913b75759969e5"
+        },
+        {
+          "path": "decisions/P3_0_D01_REVIEW.md",
+          "sha256": "6b4f5ece2dda68e411197a7c7162a4fdaec2b1dff94c2b4da63d5c9978a23dee"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.0 document review",
+          "status": "CHECKED",
+          "evidence": "Logbook Table 2.20 and spec v1.2 checked; requester confirmed F2/F3 scope and reported D01 group approval."
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D01",
+          "reviewer": null,
+          "approval_evidence": "Requester reported in chat: D01 was approved by the group.",
+          "review_packet": "decisions/P3_0_D01_REVIEW.md",
+          "status": "GROUP_APPROVAL_REPORTED",
+          "evidence_recorded_at": "2026-11-20T13:27:02.5945288+07:00",
+          "approved_revision": null,
+          "group_approved_at": null,
+          "record_revision": "D01-r2"
+        },
+        {
+          "id": "D09",
+          "status": "SCOPE_CONFIRMED_BY_REQUESTER",
+          "revision": "D09-v1",
+          "evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "verification_test": "P3-IT-02",
+          "verification_status": "NOT_RUN"
+        }
+      ],
+      "blocker": "Formal P3.0 closeout needs the original D01 approval metadata. Group approval has been reported by the requester.",
+      "next_gate": "Record actual D01 reviewer, approval timestamp, approved revision and original evidence."
+    },
+    {
+      "milestone_id": "P3.1",
+      "status": "PASS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "data/raw/rt_batt/v2/our_data.zip",
+          "sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "checksums.sha256",
+          "sha256": "9079f9279af16b3945fe897b13c6e3e64e7aba1c0306dfcc0229b1150b952f60"
+        },
+        {
+          "path": "manifests/rt_batt_download_receipt.json",
+          "sha256": "be32fb4858f12042e11d5f80191e981bc3692be2273a034887ca6524d7ff57ac"
+        },
+        {
+          "path": "manifests/rt_batt_source_manifest.json",
+          "sha256": "5a27b29cb0eb15eaf12ed88143b741dea86ad75a73184c59a3ee4a259cd97cb5"
+        },
+        {
+          "path": "manifests/p3_pickle_opcode_inventory.json",
+          "sha256": "589982125b6b9c01e3a8b790a1765ae2c682771889a961dc02451ab91b2446a7"
+        },
+        {
+          "path": "manifests/p3_conversion_route.json",
+          "sha256": "a1bc6400aca4734e986b29c257518de9756bc8a22bf07249ba99e41798501e73"
+        },
+        {
+          "path": "reports/P3_1_SOURCE_AUDIT.md",
+          "sha256": "b84b2b4ca07ecd2be8777bce72b79f5fee7ffc089b24f735a21967c7976d64c8"
+        },
+        {
+          "path": "reports/P3_1_PICKLE_SECURITY.md",
+          "sha256": "7f40d9eb611e3a90b92f1a5ab42f1c06a70c22a476e2eb46a5e40bfaab3714a1"
+        },
+        {
+          "path": "reports/P3_1_TEST_LOG.txt",
+          "sha256": "1856e925c267ce70358e95a3cbc67b6531fdf8f4489312af30d426e1e98bcd85"
+        },
+        {
+          "path": "conversion/secure_source_converter.py",
+          "sha256": "64e56ef00e724fbde068553e3d4ac31e0729b48c1728577f379814a275601ea7"
+        },
+        {
+          "path": "conversion/requirements-linux-amd64.lock",
+          "sha256": "b45604177f2f90a25494ebe8642d82dd49c7e10a00af79ae32d8cc79e5a9f9ff"
+        },
+        {
+          "path": "conversion/Dockerfile",
+          "sha256": "2e3ab4ec82abefc291e23fc3e7b60cef25f7bb01a7a77829059c80e5747b7d0e"
+        },
+        {
+          "path": "conversion/Dockerfile.dockerignore",
+          "sha256": "eb36e7bbcc444216e2c716725801afc2f10ddb1c6d20391d49d2bf9d9a7d67cc"
+        },
+        {
+          "path": "conversion/test_secure_source_converter.py",
+          "sha256": "c114e5de1ace253ec48e69cdbb7c64c09b6cba6119284dfd95fb2d6af2a42494"
+        },
+        {
+          "path": "reports/P3_1_D11_CANDIDATE_TEST_LOG.txt",
+          "sha256": "9c9b2be885d9f34fc8f8409cfedbccab2bb9540d4b35aabd037105a99fca7d4f"
+        },
+        {
+          "path": "conversion/verify_staging.py",
+          "sha256": "45e6b1cc66426054b8330b3f32119f30f51794cad5fb06c63559039cf1db4b68"
+        },
+        {
+          "path": "manifests/p3_d11_approval_snapshot.json",
+          "sha256": "715f77e9dd4b48cd3ff453af2ab6b9c47330d0696e8626e1f20507eb2b495415"
+        },
+        {
+          "path": "manifests/p3_conversion_execution.json",
+          "sha256": "176e0cc500888499ab9e158d4326eb7b9bc6dee91177a473f05c8cf6fa39427c"
+        },
+        {
+          "path": "reports/P3_1_CONVERSION_LOG.txt",
+          "sha256": "eef17dc087a95ee8c5978426179434af96924952be569ddc9510bb2c5888e1ba"
+        },
+        {
+          "path": "manifests/p3_staging_readback.json",
+          "sha256": "58e2b02cc85ee3351cfd6d465547364435215064cbadfa61668f31f16549d5cf"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3-DT-01",
+          "status": "PASS",
+          "evidence": "Publisher size/SHA, archive directory rules, quotas and ZIP CRC across 78 entries."
+        },
+        {
+          "id": "P3-DT-02",
+          "status": "PASS",
+          "evidence": "Static ZIP/pickle audit, 9 synthetic tests, denied unexpected benign global, isolated real conversion, clean readback, verified schema, counts, SHA-256 and no pickle files in staging."
+        },
+        {
+          "id": "P3-DT-04",
+          "status": "NOT_APPLICABLE_COLAB_ROUTE",
+          "evidence": "Local Docker used. Readback from clean Docker container with no ZIP, Drive, or writable host mounts."
+        },
+        {
+          "id": "source_audit_unit_tests",
+          "status": "PASS",
+          "pass": 11,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_1_TEST_LOG.txt"
+        },
+        {
+          "id": "D11 upstream cross-check",
+          "status": "PASS",
+          "evidence": "10 globals found in upstream sources; converter image verification pending."
+        },
+        {
+          "id": "D11 candidate container",
+          "status": "PASS_SYNTHETIC_ONLY",
+          "pass": 9,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_1_D11_CANDIDATE_TEST_LOG.txt"
+        },
+        {
+          "id": "Independent staging readback",
+          "status": "PASS_SYNTHETIC_ONLY",
+          "evidence": "Readback on synthetic Parquet/JSON matched schema, row counts and hashes. Modified file rejected."
+        },
+        {
+          "id": "Clean readback of all staging",
+          "status": "PASS",
+          "evidence": "manifests/p3_staging_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D11",
+          "reviewer": "Reviewer D11 do người dùng xác nhận, chưa có tên",
+          "approval_evidence": "Người dùng xác nhận trong chat: D11 đã được reviewer chấp thuận. Câu hỏi nêu rõ LOCAL_DOCKER_HARDENED, image d11-r1 và ID kết thúc 69eaa.",
+          "record": "manifests/p3_conversion_route.json",
+          "status": "APPROVED_AS_REPORTED_BY_REQUESTER",
+          "recorded_at": "2026-11-20T13:42:00.6881485+07:00"
+        }
+      ],
+      "blocker": null,
+      "next_gate": "Begin P3.2 using only verified staging. Trace one charge and next discharge first; audit dataset-wide quality and pairing separately."
+    },
+    {
+      "milestone_id": "P3.2",
+      "status": "PASS",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "data/staging/rt_batt_v2/1-1.parquet",
+          "sha256": "083884c7cacb9c8bd3435e2b3b26444fa2617b999a9de224f826f75a9595cccb"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/1-1.json",
+          "sha256": "2e4954c2e57847908f8573ca799723c506165926ffdb0f389807469e60f033db"
+        },
+        {
+          "path": "manifests/p3_staging_readback.json",
+          "sha256": "58e2b02cc85ee3351cfd6d465547364435215064cbadfa61668f31f16549d5cf"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        },
+        {
+          "path": "configs/rt_batt_protocol_reference.json",
+          "sha256": "565967c34859d43ee8113e044a6c647a05d32f2cf36e99adcf36e7a8563b14c0"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "reports/P3_2_FIRST_CELL_TRACE.md",
+          "sha256": "59cecb3315e3989590aeb8f1aa24d847069f852489e4b6b23151778e1269ce64"
+        },
+        {
+          "path": "manifests/p3_2_first_cell_trace.json",
+          "sha256": "88f5e8d22787a8af93f938a96d52c39c0f08f15936e885724b7a799a2671caf1"
+        },
+        {
+          "path": "scripts/trace_staged_charge_discharge.py",
+          "sha256": "dbf3fd875b26781862d4ddc18f42c484fbddb992d1fbc96e31a534a110667da8"
+        },
+        {
+          "path": "data/processed/canonical_cycles.parquet",
+          "sha256": "c7269d2a7e6c1a98f059b1fcfbf79bffb593135f0cff948c04c54accb7e2b7cb"
+        },
+        {
+          "path": "configs/rt_batt_schema_mapping.yaml",
+          "sha256": "cb48ae48a8752e6f0f354f6e2cbc85b72c70fe53449fe48990786a7ae628037e"
+        },
+        {
+          "path": "manifests/cell_cycle_inventory.csv",
+          "sha256": "72cad61dbd56e9fe1b0e50564cb47a5817f21523ec0c088f0b8a68e127acca22"
+        },
+        {
+          "path": "manifests/protocol_inventory.csv",
+          "sha256": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b"
+        },
+        {
+          "path": "reports/rejected_records.csv",
+          "sha256": "7baa0ceb15517f241dc3b23f3b75da942647a1aafddd43ed81d65d5041a9417f"
+        },
+        {
+          "path": "reports/P3_2_DATA_QUALITY.md",
+          "sha256": "a93220b12054fa907a740f79a5396c53e53576ab1e52d30ce73e7fd030ab53f8"
+        },
+        {
+          "path": "reports/P3_2_UT_09.log",
+          "sha256": "60e104907bd66c86d7dd04a6a7ae566e0a4a590eaa1aedb48887f35e94c6c9ec"
+        },
+        {
+          "path": "reports/P3_2_1_1_cycle_capacity.csv",
+          "sha256": "ab446acc4b05d6a9586860e66968346cecd72254b45668dbd9c3385d1b25a31f"
+        },
+        {
+          "path": "manifests/p3_2_readback.json",
+          "sha256": "aefe73bf481b99cc605d46ad1f02c59f7487da781dd8595b7eca9bafc40836fd"
+        },
+        {
+          "path": "manifests/p3_2_audit_summary.json",
+          "sha256": "ec33e63aae06a72a8d7c89fd16d68a1ceb32e3f751525ab148e91a18ca1228c5"
+        },
+        {
+          "path": "scripts/audit_rt_batt_cycles.py",
+          "sha256": "96dd6f7da643a1f43e80de746e49526b1ec09046bd0e84d43d7fe70c9b767fac"
+        },
+        {
+          "path": "scripts/check_p32_output.py",
+          "sha256": "44c7c2875ba69ee81c20d4983fc357e74f60bf7b019d2c86b522afb353bb1db7"
+        },
+        {
+          "path": "scripts/render_p32_report.py",
+          "sha256": "4e49197bab30e48cade7ec2e7f63f26ab833e82946fa742fb3373f1bf799f67e"
+        },
+        {
+          "path": "tests/test_p32.py",
+          "sha256": "0e085cfe77e043eb0f025baca80f760d86bf7fc8b28ce1000b49bcb51ac90b32"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "First staged cell charge-discharge trace",
+          "status": "PASS_ONE_CELL",
+          "evidence": "manifests/p3_2_first_cell_trace.json"
+        },
+        {
+          "id": "UT-09 / P3-DT-03",
+          "status": "PASS",
+          "pass": 9,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_2_UT_09.log"
+        },
+        {
+          "id": "Cell 1-1 deterministic rerun with different batch sizes",
+          "status": "PASS",
+          "evidence": "reports/P3_2_1_1_cycle_capacity.csv"
+        },
+        {
+          "id": "Independent full canonical readback",
+          "status": "PASS",
+          "evidence": "manifests/p3_2_readback.json"
+        },
+        {
+          "id": "Full 77-cell deterministic replay",
+          "status": "PASS",
+          "evidence": "manifests/p3_2_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D03",
+          "status": "EVIDENCE_READY_PENDING_P3_3_REVIEW",
+          "evidence": "Full P3.2 pairing audit, keyed capacity cross-check and temporal evidence; selection of Q_observed pending review."
+        }
+      ],
+      "blocker": null,
+      "next_gate": "P3.3 reviewer to approve pairing and observed capacity for eligible cycles, then audit commissioning Q_ref and guard feature/label availability."
+    },
+    {
+      "milestone_id": "P3.3",
+      "status": "PASS",
+      "release_status": "APPROVED_V1",
+      "source_version": {
+        "doi": "10.17632/nsc7hnsg4s.2",
+        "raw_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db"
+      },
+      "inputs": [
+        {
+          "path": "manifests/p3_2_readback.json",
+          "sha256": "aefe73bf481b99cc605d46ad1f02c59f7487da781dd8595b7eca9bafc40836fd"
+        },
+        {
+          "path": "manifests/cell_cycle_inventory.csv",
+          "sha256": "72cad61dbd56e9fe1b0e50564cb47a5817f21523ec0c088f0b8a68e127acca22"
+        },
+        {
+          "path": "manifests/protocol_inventory.csv",
+          "sha256": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b"
+        },
+        {
+          "path": "data/staging/rt_batt_v2/conversion_manifest.json",
+          "sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "configs/p3_soh_reference_policy.yaml",
+          "sha256": "911037d6dbbca64581eeb1e5f6d74524f80a37c47e48fb407444047a686c5d61"
+        },
+        {
+          "path": "manifests/cycle_label_pairing.parquet",
+          "sha256": "90bfc1606761b8bd39750414ea168cc772ce8a5ff233ed5cc39b70e289e7d227"
+        },
+        {
+          "path": "data/processed/soh_labels.parquet",
+          "sha256": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2"
+        },
+        {
+          "path": "reports/P3_3_COMMISSIONING.md",
+          "sha256": "647b2f4846ef4d476d2c524061535ba9c2c28ce4f0457ac8348f02f7751124dc"
+        },
+        {
+          "path": "reports/P3_3_LABEL_AUDIT.md",
+          "sha256": "a0b40923b28ba98f5c51fabe8a7f7e81f6499ebe875264be979899c7923926c9"
+        },
+        {
+          "path": "reports/P3_3_TEST_LOG.txt",
+          "sha256": "2c3896e2609fe4c7b86736f3c4aaa5cf10bc5b479861eb399419b4ef696caae4"
+        },
+        {
+          "path": "manifests/p3_3_readback.json",
+          "sha256": "7009b0f56d2ca157d19df4fe1a68ed0c4e9979042b8b0c28855196033271a2b1"
+        },
+        {
+          "path": "manifests/p3_3_audit_summary.json",
+          "sha256": "5e4f35a5adf4583c84c507ad0183c52a10408659dbc14354bc5ca88c50da0e97"
+        },
+        {
+          "path": "scripts/build_p33_labels.py",
+          "sha256": "166c13caf79629eab4a27079c83c0a28971537fc1272f3e9e6f70eaff2645297"
+        },
+        {
+          "path": "scripts/check_p33_output.py",
+          "sha256": "b9489dcb5ea54e869aa103173ca52f0b80666b1af50568b4d8821d5a4da1a835"
+        },
+        {
+          "path": "scripts/render_p33_reports.py",
+          "sha256": "490ead1550384aa67be04044f9ee596436097e7ddc11a938fe42e21fa23a6b9a"
+        },
+        {
+          "path": "tests/test_p33.py",
+          "sha256": "8dcc70475016b0237cd666aa6c35782494e902d986d3830d13ffdc330f2e800b"
+        }
+      ],
+      "tests_executed": [
+        {
+          "id": "P3.3 commissioning and label builder",
+          "status": "PASS",
+          "pass": 10,
+          "fail": 0,
+          "skip": 0,
+          "evidence": "reports/P3_3_TEST_LOG.txt"
+        },
+        {
+          "id": "Independent all-key and temporal label readback",
+          "status": "PASS",
+          "evidence": "manifests/p3_3_readback.json"
+        }
+      ],
+      "decisions": [
+        {
+          "id": "D02",
+          "status": "APPROVED",
+          "evidence": "reports/P3_3_COMMISSIONING.md",
+          "approval_evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "recorded_at": "2026-11-20T20:05:38+07:00"
+        },
+        {
+          "id": "D03",
+          "status": "APPROVED",
+          "evidence": "reports/P3_3_LABEL_AUDIT.md",
+          "approval_evidence": "decisions/P3_APPROVAL_REGISTER.md",
+          "recorded_at": "2026-11-20T20:05:38+07:00"
+        }
+      ],
+      "blocker": null,
+      "next_gate": "P3.4: freeze the 76-cell grouped split, development folds and test exposure ledger for D05 review."
+    }
+  ]
+}

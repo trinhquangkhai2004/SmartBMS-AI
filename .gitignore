@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv-py314/
+.p36_env/
+.uv-cache/
+.wheelhouse/
+.env
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.pkl
+*.joblib
+*.parquet
+*.zip
+*.csv.gz

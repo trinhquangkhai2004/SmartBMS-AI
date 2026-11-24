@@ -1,0 +1,36 @@
+{
+  "revision": "d07-r1",
+  "status": "APPROVED",
+  "reviewer": "Trịnh Quang Khải",
+  "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+  "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+  "approved_at": "2026-11-22T15:57:44+07:00",
+  "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+  "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6",
+  "signed_at": "2026-11-22T16:01:21+07:00",
+  "labels_sha256": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2",
+  "population": "FULL_ELIGIBLE",
+  "expected_cells": 19,
+  "expected_rows": 37130,
+  "max_abs_error_pp": 10.0,
+  "raw_coverage_global_min": 0.99,
+  "raw_coverage_per_cell_min": 0.95,
+  "valid_coverage_global_min": 0.85,
+  "valid_coverage_per_cell_min": null,
+  "low_valid_diagnostic_below": 0.9,
+  "band_cutoff_percent": 80.0,
+  "band_source": "soh_ref_percent",
+  "zero_numeric_predictions_for_required_cell_max": "ER5_NOT_ASSESSABLE",
+  "decision_order": [
+    "ER5_NOT_MET",
+    "ER5_NOT_ASSESSABLE",
+    "ER5_PASS"
+  ],
+  "chronological_early_late": "first_vs_second_half_of_frozen_eligible_cycles_per_cell",
+  "diagnostic_small_band": "fewer_than_two_physical_cells; report observations only",
+  "offline_stale": {
+    "value": false,
+    "reason": "NOT_APPLICABLE_OFFLINE_CYCLE_REPLAY"
+  },
+  "online_stale_seconds": "PENDING_EVIDENCE_P3_8_BEFORE_INFERENCE_VERIFIED"
+}

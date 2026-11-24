@@ -1,0 +1,29 @@
+{
+  "version": "p25-dev-grid-1",
+  "seed": 20261112,
+  "profiles": ["DST", "FUDS"],
+  "scope": "P2.5 offline development, SP20-2 nominal 25 C",
+  "initial_z_sd_fraction": [0.04, 0.12],
+  "initial_vrc_sd_v": 0.02,
+  "process_variance_per_second_pairs": [[1e-9, 1e-6], [1e-8, 1e-5]],
+  "measurement_voltage_sd_v": [0.02, 0.06],
+  "initial_vrc_v": 0.0,
+  "initial_vrc_basis": "Frozen development windows start after verified preconditioning rest. Zero is a polarization prior assumption.",
+  "Q_model": "Diagonal continuous variance density times actual elapsed seconds; zero process noise on zero-dt transitions.",
+  "gap_rule": "Three times the pooled DST 99.5th percentile of positive dynamic intervals, linear percentile. No gap evidence inferred from endpoint currents.",
+  "candidate_selection": "Lexicographic minimization on nominal FUDS: worst per-run missing fraction, worst per-run FULL_DYNAMIC MAX absolute error (pp), unweighted mean per-run FULL_DYNAMIC RMSE (pp), grid order. DST nominal metrics retained as identification diagnostics.",
+  "scenarios": {
+    "nominal": {},
+    "prior_minus_20pp": {"prior_offset_pp": -20},
+    "prior_minus_10pp": {"prior_offset_pp": -10},
+    "prior_plus_10pp": {"prior_offset_pp": 10},
+    "prior_plus_20pp": {"prior_offset_pp": 20},
+    "current_bias_minus": {"current_bias_a": -0.05},
+    "current_bias_plus": {"current_bias_a": 0.05},
+    "vi_noise": {"voltage_noise_sd_v": 0.01, "current_noise_sd_a": 0.02}
+  },
+  "noise_model": "Independent zero-mean Gaussian voltage and current perturbations, one pair per distinct observation. Repeated identical observations share the original perturbation. Per-run seed uses the declared seed and frozen run order.",
+  "stress_scope": "Illustrative injected conditions, not measured sensor specifications. Stress metrics are descriptive and do not select noise parameters.",
+  "convergence": {"abs_error_pp": 5.0, "continuous_s": 60.0},
+  "exclusions": "None based on voltage, warning or error. Physically impossible initial-offset scenarios are marked inapplicable rather than clipped."
+}

@@ -1,0 +1,712 @@
+{
+  "schema_version": "p2.3.1",
+  "model": "fixed_1RC",
+  "status": "NEEDS_REVIEW",
+  "lock_status": "NEEDS_REVIEW_NOT_RELEASED",
+  "parameters": {
+    "R0_ohm": 0.07737126684384747,
+    "R1_ohm": 0.02765005243125075,
+    "C1_farad": 813.5006232753844,
+    "tau_s": 22.493334886419543,
+    "capacity_model_ah": 2.028344937765965
+  },
+  "units": {
+    "R0_ohm": "ohm",
+    "R1_ohm": "ohm",
+    "C1_farad": "F",
+    "tau_s": "s",
+    "capacity_model_ah": "Ah",
+    "voltage": "V",
+    "soc": "fraction"
+  },
+  "source_cell_id": "SP20-2",
+  "ocv_source_cell_id": "SP20-3",
+  "transfer_assumption": true,
+  "calibration": [
+    {
+      "run_id": "11_05_2015_SP20-2_DST_50SOC",
+      "role": "identification",
+      "file_sha256": "4eb0e33a4f0ba0da440cb53ae228180115fb7f83c65f6ac77046b50e081ddd6d",
+      "archive_sha256": "3d3a90a67574c336eca9d097a5f139aaad70e7fa3106078079da9cd11d1b3661",
+      "cell_id": "SP20-2"
+    },
+    {
+      "run_id": "11_05_2015_SP20-2_DST_80SOC",
+      "role": "identification",
+      "file_sha256": "0640dc88b48f6192260b706f06b4245320bb607488b0ee7a3f8f9fe5eac026ec",
+      "archive_sha256": "3d3a90a67574c336eca9d097a5f139aaad70e7fa3106078079da9cd11d1b3661",
+      "cell_id": "SP20-2"
+    }
+  ],
+  "validation": [
+    {
+      "run_id": "11_06_2015_SP20-2_FUDS_80SOC",
+      "role": "validation",
+      "file_sha256": "8c24e60e4032af8d4279942141cec74ac34640c3368015f28efa76f989589d33",
+      "archive_sha256": "e2ce8e4626c4263cb8758c9488cec66d31c04a9d11465c14e668428cead1e053",
+      "cell_id": "SP20-2"
+    },
+    {
+      "run_id": "11_09_2015_SP20-2_FUDS_50SOC",
+      "role": "validation",
+      "file_sha256": "cfdb009e7a9be2547796c931815b06bf80a93a189e5c24fa0f7c22ea1587c764",
+      "archive_sha256": "e2ce8e4626c4263cb8758c9488cec66d31c04a9d11465c14e668428cead1e053",
+      "cell_id": "SP20-2"
+    }
+  ],
+  "capacity_metadata_sha256": "bcd2f28b57d9b21ed43f99561d6b8dfc263aaf2ba38c2e60759584f27479e8e0",
+  "ocv_model_sha256": "ca9872be1836d000b8ec6b2f970c371064a54dad59efa8d2ea8c084a2111107b",
+  "ocv_table_sha256": "fb337d4c9df5e44ac1121bffef08c27889156d49ff4ccb92c358308a84bdbac5",
+  "policy_sha256": "e470eb8c8f0e5c004271393f53aefdbd6b3d5341e6496ceb00f238cbbecd63ba",
+  "algorithm_sha256": {
+    "src/soc/ecm.py": "481146bf89ef2628a0c0bdc741fc71a3a6584ae1a2f06a5642c5d03cfb74cbff",
+    "src/soc/ecm_identification.py": "092bbd0a45d470e9ef87096f7504b775f7fbb03269d8a3c2d9a7da49a980e2fa",
+    "src/soc/p23.py": "a7ed0d1cabf84b56cfdeae0c6e8e6136b4927635780ea46cbb1cc2b52a67818e",
+    "src/soc/p23_io.py": "31e0d9f5393cded31017fbccea1f92f7ea7281c66936ffddd8e91d7fe0450273"
+  },
+  "bounds": {
+    "R0_ohm": [
+      0.014043642700144836,
+      0.3834291676754575
+    ],
+    "R1_ohm": [
+      0.0014043642700144836,
+      0.27503524228287807
+    ],
+    "tau_s": [
+      2.0314235834608554,
+      435.0749286262362
+    ]
+  },
+  "objective": "linear least_squares in log R0/R1/tau; each selected current plateau equal total squared weight, each DST run equal total weight; no free OCV offset/capacity/state fit",
+  "seed": 20261114,
+  "random_used": false,
+  "initialization": {
+    "11_05_2015_SP20-2_DST_50SOC": {
+      "method": "observed full-rest RC warm-up with zero sampled current; conditional zero rest-start polarization",
+      "prior_kind": "historical_preconditioning",
+      "prior_soc_fraction": 0.5069004189528865,
+      "prior_information_cutoff_row": 2803,
+      "rest_source_rows": [
+        2083,
+        2802
+      ],
+      "rest_duration_observed_s": 7190.013256013615,
+      "rest_tau_ratio": 319.6508340057045,
+      "v_rc0_v": 0.0,
+      "status": "CONDITIONALLY_RELAXED",
+      "conditional_initial_vrc_sensitivity_abs_v": 2.484852364201341e-139,
+      "continuity_basis": "entire source-row sequence, measured zero current, frozen rest step/cycle, monotone step clock and expected observed cadence",
+      "limitation": "conditional one-RC relaxation; does not prove equilibrium or an absolute physical initial-state error bound"
+    },
+    "11_05_2015_SP20-2_DST_80SOC": {
+      "method": "observed full-rest RC warm-up with zero sampled current; conditional zero rest-start polarization",
+      "prior_kind": "historical_preconditioning",
+      "prior_soc_fraction": 0.8027683762351273,
+      "prior_information_cutoff_row": 1916,
+      "rest_source_rows": [
+        1196,
+        1915
+      ],
+      "rest_duration_observed_s": 7189.996765527681,
+      "rest_tau_ratio": 319.65010087804615,
+      "v_rc0_v": 0.0,
+      "status": "CONDITIONALLY_RELAXED",
+      "conditional_initial_vrc_sensitivity_abs_v": 2.486674746134129e-139,
+      "continuity_basis": "entire source-row sequence, measured zero current, frozen rest step/cycle, monotone step clock and expected observed cadence",
+      "limitation": "conditional one-RC relaxation; does not prove equilibrium or an absolute physical initial-state error bound"
+    },
+    "11_06_2015_SP20-2_FUDS_80SOC": {
+      "method": "observed full-rest RC warm-up with zero sampled current; conditional zero rest-start polarization",
+      "prior_kind": "historical_preconditioning",
+      "prior_soc_fraction": 0.8027674412526686,
+      "prior_information_cutoff_row": 2583,
+      "rest_source_rows": [
+        1864,
+        2582
+      ],
+      "rest_duration_observed_s": 7189.999439717296,
+      "rest_tau_ratio": 319.65021976613576,
+      "v_rc0_v": 0.0,
+      "status": "CONDITIONALLY_RELAXED",
+      "conditional_initial_vrc_sensitivity_abs_v": 2.486379127697167e-139,
+      "continuity_basis": "entire source-row sequence, measured zero current, frozen rest step/cycle, monotone step clock and expected observed cadence",
+      "limitation": "conditional one-RC relaxation; does not prove equilibrium or an absolute physical initial-state error bound"
+    },
+    "11_09_2015_SP20-2_FUDS_50SOC": {
+      "method": "observed full-rest RC warm-up with zero sampled current; conditional zero rest-start polarization",
+      "prior_kind": "historical_preconditioning",
+      "prior_soc_fraction": 0.5069310405606724,
+      "prior_information_cutoff_row": 2309,
+      "rest_source_rows": [
+        1589,
+        2308
+      ],
+      "rest_duration_observed_s": 7189.997300599185,
+      "rest_tau_ratio": 319.6501246660485,
+      "v_rc0_v": 0.0,
+      "status": "CONDITIONALLY_RELAXED",
+      "conditional_initial_vrc_sensitivity_abs_v": 2.48661559381298e-139,
+      "continuity_basis": "entire source-row sequence, measured zero current, frozen rest step/cycle, monotone step clock and expected observed cadence",
+      "limitation": "conditional one-RC relaxation; does not prove equilibrium or an absolute physical initial-state error bound"
+    }
+  },
+  "identifiability": {
+    "status": "IDENTIFIED_CONDITIONALLY",
+    "flags": [],
+    "jacobian_rank": 3,
+    "log_jacobian_condition": 16.340368463684552,
+    "singular_values": [
+      0.11294273669738453,
+      0.02128074074560651,
+      0.006911884327969268
+    ],
+    "parameter_log_correlation": [
+      [
+        1.0,
+        -0.14281455856906308,
+        0.573669897238839
+      ],
+      [
+        -0.14281455856906305,
+        1.0,
+        0.32255020422406167
+      ],
+      [
+        0.573669897238839,
+        0.32255020422406167,
+        0.9999999999999998
+      ]
+    ],
+    "conditional_log_standard_errors": [
+      0.0029216443206547655,
+      0.01211823261323895,
+      0.03495234211514428
+    ],
+    "near_bounds": [],
+    "bound_distance_fraction": {
+      "R0_ohm": 0.48398749296893584,
+      "R1_ohm": 0.4353107267776534,
+      "tau_s": 0.44803058263286105
+    },
+    "near_optimal_start_parameter_ratios": {
+      "R0_ohm": 1.0000033136718813,
+      "R1_ohm": 1.0000077285263946,
+      "tau_s": 1.0000691072340988
+    },
+    "limitations": "Local curvature and numerical rank conditional on fixed transferred OCV, prior, sampled ZOH and correlated residuals; not calibrated physical confidence intervals"
+  },
+  "stability": {
+    "per_run": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "fit_run_ids": [
+          "11_05_2015_SP20-2_DST_50SOC"
+        ],
+        "fit_roles": [
+          "identification"
+        ],
+        "parameters": {
+          "R0_ohm": 0.07601164247544828,
+          "R1_ohm": 0.024832905172274346,
+          "C1_farad": 482.28269663129936,
+          "tau_s": 11.976480471673813,
+          "capacity_model_ah": 2.028344937765965
+        },
+        "attempts": [
+          {
+            "start": [
+              0.07159920239384027,
+              0.023866400797946757,
+              29.729135046009738
+            ],
+            "parameters": {
+              "R0_ohm": 0.07601164247544828,
+              "R1_ohm": 0.024832905172274346,
+              "C1_farad": 482.28269663129936,
+              "tau_s": 11.976480471673813
+            },
+            "cost": 0.00032177652217587347,
+            "nfev": 11,
+            "success": true,
+            "status": 2,
+            "message": "`ftol` termination condition is satisfied.",
+            "optimality": 1.3960769493709968e-10
+          }
+        ],
+        "selected_attempt": 0,
+        "weighted_residual_count": 6682,
+        "weighted_SSE_V2": 0.0006435530443517469,
+        "identifiability": {
+          "status": "IDENTIFIED_CONDITIONALLY",
+          "flags": [],
+          "jacobian_rank": 3,
+          "log_jacobian_condition": 15.535094068136148,
+          "singular_values": [
+            0.07878361479761434,
+            0.01373893763109741,
+            0.005071331686314439
+          ],
+          "parameter_log_correlation": [
+            [
+              0.9999999999999999,
+              -0.45840213115549966,
+              0.6659068737859802
+            ],
+            [
+              -0.45840213115549966,
+              1.0,
+              -0.06570766732707385
+            ],
+            [
+              0.6659068737859801,
+              -0.06570766732707375,
+              1.0
+            ]
+          ],
+          "conditional_log_standard_errors": [
+            0.00641953763317291,
+            0.022492898586122776,
+            0.06103585633053526
+          ],
+          "near_bounds": [],
+          "bound_distance_fraction": {
+            "R0_ohm": 0.48934855834288343,
+            "R1_ohm": 0.4556729827375154,
+            "tau_s": 0.3305906834057582
+          },
+          "near_optimal_start_parameter_ratios": {
+            "R0_ohm": 1.0,
+            "R1_ohm": 1.0,
+            "tau_s": 1.0
+          },
+          "limitations": "Local curvature and numerical rank conditional on fixed transferred OCV, prior, sampled ZOH and correlated residuals; not calibrated physical confidence intervals"
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "fit_run_ids": [
+          "11_05_2015_SP20-2_DST_80SOC"
+        ],
+        "fit_roles": [
+          "identification"
+        ],
+        "parameters": {
+          "R0_ohm": 0.07786725143581821,
+          "R1_ohm": 0.034160886449222945,
+          "C1_farad": 1309.0039983454617,
+          "tau_s": 44.71673694905814,
+          "capacity_model_ah": 2.028344937765965
+        },
+        "attempts": [
+          {
+            "start": [
+              0.07159920239384027,
+              0.023866400797946757,
+              29.729135046009738
+            ],
+            "parameters": {
+              "R0_ohm": 0.07786725143581821,
+              "R1_ohm": 0.034160886449222945,
+              "C1_farad": 1309.0039983454617,
+              "tau_s": 44.71673694905814
+            },
+            "cost": 0.00018315004600262972,
+            "nfev": 16,
+            "success": true,
+            "status": 2,
+            "message": "`ftol` termination condition is satisfied.",
+            "optimality": 7.720118332068877e-10
+          }
+        ],
+        "selected_attempt": 0,
+        "weighted_residual_count": 10629,
+        "weighted_SSE_V2": 0.00036630009200525944,
+        "identifiability": {
+          "status": "IDENTIFIED_CONDITIONALLY",
+          "flags": [],
+          "jacobian_rank": 3,
+          "log_jacobian_condition": 15.741113247233999,
+          "singular_values": [
+            0.08015756399416957,
+            0.016911819802985104,
+            0.005092242380522529
+          ],
+          "parameter_log_correlation": [
+            [
+              0.9999999999999999,
+              -0.06805740738408908,
+              0.3340088788662506
+            ],
+            [
+              -0.06805740738408907,
+              0.9999999999999998,
+              0.552120802799145
+            ],
+            [
+              0.3340088788662505,
+              0.5521208027991451,
+              1.0000000000000002
+            ]
+          ],
+          "conditional_log_standard_errors": [
+            0.002603711640406445,
+            0.013437337928078262,
+            0.03560802109996473
+          ],
+          "near_bounds": [],
+          "bound_distance_fraction": {
+            "R0_ohm": 0.48205522242611215,
+            "R1_ohm": 0.39524229926600396,
+            "tau_s": 0.4239357292469655
+          },
+          "near_optimal_start_parameter_ratios": {
+            "R0_ohm": 1.0,
+            "R1_ohm": 1.0,
+            "tau_s": 1.0
+          },
+          "limitations": "Local curvature and numerical rank conditional on fixed transferred OCV, prior, sampled ZOH and correlated residuals; not calibrated physical confidence intervals"
+        }
+      }
+    },
+    "parameter_max_min_ratios": {
+      "R0_ohm": 1.024412167661938,
+      "R1_ohm": 1.375629883504858,
+      "tau_s": 3.7337126758416197,
+      "C1_farad": 2.71418404078922
+    },
+    "weak_run_diagnostics": {},
+    "status": "STABLE_WITHIN_DECLARED_REVIEW_RANGE",
+    "limitation": "Run-wise differences include SoC, OCV transfer, noise and cell drift; not repeated independent laboratory parameter measurements"
+  },
+  "voltage_metrics": [
+    {
+      "run_id": "11_05_2015_SP20-2_DST_50SOC",
+      "role": "identification",
+      "model": "1RC",
+      "MAE_V": 0.011172251046973461,
+      "RMSE_V": 0.027689952395254788,
+      "P95_abs_V": 0.03624276140094136,
+      "MAX_abs_V": 0.5750491021638364,
+      "mean_bias_V": 0.0022761465927130502,
+      "n_total": 6698,
+      "effective_event_population": 6698,
+      "n_effective": 6698,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_05_2015_SP20-2_DST_50SOC",
+      "role": "identification",
+      "model": "OCV_only",
+      "MAE_V": 0.06589239245313519,
+      "RMSE_V": 0.10031513526862189,
+      "P95_abs_V": 0.22639200008012172,
+      "MAX_abs_V": 0.8212623914394448,
+      "mean_bias_V": -0.05385748915204626,
+      "n_total": 6698,
+      "effective_event_population": 6698,
+      "n_effective": 6698,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_05_2015_SP20-2_DST_50SOC",
+      "role": "identification",
+      "model": "R0_only",
+      "MAE_V": 0.017438296344493984,
+      "RMSE_V": 0.03276675367260315,
+      "P95_abs_V": 0.038152433560049624,
+      "MAX_abs_V": 0.6278611750279297,
+      "mean_bias_V": -0.01236896182412835,
+      "n_total": 6698,
+      "effective_event_population": 6698,
+      "n_effective": 6698,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_05_2015_SP20-2_DST_80SOC",
+      "role": "identification",
+      "model": "1RC",
+      "MAE_V": 0.011876806921911242,
+      "RMSE_V": 0.025461000318225874,
+      "P95_abs_V": 0.030223335695978102,
+      "MAX_abs_V": 0.6738127095342104,
+      "mean_bias_V": -0.004421194378119194,
+      "n_total": 10645,
+      "effective_event_population": 10645,
+      "n_effective": 10645,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_05_2015_SP20-2_DST_80SOC",
+      "role": "identification",
+      "model": "OCV_only",
+      "MAE_V": 0.07013291789433071,
+      "RMSE_V": 0.10173719578508679,
+      "P95_abs_V": 0.23408383249895337,
+      "MAX_abs_V": 0.9257066906966016,
+      "mean_bias_V": -0.06051929403644934,
+      "n_total": 10645,
+      "effective_event_population": 10645,
+      "n_effective": 10645,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_05_2015_SP20-2_DST_80SOC",
+      "role": "identification",
+      "model": "R0_only",
+      "MAE_V": 0.021607285600566923,
+      "RMSE_V": 0.03331304014114973,
+      "P95_abs_V": 0.04238935552974059,
+      "MAX_abs_V": 0.7322915100972258,
+      "mean_bias_V": -0.019099908489643873,
+      "n_total": 10645,
+      "effective_event_population": 10645,
+      "n_effective": 10645,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_06_2015_SP20-2_FUDS_80SOC",
+      "role": "validation",
+      "model": "1RC",
+      "MAE_V": 0.010844620726063996,
+      "RMSE_V": 0.01991608478466188,
+      "P95_abs_V": 0.031224422296515023,
+      "MAX_abs_V": 0.474003465340723,
+      "mean_bias_V": -0.0017877301659374337,
+      "n_total": 11098,
+      "effective_event_population": 11098,
+      "n_effective": 11098,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_06_2015_SP20-2_FUDS_80SOC",
+      "role": "validation",
+      "model": "OCV_only",
+      "MAE_V": 0.06990059311061181,
+      "RMSE_V": 0.09839532723783107,
+      "P95_abs_V": 0.20859171658636497,
+      "MAX_abs_V": 0.8342811688786562,
+      "mean_bias_V": -0.05557010879887018,
+      "n_total": 11098,
+      "effective_event_population": 11098,
+      "n_effective": 11098,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_06_2015_SP20-2_FUDS_80SOC",
+      "role": "validation",
+      "model": "R0_only",
+      "MAE_V": 0.01937400083339463,
+      "RMSE_V": 0.026785373936976033,
+      "P95_abs_V": 0.03972457459248856,
+      "MAX_abs_V": 0.5248401154428115,
+      "mean_bias_V": -0.015869143913194744,
+      "n_total": 11098,
+      "effective_event_population": 11098,
+      "n_effective": 11098,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_09_2015_SP20-2_FUDS_50SOC",
+      "role": "validation",
+      "model": "1RC",
+      "MAE_V": 0.01038938641677499,
+      "RMSE_V": 0.020387787439092888,
+      "P95_abs_V": 0.0458670031240687,
+      "MAX_abs_V": 0.4675975612179517,
+      "mean_bias_V": 0.0036333331738809867,
+      "n_total": 6999,
+      "effective_event_population": 6999,
+      "n_effective": 6999,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_09_2015_SP20-2_FUDS_50SOC",
+      "role": "validation",
+      "model": "OCV_only",
+      "MAE_V": 0.06961556772871806,
+      "RMSE_V": 0.0991108243839507,
+      "P95_abs_V": 0.21140797313520476,
+      "MAX_abs_V": 0.8237972165885803,
+      "mean_bias_V": -0.0500269326216899,
+      "n_total": 6999,
+      "effective_event_population": 6999,
+      "n_effective": 6999,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    },
+    {
+      "run_id": "11_09_2015_SP20-2_FUDS_50SOC",
+      "role": "validation",
+      "model": "R0_only",
+      "MAE_V": 0.017943820182371555,
+      "RMSE_V": 0.024464284926552178,
+      "P95_abs_V": 0.04223863007231422,
+      "MAX_abs_V": 0.5143561631527356,
+      "mean_bias_V": -0.010375445859642287,
+      "n_total": 6999,
+      "effective_event_population": 6999,
+      "n_effective": 6999,
+      "metadata_only_rows": 0,
+      "coverage": 1.0,
+      "raw_row_coverage": 1.0,
+      "invalid_events": {}
+    }
+  ],
+  "adequacy": {
+    "status": "PASS_CANDIDATE_FOR_INDEPENDENT_REVIEW",
+    "reasons": [],
+    "criteria": {
+      "no_absolute_voltage_threshold": true,
+      "requirements": [
+        "full frozen dynamic effective-event coverage",
+        "identified finite positive parameters with no bound/rank/stability blocker",
+        "one-RC MAE and RMSE do not exceed both common-input OCV-only and R0-only baselines on each FUDS run",
+        "physical transition signs and active/rest/bias diagnostics reported",
+        "cross-cell/temperature/cadence/prior/initial-polarization limitations reviewed"
+      ],
+      "action_if_failed": "NEEDS_REVIEW; retain all metrics, do not move threshold or retune"
+    },
+    "no_absolute_voltage_threshold": true,
+    "no_FUDS_refit": true,
+    "independent_human_review_required": true
+  },
+  "observed_domain": {
+    "per_run": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "z_calibration_fraction": [
+          0.010764878306476634,
+          0.5069004189528865
+        ],
+        "current_a": [
+          -2.004563093185425,
+          4.0003342628479
+        ],
+        "voltage_v": [
+          2.4996910095214844,
+          3.8012523651123047
+        ]
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "z_calibration_fraction": [
+          0.014595193386391219,
+          0.8027683762351273
+        ],
+        "current_a": [
+          -2.001131534576416,
+          4.001959800720215
+        ],
+        "voltage_v": [
+          2.4033689498901367,
+          4.054927349090576
+        ]
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "z_calibration_fraction": [
+          0.01553761445489284,
+          0.8027674412526686
+        ],
+        "current_a": [
+          -2.1421873569488525,
+          4.0003342628479
+        ],
+        "voltage_v": [
+          2.496777057647705,
+          4.076943874359131
+        ]
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "z_calibration_fraction": [
+          0.011574554579295994,
+          0.5069310405606724
+        ],
+        "current_a": [
+          -2.1421873569488525,
+          4.000514507293701
+        ],
+        "voltage_v": [
+          2.4988815784454346,
+          3.8142032623291016
+        ]
+      }
+    },
+    "note": "Observed model-state/current/voltage domain only; not hardware safety limits.",
+    "temperature_c": null,
+    "nominal_archive_temperature_c": 25
+  },
+  "limitations": [
+    "constant one-RC model and transferred SP20-3 discharge OCV",
+    "sampled-current ZOH and historical operational prior, not counter-derived future trajectory",
+    "unknown measured temperature and absolute initial/OCV/systematic uncertainty",
+    "validation informs adequacy, FUDS is not an untouched held-out test",
+    "conditional calibration identifiability is not absolute physical parameter truth"
+  ],
+  "phase2_complete": false,
+  "soc_accuracy_evaluated": false,
+  "ER4_status": "NOT_EVALUATED",
+  "phase1_interface_status": "PHASE1_INTERFACE_PENDING",
+  "independent_review_hold": {
+    "status": "NEEDS_REVIEW",
+    "gate": "G10",
+    "reason": "Independent scientific review holds release: both FUDS runs show substantial localized terminal-cutoff voltage collapse that the fixed 1-RC/transferred OCV model does not reproduce (maximum residual approximately 0.47 V). Improved aggregate errors do not establish adequacy throughout the frozen domain. Explicit downstream domain/use review is required before P2.4.",
+    "review_date": "2026-11-14",
+    "review_type": "independent code and scientific evidence review; user approval still pending",
+    "not_a_new_numeric_acceptance_threshold": true,
+    "no_fit_or_protocol_change": true,
+    "frozen_prevalidation_policy_sha256": "e470eb8c8f0e5c004271393f53aefdbd6b3d5341e6496ceb00f238cbbecd63ba",
+    "evidence": [
+      {
+        "run_id": "11_06_2015_SP20-2_FUDS_80SOC",
+        "source_row": 13680,
+        "source_excel_row": 13682,
+        "maximum_abs_residual_v": 0.474003465340723
+      },
+      {
+        "run_id": "11_09_2015_SP20-2_FUDS_50SOC",
+        "source_row": 9307,
+        "source_excel_row": 9309,
+        "maximum_abs_residual_v": 0.4675975612179517
+      }
+    ],
+    "action": "Preserve all cutoff rows and frozen model choices; do not tune on held-out or exclude the affected region. Retain numerical candidate for inspection, withhold release pending independent user judgment. No SoC accuracy or ER4 conclusion."
+  },
+  "acceptance_status": "NEEDS_REVIEW",
+  "acceptance_blockers": [
+    {
+      "gate": "G10",
+      "status": "NEEDS_REVIEW",
+      "reason": "Independent scientific review holds release: both FUDS runs show substantial localized terminal-cutoff voltage collapse that the fixed 1-RC/transferred OCV model does not reproduce (maximum residual approximately 0.47 V). Improved aggregate errors do not establish adequacy throughout the frozen domain. Explicit downstream domain/use review is required before P2.4.",
+      "evidence": "voltage_metrics.csv; model_adequacy.json; residual_review.json; ../../configs/p2_3_review_hold.json"
+    }
+  ]
+}

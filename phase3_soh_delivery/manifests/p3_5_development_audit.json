@@ -1,0 +1,1220 @@
+{
+  "split_sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a",
+  "fold_sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274",
+  "cells": [
+    {
+      "cell": "1-1",
+      "fold": 5,
+      "rows": 1499,
+      "available": {
+        "delta_q_345_355_ah": 1499,
+        "delta_q_350_358_ah": 1499,
+        "q_cc_fast_ah": 1499,
+        "q_cc_topup_ah": 1499,
+        "q_cc_ah": 1499,
+        "q_cv_ah": 1499,
+        "q_cv_over_q_cc": 1499,
+        "q_cv_fraction_total": 1499,
+        "cv_duration_s": 1499,
+        "charge_duration_s": 1499,
+        "start_charge_voltage_v": 1499,
+        "delta_q_345_360_ah": 111
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1388
+      }
+    },
+    {
+      "cell": "1-2",
+      "fold": 2,
+      "rows": 2673,
+      "available": {
+        "delta_q_345_355_ah": 2673,
+        "delta_q_350_358_ah": 2673,
+        "q_cc_fast_ah": 2673,
+        "q_cc_topup_ah": 2673,
+        "q_cc_ah": 2673,
+        "q_cv_ah": 2673,
+        "q_cv_over_q_cc": 2673,
+        "q_cv_fraction_total": 2673,
+        "cv_duration_s": 2673,
+        "charge_duration_s": 2673,
+        "start_charge_voltage_v": 2673,
+        "delta_q_345_360_ah": 137
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2536
+      }
+    },
+    {
+      "cell": "1-3",
+      "fold": 5,
+      "rows": 1853,
+      "available": {
+        "delta_q_345_355_ah": 1853,
+        "delta_q_350_358_ah": 1853,
+        "q_cc_fast_ah": 1853,
+        "q_cc_topup_ah": 1853,
+        "q_cc_ah": 1853,
+        "q_cv_ah": 1853,
+        "q_cv_over_q_cc": 1853,
+        "q_cv_fraction_total": 1853,
+        "cv_duration_s": 1853,
+        "charge_duration_s": 1853,
+        "start_charge_voltage_v": 1853,
+        "delta_q_345_360_ah": 126
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1727
+      }
+    },
+    {
+      "cell": "1-4",
+      "fold": 5,
+      "rows": 1495,
+      "available": {
+        "delta_q_345_355_ah": 1495,
+        "delta_q_350_358_ah": 1495,
+        "delta_q_345_360_ah": 1403,
+        "q_cc_fast_ah": 1495,
+        "q_cc_topup_ah": 1495,
+        "q_cc_ah": 1495,
+        "q_cv_ah": 1495,
+        "q_cv_over_q_cc": 1495,
+        "q_cv_fraction_total": 1495,
+        "cv_duration_s": 1495,
+        "charge_duration_s": 1495,
+        "start_charge_voltage_v": 1495
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 92
+      }
+    },
+    {
+      "cell": "1-5",
+      "fold": 5,
+      "rows": 1966,
+      "available": {
+        "delta_q_345_355_ah": 1966,
+        "delta_q_350_358_ah": 1966,
+        "q_cc_fast_ah": 1966,
+        "q_cc_topup_ah": 1966,
+        "q_cc_ah": 1966,
+        "q_cv_ah": 1966,
+        "q_cv_over_q_cc": 1966,
+        "q_cv_fraction_total": 1966,
+        "cv_duration_s": 1966,
+        "charge_duration_s": 1966,
+        "start_charge_voltage_v": 1966
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1966
+      }
+    },
+    {
+      "cell": "1-7",
+      "fold": 5,
+      "rows": 1673,
+      "available": {
+        "delta_q_345_355_ah": 1673,
+        "delta_q_350_358_ah": 1673,
+        "q_cc_fast_ah": 1673,
+        "q_cc_topup_ah": 1673,
+        "q_cc_ah": 1673,
+        "q_cv_ah": 1673,
+        "q_cv_over_q_cc": 1673,
+        "q_cv_fraction_total": 1673,
+        "cv_duration_s": 1673,
+        "charge_duration_s": 1673,
+        "start_charge_voltage_v": 1673
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1673
+      }
+    },
+    {
+      "cell": "2-3",
+      "fold": 3,
+      "rows": 1746,
+      "available": {
+        "delta_q_345_355_ah": 1746,
+        "delta_q_350_358_ah": 1746,
+        "q_cc_fast_ah": 1746,
+        "q_cc_topup_ah": 1746,
+        "q_cc_ah": 1746,
+        "q_cv_ah": 1746,
+        "q_cv_over_q_cc": 1746,
+        "q_cv_fraction_total": 1746,
+        "cv_duration_s": 1746,
+        "charge_duration_s": 1746,
+        "start_charge_voltage_v": 1746
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1746
+      }
+    },
+    {
+      "cell": "2-4",
+      "fold": 2,
+      "rows": 1494,
+      "available": {
+        "delta_q_345_355_ah": 1494,
+        "delta_q_350_358_ah": 1494,
+        "q_cc_fast_ah": 1494,
+        "q_cc_topup_ah": 1494,
+        "q_cc_ah": 1494,
+        "q_cv_ah": 1494,
+        "q_cv_over_q_cc": 1494,
+        "q_cv_fraction_total": 1494,
+        "cv_duration_s": 1494,
+        "charge_duration_s": 1494,
+        "start_charge_voltage_v": 1494
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1494
+      }
+    },
+    {
+      "cell": "2-5",
+      "fold": 3,
+      "rows": 1381,
+      "available": {
+        "delta_q_345_355_ah": 1381,
+        "delta_q_350_358_ah": 1381,
+        "q_cc_fast_ah": 1381,
+        "q_cc_topup_ah": 1381,
+        "q_cc_ah": 1381,
+        "q_cv_ah": 1381,
+        "q_cv_over_q_cc": 1381,
+        "q_cv_fraction_total": 1381,
+        "cv_duration_s": 1381,
+        "charge_duration_s": 1381,
+        "start_charge_voltage_v": 1381
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1381
+      }
+    },
+    {
+      "cell": "2-6",
+      "fold": 1,
+      "rows": 1567,
+      "available": {
+        "delta_q_345_355_ah": 1567,
+        "delta_q_350_358_ah": 1567,
+        "q_cc_fast_ah": 1567,
+        "q_cc_topup_ah": 1567,
+        "q_cc_ah": 1567,
+        "q_cv_ah": 1567,
+        "q_cv_over_q_cc": 1567,
+        "q_cv_fraction_total": 1567,
+        "cv_duration_s": 1567,
+        "charge_duration_s": 1567,
+        "start_charge_voltage_v": 1567
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1567
+      }
+    },
+    {
+      "cell": "2-7",
+      "fold": 2,
+      "rows": 2197,
+      "available": {
+        "delta_q_345_355_ah": 2197,
+        "delta_q_350_358_ah": 2197,
+        "q_cc_fast_ah": 2197,
+        "q_cc_topup_ah": 2197,
+        "q_cc_ah": 2197,
+        "q_cv_ah": 2197,
+        "q_cv_over_q_cc": 2197,
+        "q_cv_fraction_total": 2197,
+        "cv_duration_s": 2197,
+        "charge_duration_s": 2197,
+        "start_charge_voltage_v": 2197
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2197
+      }
+    },
+    {
+      "cell": "3-1",
+      "fold": 4,
+      "rows": 1933,
+      "available": {
+        "delta_q_345_355_ah": 1933,
+        "delta_q_350_358_ah": 1933,
+        "q_cc_fast_ah": 1933,
+        "q_cc_topup_ah": 1933,
+        "q_cc_ah": 1933,
+        "q_cv_ah": 1933,
+        "q_cv_over_q_cc": 1933,
+        "q_cv_fraction_total": 1933,
+        "cv_duration_s": 1933,
+        "charge_duration_s": 1933,
+        "start_charge_voltage_v": 1933
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1933
+      }
+    },
+    {
+      "cell": "3-2",
+      "fold": 3,
+      "rows": 2278,
+      "available": {
+        "delta_q_345_355_ah": 2278,
+        "delta_q_350_358_ah": 2278,
+        "q_cc_fast_ah": 2278,
+        "q_cc_topup_ah": 2278,
+        "q_cc_ah": 2278,
+        "q_cv_ah": 2278,
+        "q_cv_over_q_cc": 2278,
+        "q_cv_fraction_total": 2278,
+        "cv_duration_s": 2278,
+        "charge_duration_s": 2278,
+        "start_charge_voltage_v": 2278
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2278
+      }
+    },
+    {
+      "cell": "3-3",
+      "fold": 4,
+      "rows": 1644,
+      "available": {
+        "delta_q_345_355_ah": 1644,
+        "delta_q_350_358_ah": 1644,
+        "delta_q_345_360_ah": 6,
+        "q_cc_fast_ah": 1644,
+        "q_cc_topup_ah": 1644,
+        "q_cc_ah": 1644,
+        "q_cv_ah": 1644,
+        "q_cv_over_q_cc": 1644,
+        "q_cv_fraction_total": 1644,
+        "cv_duration_s": 1644,
+        "charge_duration_s": 1644,
+        "start_charge_voltage_v": 1644
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1638
+      }
+    },
+    {
+      "cell": "3-6",
+      "fold": 3,
+      "rows": 2486,
+      "available": {
+        "delta_q_345_355_ah": 2486,
+        "delta_q_350_358_ah": 2486,
+        "q_cc_fast_ah": 2486,
+        "q_cc_topup_ah": 2486,
+        "q_cc_ah": 2486,
+        "q_cv_ah": 2486,
+        "q_cv_over_q_cc": 2486,
+        "q_cv_fraction_total": 2486,
+        "cv_duration_s": 2486,
+        "charge_duration_s": 2486,
+        "start_charge_voltage_v": 2486
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2486
+      }
+    },
+    {
+      "cell": "3-7",
+      "fold": 4,
+      "rows": 2474,
+      "available": {
+        "delta_q_345_355_ah": 2474,
+        "delta_q_350_358_ah": 2474,
+        "q_cc_fast_ah": 2474,
+        "q_cc_topup_ah": 2474,
+        "q_cc_ah": 2474,
+        "q_cv_ah": 2474,
+        "q_cv_over_q_cc": 2474,
+        "q_cv_fraction_total": 2474,
+        "cv_duration_s": 2474,
+        "charge_duration_s": 2474,
+        "start_charge_voltage_v": 2474
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2474
+      }
+    },
+    {
+      "cell": "3-8",
+      "fold": 4,
+      "rows": 2337,
+      "available": {
+        "delta_q_345_355_ah": 2337,
+        "delta_q_350_358_ah": 2337,
+        "q_cc_fast_ah": 2337,
+        "q_cc_topup_ah": 2337,
+        "q_cc_ah": 2337,
+        "q_cv_ah": 2337,
+        "q_cv_over_q_cc": 2337,
+        "q_cv_fraction_total": 2337,
+        "cv_duration_s": 2337,
+        "charge_duration_s": 2337,
+        "start_charge_voltage_v": 2337
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2337
+      }
+    },
+    {
+      "cell": "4-1",
+      "fold": 4,
+      "rows": 2212,
+      "available": {
+        "delta_q_345_355_ah": 2212,
+        "delta_q_350_358_ah": 2212,
+        "q_cc_fast_ah": 2212,
+        "q_cc_topup_ah": 2212,
+        "q_cc_ah": 2212,
+        "q_cv_ah": 2212,
+        "q_cv_over_q_cc": 2212,
+        "q_cv_fraction_total": 2212,
+        "cv_duration_s": 2212,
+        "charge_duration_s": 2212,
+        "start_charge_voltage_v": 2212
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2212
+      }
+    },
+    {
+      "cell": "4-2",
+      "fold": 1,
+      "rows": 1777,
+      "available": {
+        "delta_q_345_355_ah": 1777,
+        "delta_q_350_358_ah": 1777,
+        "q_cc_fast_ah": 1777,
+        "q_cc_topup_ah": 1777,
+        "q_cc_ah": 1777,
+        "q_cv_ah": 1777,
+        "q_cv_over_q_cc": 1777,
+        "q_cv_fraction_total": 1777,
+        "cv_duration_s": 1777,
+        "charge_duration_s": 1777,
+        "start_charge_voltage_v": 1777
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1777
+      }
+    },
+    {
+      "cell": "4-3",
+      "fold": 2,
+      "rows": 1137,
+      "available": {
+        "delta_q_345_355_ah": 1137,
+        "delta_q_350_358_ah": 1137,
+        "q_cc_fast_ah": 1137,
+        "q_cc_topup_ah": 1137,
+        "q_cc_ah": 1137,
+        "q_cv_ah": 1137,
+        "q_cv_over_q_cc": 1137,
+        "q_cv_fraction_total": 1137,
+        "cv_duration_s": 1137,
+        "charge_duration_s": 1137,
+        "start_charge_voltage_v": 1137
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1137
+      }
+    },
+    {
+      "cell": "4-5",
+      "fold": 2,
+      "rows": 1555,
+      "available": {
+        "delta_q_345_355_ah": 1555,
+        "delta_q_350_358_ah": 1555,
+        "q_cc_fast_ah": 1555,
+        "q_cc_topup_ah": 1555,
+        "q_cc_ah": 1555,
+        "q_cv_ah": 1555,
+        "q_cv_over_q_cc": 1555,
+        "q_cv_fraction_total": 1555,
+        "cv_duration_s": 1555,
+        "charge_duration_s": 1555,
+        "start_charge_voltage_v": 1555
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1555
+      }
+    },
+    {
+      "cell": "4-6",
+      "fold": 5,
+      "rows": 1375,
+      "available": {
+        "delta_q_345_355_ah": 1375,
+        "delta_q_350_358_ah": 1375,
+        "q_cc_fast_ah": 1375,
+        "q_cc_topup_ah": 1375,
+        "q_cc_ah": 1375,
+        "q_cv_ah": 1375,
+        "q_cv_over_q_cc": 1375,
+        "q_cv_fraction_total": 1375,
+        "cv_duration_s": 1375,
+        "charge_duration_s": 1375,
+        "start_charge_voltage_v": 1375
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1375
+      }
+    },
+    {
+      "cell": "4-7",
+      "fold": 5,
+      "rows": 2211,
+      "available": {
+        "delta_q_345_355_ah": 2211,
+        "delta_q_350_358_ah": 2211,
+        "q_cc_fast_ah": 2211,
+        "q_cc_topup_ah": 2211,
+        "q_cc_ah": 2211,
+        "q_cv_ah": 2211,
+        "q_cv_over_q_cc": 2211,
+        "q_cv_fraction_total": 2211,
+        "cv_duration_s": 2211,
+        "charge_duration_s": 2211,
+        "start_charge_voltage_v": 2211
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2211
+      }
+    },
+    {
+      "cell": "4-8",
+      "fold": 4,
+      "rows": 1701,
+      "available": {
+        "delta_q_345_355_ah": 1701,
+        "delta_q_350_358_ah": 1701,
+        "q_cc_fast_ah": 1701,
+        "q_cc_topup_ah": 1701,
+        "q_cc_ah": 1701,
+        "q_cv_ah": 1701,
+        "q_cv_over_q_cc": 1701,
+        "q_cv_fraction_total": 1701,
+        "cv_duration_s": 1701,
+        "charge_duration_s": 1701,
+        "start_charge_voltage_v": 1701
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1701
+      }
+    },
+    {
+      "cell": "5-2",
+      "fold": 3,
+      "rows": 1921,
+      "available": {
+        "delta_q_345_355_ah": 1921,
+        "delta_q_350_358_ah": 1921,
+        "q_cc_fast_ah": 1921,
+        "q_cc_topup_ah": 1921,
+        "q_cc_ah": 1921,
+        "q_cv_ah": 1921,
+        "q_cv_over_q_cc": 1921,
+        "q_cv_fraction_total": 1921,
+        "cv_duration_s": 1921,
+        "charge_duration_s": 1921,
+        "start_charge_voltage_v": 1921,
+        "delta_q_345_360_ah": 68
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1853
+      }
+    },
+    {
+      "cell": "5-3",
+      "fold": 1,
+      "rows": 2684,
+      "available": {
+        "delta_q_345_355_ah": 2684,
+        "delta_q_350_358_ah": 2684,
+        "delta_q_345_360_ah": 2684,
+        "q_cc_fast_ah": 2684,
+        "q_cc_topup_ah": 2684,
+        "q_cc_ah": 2684,
+        "q_cv_ah": 2684,
+        "q_cv_over_q_cc": 2684,
+        "q_cv_fraction_total": 2684,
+        "cv_duration_s": 2684,
+        "charge_duration_s": 2684,
+        "start_charge_voltage_v": 2684
+      },
+      "reasons": {}
+    },
+    {
+      "cell": "5-4",
+      "fold": 2,
+      "rows": 1957,
+      "available": {
+        "delta_q_345_355_ah": 1957,
+        "delta_q_350_358_ah": 1957,
+        "q_cc_fast_ah": 1957,
+        "q_cc_topup_ah": 1957,
+        "q_cc_ah": 1957,
+        "q_cv_ah": 1957,
+        "q_cv_over_q_cc": 1957,
+        "q_cv_fraction_total": 1957,
+        "cv_duration_s": 1957,
+        "charge_duration_s": 1957,
+        "start_charge_voltage_v": 1957,
+        "delta_q_345_360_ah": 2
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1955
+      }
+    },
+    {
+      "cell": "5-5",
+      "fold": 3,
+      "rows": 1578,
+      "available": {
+        "delta_q_345_355_ah": 1578,
+        "delta_q_350_358_ah": 1578,
+        "q_cc_fast_ah": 1578,
+        "q_cc_topup_ah": 1578,
+        "q_cc_ah": 1578,
+        "q_cv_ah": 1578,
+        "q_cv_over_q_cc": 1578,
+        "q_cv_fraction_total": 1578,
+        "cv_duration_s": 1578,
+        "charge_duration_s": 1578,
+        "start_charge_voltage_v": 1578
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1578
+      }
+    },
+    {
+      "cell": "5-6",
+      "fold": 5,
+      "rows": 2455,
+      "available": {
+        "delta_q_345_355_ah": 2455,
+        "delta_q_350_358_ah": 2455,
+        "delta_q_345_360_ah": 2420,
+        "q_cc_fast_ah": 2455,
+        "q_cc_topup_ah": 2455,
+        "q_cc_ah": 2455,
+        "q_cv_ah": 2455,
+        "q_cv_over_q_cc": 2455,
+        "q_cv_fraction_total": 2455,
+        "cv_duration_s": 2455,
+        "charge_duration_s": 2455,
+        "start_charge_voltage_v": 2455
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 35
+      }
+    },
+    {
+      "cell": "5-7",
+      "fold": 3,
+      "rows": 1443,
+      "available": {
+        "delta_q_345_355_ah": 1443,
+        "delta_q_350_358_ah": 1443,
+        "q_cc_fast_ah": 1443,
+        "q_cc_topup_ah": 1443,
+        "q_cc_ah": 1443,
+        "q_cv_ah": 1443,
+        "q_cv_over_q_cc": 1443,
+        "q_cv_fraction_total": 1443,
+        "cv_duration_s": 1443,
+        "charge_duration_s": 1443,
+        "start_charge_voltage_v": 1443,
+        "delta_q_345_360_ah": 6
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1437
+      }
+    },
+    {
+      "cell": "6-4",
+      "fold": 4,
+      "rows": 1712,
+      "available": {
+        "delta_q_345_355_ah": 1712,
+        "delta_q_350_358_ah": 1712,
+        "q_cc_fast_ah": 1712,
+        "q_cc_topup_ah": 1712,
+        "q_cc_ah": 1712,
+        "q_cv_ah": 1712,
+        "q_cv_over_q_cc": 1712,
+        "q_cv_fraction_total": 1712,
+        "cv_duration_s": 1712,
+        "charge_duration_s": 1712,
+        "start_charge_voltage_v": 1712
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1712
+      }
+    },
+    {
+      "cell": "6-5",
+      "fold": 1,
+      "rows": 2173,
+      "available": {
+        "delta_q_345_355_ah": 2173,
+        "delta_q_350_358_ah": 2173,
+        "delta_q_345_360_ah": 2173,
+        "q_cc_fast_ah": 2173,
+        "q_cc_topup_ah": 2173,
+        "q_cc_ah": 2173,
+        "q_cv_ah": 2173,
+        "q_cv_over_q_cc": 2173,
+        "q_cv_fraction_total": 2173,
+        "cv_duration_s": 2173,
+        "charge_duration_s": 2173,
+        "start_charge_voltage_v": 2173
+      },
+      "reasons": {}
+    },
+    {
+      "cell": "6-6",
+      "fold": 5,
+      "rows": 2463,
+      "available": {
+        "delta_q_345_355_ah": 2463,
+        "delta_q_350_358_ah": 2463,
+        "q_cc_fast_ah": 2463,
+        "q_cc_topup_ah": 2463,
+        "q_cc_ah": 2463,
+        "q_cv_ah": 2463,
+        "q_cv_over_q_cc": 2463,
+        "q_cv_fraction_total": 2463,
+        "cv_duration_s": 2463,
+        "charge_duration_s": 2463,
+        "start_charge_voltage_v": 2463,
+        "delta_q_345_360_ah": 83
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2380
+      }
+    },
+    {
+      "cell": "7-1",
+      "fold": 3,
+      "rows": 1685,
+      "available": {
+        "delta_q_345_355_ah": 1685,
+        "delta_q_350_358_ah": 1685,
+        "q_cc_fast_ah": 1685,
+        "q_cc_topup_ah": 1685,
+        "q_cc_ah": 1685,
+        "q_cv_ah": 1685,
+        "q_cv_over_q_cc": 1685,
+        "q_cv_fraction_total": 1685,
+        "cv_duration_s": 1685,
+        "charge_duration_s": 1685,
+        "start_charge_voltage_v": 1685
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1685
+      }
+    },
+    {
+      "cell": "7-2",
+      "fold": 1,
+      "rows": 2025,
+      "available": {
+        "delta_q_345_355_ah": 2025,
+        "delta_q_350_358_ah": 2025,
+        "q_cc_fast_ah": 2025,
+        "q_cc_topup_ah": 2025,
+        "q_cc_ah": 2025,
+        "q_cv_ah": 2025,
+        "q_cv_over_q_cc": 2025,
+        "q_cv_fraction_total": 2025,
+        "cv_duration_s": 2025,
+        "charge_duration_s": 2025,
+        "start_charge_voltage_v": 2025
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2025
+      }
+    },
+    {
+      "cell": "7-3",
+      "fold": 4,
+      "rows": 1290,
+      "available": {
+        "delta_q_345_355_ah": 1290,
+        "delta_q_350_358_ah": 1290,
+        "q_cc_fast_ah": 1290,
+        "q_cc_topup_ah": 1290,
+        "q_cc_ah": 1290,
+        "q_cv_ah": 1290,
+        "q_cv_over_q_cc": 1290,
+        "q_cv_fraction_total": 1290,
+        "cv_duration_s": 1290,
+        "charge_duration_s": 1290,
+        "start_charge_voltage_v": 1290
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1290
+      }
+    },
+    {
+      "cell": "7-4",
+      "fold": 1,
+      "rows": 1388,
+      "available": {
+        "delta_q_345_355_ah": 1388,
+        "delta_q_350_358_ah": 1388,
+        "q_cc_fast_ah": 1388,
+        "q_cc_topup_ah": 1388,
+        "q_cc_ah": 1388,
+        "q_cv_ah": 1388,
+        "q_cv_over_q_cc": 1388,
+        "q_cv_fraction_total": 1388,
+        "cv_duration_s": 1388,
+        "charge_duration_s": 1388,
+        "start_charge_voltage_v": 1388
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1388
+      }
+    },
+    {
+      "cell": "7-6",
+      "fold": 1,
+      "rows": 1414,
+      "available": {
+        "delta_q_345_355_ah": 1414,
+        "delta_q_350_358_ah": 1414,
+        "q_cc_fast_ah": 1414,
+        "q_cc_topup_ah": 1414,
+        "q_cc_ah": 1414,
+        "q_cv_ah": 1414,
+        "q_cv_over_q_cc": 1414,
+        "q_cv_fraction_total": 1414,
+        "cv_duration_s": 1414,
+        "charge_duration_s": 1414,
+        "start_charge_voltage_v": 1414
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1414
+      }
+    },
+    {
+      "cell": "7-7",
+      "fold": 1,
+      "rows": 1680,
+      "available": {
+        "delta_q_345_355_ah": 1680,
+        "delta_q_350_358_ah": 1680,
+        "q_cc_fast_ah": 1680,
+        "q_cc_topup_ah": 1680,
+        "q_cc_ah": 1680,
+        "q_cv_ah": 1680,
+        "q_cv_over_q_cc": 1680,
+        "q_cv_fraction_total": 1680,
+        "cv_duration_s": 1680,
+        "charge_duration_s": 1680,
+        "start_charge_voltage_v": 1680
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1680
+      }
+    },
+    {
+      "cell": "7-8",
+      "fold": 4,
+      "rows": 1933,
+      "available": {
+        "delta_q_345_355_ah": 1933,
+        "delta_q_350_358_ah": 1933,
+        "q_cc_fast_ah": 1933,
+        "q_cc_topup_ah": 1933,
+        "q_cc_ah": 1933,
+        "q_cv_ah": 1933,
+        "q_cv_over_q_cc": 1933,
+        "q_cv_fraction_total": 1933,
+        "cv_duration_s": 1933,
+        "charge_duration_s": 1933,
+        "start_charge_voltage_v": 1933
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1933
+      }
+    },
+    {
+      "cell": "8-1",
+      "fold": 2,
+      "rows": 1303,
+      "available": {
+        "delta_q_345_355_ah": 1303,
+        "delta_q_350_358_ah": 1303,
+        "q_cc_fast_ah": 1303,
+        "q_cc_topup_ah": 1303,
+        "q_cc_ah": 1303,
+        "q_cv_ah": 1303,
+        "q_cv_over_q_cc": 1303,
+        "q_cv_fraction_total": 1303,
+        "cv_duration_s": 1303,
+        "charge_duration_s": 1303,
+        "start_charge_voltage_v": 1303
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1303
+      }
+    },
+    {
+      "cell": "8-3",
+      "fold": 2,
+      "rows": 2285,
+      "available": {
+        "delta_q_345_355_ah": 2285,
+        "delta_q_350_358_ah": 2285,
+        "delta_q_345_360_ah": 2285,
+        "q_cc_fast_ah": 2285,
+        "q_cc_topup_ah": 2285,
+        "q_cc_ah": 2285,
+        "q_cv_ah": 2285,
+        "q_cv_over_q_cc": 2285,
+        "q_cv_fraction_total": 2285,
+        "cv_duration_s": 2285,
+        "charge_duration_s": 2285,
+        "start_charge_voltage_v": 2285
+      },
+      "reasons": {}
+    },
+    {
+      "cell": "8-4",
+      "fold": 2,
+      "rows": 1880,
+      "available": {
+        "delta_q_345_355_ah": 1880,
+        "delta_q_350_358_ah": 1880,
+        "delta_q_345_360_ah": 444,
+        "q_cc_fast_ah": 1880,
+        "q_cc_topup_ah": 1880,
+        "q_cc_ah": 1880,
+        "q_cv_ah": 1880,
+        "q_cv_over_q_cc": 1880,
+        "q_cv_fraction_total": 1880,
+        "cv_duration_s": 1880,
+        "charge_duration_s": 1880,
+        "start_charge_voltage_v": 1880
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1436
+      }
+    },
+    {
+      "cell": "8-5",
+      "fold": 4,
+      "rows": 1343,
+      "available": {
+        "delta_q_345_355_ah": 1343,
+        "delta_q_350_358_ah": 1343,
+        "delta_q_345_360_ah": 1252,
+        "q_cc_fast_ah": 1343,
+        "q_cc_topup_ah": 1343,
+        "q_cc_ah": 1343,
+        "q_cv_ah": 1343,
+        "q_cv_over_q_cc": 1343,
+        "q_cv_fraction_total": 1343,
+        "cv_duration_s": 1343,
+        "charge_duration_s": 1343,
+        "start_charge_voltage_v": 1343
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 91
+      }
+    },
+    {
+      "cell": "8-7",
+      "fold": 5,
+      "rows": 2042,
+      "available": {
+        "delta_q_345_355_ah": 2042,
+        "delta_q_350_358_ah": 2042,
+        "q_cc_fast_ah": 2042,
+        "q_cc_topup_ah": 2042,
+        "q_cc_ah": 2042,
+        "q_cv_ah": 2042,
+        "q_cv_over_q_cc": 2042,
+        "q_cv_fraction_total": 2042,
+        "cv_duration_s": 2042,
+        "charge_duration_s": 2042,
+        "start_charge_voltage_v": 2042
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2042
+      }
+    },
+    {
+      "cell": "8-8",
+      "fold": 2,
+      "rows": 1674,
+      "available": {
+        "delta_q_345_355_ah": 1674,
+        "delta_q_350_358_ah": 1674,
+        "delta_q_345_360_ah": 84,
+        "q_cc_fast_ah": 1674,
+        "q_cc_topup_ah": 1674,
+        "q_cc_ah": 1674,
+        "q_cv_ah": 1674,
+        "q_cv_over_q_cc": 1674,
+        "q_cv_fraction_total": 1674,
+        "cv_duration_s": 1674,
+        "charge_duration_s": 1674,
+        "start_charge_voltage_v": 1674
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1590
+      }
+    },
+    {
+      "cell": "9-1",
+      "fold": 3,
+      "rows": 2052,
+      "available": {
+        "delta_q_345_355_ah": 2052,
+        "delta_q_350_358_ah": 2052,
+        "q_cc_fast_ah": 2052,
+        "q_cc_topup_ah": 2052,
+        "q_cc_ah": 2052,
+        "q_cv_ah": 2052,
+        "q_cv_over_q_cc": 2052,
+        "q_cv_fraction_total": 2052,
+        "cv_duration_s": 2052,
+        "charge_duration_s": 2052,
+        "start_charge_voltage_v": 2052
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2052
+      }
+    },
+    {
+      "cell": "9-3",
+      "fold": 1,
+      "rows": 1900,
+      "available": {
+        "delta_q_345_355_ah": 1900,
+        "delta_q_350_358_ah": 1900,
+        "q_cc_fast_ah": 1900,
+        "q_cc_topup_ah": 1900,
+        "q_cc_ah": 1900,
+        "q_cv_ah": 1900,
+        "q_cv_over_q_cc": 1900,
+        "q_cv_fraction_total": 1900,
+        "cv_duration_s": 1900,
+        "charge_duration_s": 1900,
+        "start_charge_voltage_v": 1900,
+        "delta_q_345_360_ah": 55
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1845
+      }
+    },
+    {
+      "cell": "9-4",
+      "fold": 1,
+      "rows": 1970,
+      "available": {
+        "delta_q_345_355_ah": 1970,
+        "delta_q_350_358_ah": 1970,
+        "q_cc_fast_ah": 1970,
+        "q_cc_topup_ah": 1970,
+        "q_cc_ah": 1970,
+        "q_cv_ah": 1970,
+        "q_cv_over_q_cc": 1970,
+        "q_cv_fraction_total": 1970,
+        "cv_duration_s": 1970,
+        "charge_duration_s": 1970,
+        "start_charge_voltage_v": 1970,
+        "delta_q_345_360_ah": 77
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1893
+      }
+    },
+    {
+      "cell": "9-5",
+      "fold": 4,
+      "rows": 2161,
+      "available": {
+        "delta_q_345_355_ah": 2161,
+        "delta_q_350_358_ah": 2161,
+        "q_cc_fast_ah": 2161,
+        "q_cc_topup_ah": 2161,
+        "q_cc_ah": 2161,
+        "q_cv_ah": 2161,
+        "q_cv_over_q_cc": 2161,
+        "q_cv_fraction_total": 2161,
+        "cv_duration_s": 2161,
+        "charge_duration_s": 2161,
+        "start_charge_voltage_v": 2161,
+        "delta_q_345_360_ah": 2
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2159
+      }
+    },
+    {
+      "cell": "9-7",
+      "fold": 3,
+      "rows": 2006,
+      "available": {
+        "delta_q_345_355_ah": 2006,
+        "delta_q_350_358_ah": 2006,
+        "q_cc_fast_ah": 2006,
+        "q_cc_topup_ah": 2006,
+        "q_cc_ah": 2006,
+        "q_cv_ah": 2006,
+        "q_cv_over_q_cc": 2006,
+        "q_cv_fraction_total": 2006,
+        "cv_duration_s": 2006,
+        "charge_duration_s": 2006,
+        "start_charge_voltage_v": 2006,
+        "delta_q_345_360_ah": 41
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1965
+      }
+    },
+    {
+      "cell": "9-8",
+      "fold": 3,
+      "rows": 2303,
+      "available": {
+        "delta_q_345_355_ah": 2303,
+        "delta_q_350_358_ah": 2303,
+        "delta_q_345_360_ah": 2208,
+        "q_cc_fast_ah": 2303,
+        "q_cc_topup_ah": 2303,
+        "q_cc_ah": 2303,
+        "q_cv_ah": 2303,
+        "q_cv_over_q_cc": 2303,
+        "q_cv_fraction_total": 2303,
+        "cv_duration_s": 2303,
+        "charge_duration_s": 2303,
+        "start_charge_voltage_v": 2303
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 95
+      }
+    },
+    {
+      "cell": "10-3",
+      "fold": 5,
+      "rows": 1843,
+      "available": {
+        "delta_q_345_355_ah": 1843,
+        "delta_q_350_358_ah": 1843,
+        "delta_q_345_360_ah": 1458,
+        "q_cc_fast_ah": 1843,
+        "q_cc_topup_ah": 1843,
+        "q_cc_ah": 1843,
+        "q_cv_ah": 1843,
+        "q_cv_over_q_cc": 1843,
+        "q_cv_fraction_total": 1843,
+        "cv_duration_s": 1843,
+        "charge_duration_s": 1843,
+        "start_charge_voltage_v": 1843
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 385
+      }
+    },
+    {
+      "cell": "10-4",
+      "fold": 2,
+      "rows": 1806,
+      "available": {
+        "delta_q_345_355_ah": 1806,
+        "delta_q_350_358_ah": 1806,
+        "delta_q_345_360_ah": 1268,
+        "q_cc_fast_ah": 1806,
+        "q_cc_topup_ah": 1806,
+        "q_cc_ah": 1806,
+        "q_cv_ah": 1806,
+        "q_cv_over_q_cc": 1806,
+        "q_cv_fraction_total": 1806,
+        "cv_duration_s": 1806,
+        "charge_duration_s": 1806,
+        "start_charge_voltage_v": 1806
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 538
+      }
+    },
+    {
+      "cell": "10-5",
+      "fold": 2,
+      "rows": 2025,
+      "available": {
+        "delta_q_345_355_ah": 2025,
+        "delta_q_350_358_ah": 2025,
+        "q_cc_fast_ah": 2025,
+        "q_cc_topup_ah": 2025,
+        "q_cc_ah": 2025,
+        "q_cv_ah": 2025,
+        "q_cv_over_q_cc": 2025,
+        "q_cv_fraction_total": 2025,
+        "cv_duration_s": 2025,
+        "charge_duration_s": 2025,
+        "start_charge_voltage_v": 2025
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2025
+      }
+    },
+    {
+      "cell": "10-6",
+      "fold": 1,
+      "rows": 2280,
+      "available": {
+        "delta_q_345_355_ah": 2280,
+        "delta_q_350_358_ah": 2280,
+        "q_cc_fast_ah": 2280,
+        "q_cc_topup_ah": 2280,
+        "q_cc_ah": 2280,
+        "q_cv_ah": 2280,
+        "q_cv_over_q_cc": 2280,
+        "q_cv_fraction_total": 2280,
+        "cv_duration_s": 2280,
+        "charge_duration_s": 2280,
+        "start_charge_voltage_v": 2280
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 2280
+      }
+    },
+    {
+      "cell": "10-8",
+      "fold": 4,
+      "rows": 1395,
+      "available": {
+        "delta_q_345_355_ah": 1395,
+        "delta_q_350_358_ah": 1395,
+        "q_cc_fast_ah": 1395,
+        "q_cc_topup_ah": 1395,
+        "q_cc_ah": 1395,
+        "q_cv_ah": 1395,
+        "q_cv_over_q_cc": 1395,
+        "q_cv_fraction_total": 1395,
+        "cv_duration_s": 1395,
+        "charge_duration_s": 1395,
+        "start_charge_voltage_v": 1395
+      },
+      "reasons": {
+        "PARTIAL_WINDOW": 1395
+      }
+    }
+  ]
+}

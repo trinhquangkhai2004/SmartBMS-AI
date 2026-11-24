@@ -1,0 +1,15 @@
+test_clock_classification (test_cc.CoulombTests.test_clock_classification) ... ok
+test_constant_discharge_rests_and_charging (test_cc.CoulombTests.test_constant_discharge_rests_and_charging) ... ok
+test_future_currents_do_not_change_past_states (test_cc.CoulombTests.test_future_currents_do_not_change_past_states) ... ok
+test_modified_archive_rejected_before_any_member_is_read (test_cc.CoulombTests.test_modified_archive_rejected_before_any_member_is_read) ... ok
+test_population_boundary_and_missing_denominators (test_cc.CoulombTests.test_population_boundary_and_missing_denominators) ... ok
+test_prior_equivalence_and_no_reference_input (test_cc.CoulombTests.test_prior_equivalence_and_no_reference_input) ... ok
+test_reference_and_future_counters_excluded_from_runtime_record (test_cc.CoulombTests.test_reference_and_future_counters_excluded_from_runtime_record) ... ok
+test_reject_invalid_inputs (test_cc.CoulombTests.test_reject_invalid_inputs) ... ok
+test_subdivision_and_current_bias (test_cc.CoulombTests.test_subdivision_and_current_bias) ... ok
+test_zoh_duplicate_and_range_excursion (test_cc.CoulombTests.test_zoh_duplicate_and_range_excursion) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.458s
+
+OK

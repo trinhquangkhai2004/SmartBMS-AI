@@ -1,0 +1,206 @@
+{
+  "registered_utc": "2026-11-19T10:00:48.469405+00:00",
+  "snapshot": {
+    "files": {
+      "configs/p26_final_protocol.json": "6754547420a9fe65cd6f05c102b3b2022e6942137b632b4e432494f12de0cec4",
+      "results/p25/ekf_config.json": "1508778b1d827c80e844641bde0bc4029494eaf5c1b662bd1a190f80647ce7c8",
+      "artifacts/ecm_params.json": "4105b629aad216ec88de49084c629a14359537dbd670a65a6d79be93fbfffa34",
+      "run_cc.py": "e70d1f11d06766270ba363c292f0c8ddf0c33ee9f460eaf17cfc9e9af3185c06",
+      "run_ekf.py": "e8ddc833a9dfac2c8a94d1c1efae54bed3f2e9cb169b2ad59434c64d52d81a85",
+      "run_heldout.py": "0ca54e3fd77f76fca66311b0e78d6555afdbfc70ab2051e46f42b0f9a0f8cb05",
+      "src/governance.py": "052227289a324e99c5625ea2a47911c6d5e8330bc32416ad54bf864072eca0fb",
+      "src/development_data.py": "594cc95445679626af97d950cd17f82134c1d3dafd9e7a2fc5b77129de102847",
+      "src/cc.py": "d87e5183ba2662064dca5b72024a94cecc72f11f49a2333aa8c54e21c81b6f10",
+      "src/ekf.py": "ca8359c969781c29ed9a09f143dccd9e953319a3abf6862cd28d069a4418a828",
+      "src/final_evaluation.py": "cf26433fc0e21889f5e503ea4626a089d93e39aa1ea2387c96762627ac23aa73",
+      "configs/g10_conditional_run_policy.yaml": "eda8e017852d9d1470936951484b031459b8a137c1e1156a2840536431ab8a5f",
+      "configs/p25_development_search.json": "b418e34fc673cb39b3be121ad294bfca5ee7393ad516e236b41c07c76b45ff54",
+      "approvals/conditional_approval_record.json": "20ae911ad26d1c48906aa04994df13056e16515992af1ccf3e441e9636ef0f35",
+      "approvals/heldout_approval.json": "7435136ca04d05c4fe841d84715bf38fb71ec5ee757631b8256cb4db633d4746",
+      "artifacts/ocv_model.json": "ca9872be1836d000b8ec6b2f970c371064a54dad59efa8d2ea8c084a2111107b",
+      "artifacts/capacity_metadata.json": "bcd2f28b57d9b21ed43f99561d6b8dfc263aaf2ba38c2e60759584f27479e8e0",
+      "results/p24/metrics.json": "6edd67d7e6f3c00b4c645687e1dbad11b47ea509db0c36f3f4358a90755ac59f",
+      "results/p25/metrics.json": "807816587905f8e2facfde56acfca749f873323b147dd289f0ba98cf42f7be8d",
+      "results/p25/candidate_selection.json": "cf3410f13788218e5a99c83ac429ecd6ccf6f290d8a8737fc94cc2dfd66cfb2a",
+      "results/p25/source_access.json": "b5d3f6d742a96df82bf7539a5f124718029100c2cddd2685ebbb4649a44d8c95"
+    },
+    "environment": {
+      "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+      "executable_sha256": "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082",
+      "packages": {
+        "numpy": {
+          "version": "2.4.6",
+          "record_sha256": "c08c030b7b67ebd644b5d704f1e8448589bc3b406b9c906e10ae7a5a1a463a77"
+        },
+        "pandas": {
+          "version": "3.1.1",
+          "record_sha256": "77cd063c9c9abdef90ba9a7d426923fa0ca800ec464a0b97dcf93ac52bc2b453"
+        },
+        "pyarrow": {
+          "version": "26.0.1",
+          "record_sha256": "32c83d64035008aa8ba060f69cf4ab214c1a9ae626de6abf16334d53ea4daabc"
+        },
+        "openpyxl": {
+          "version": "3.1.5",
+          "record_sha256": "89fb27b7b9ef96f6871e5f400b8aedf1f569856ac2594f0cf48ff0fbcd04ece0"
+        }
+      }
+    },
+    "p22_sha256": "101934ecc5a9bd89c8877a426a7346d1e89d3ffb752eef4ecdc365638ff8cd89",
+    "sources": {
+      "11_11_2015_SP20-2_US06_50SOC": {
+        "split": {
+          "run_id": "11_11_2015_SP20-2_US06_50SOC",
+          "file": "11_11_2015_SP20-2_US06_50SOC.xls",
+          "file_sha256": "a431e8649f39526cf86bdfec75938fd5f481496672b1c1b4cac8e2000f907b94",
+          "archive_sha256": "cedf99281bad6c1f17a879d614f867451cf5994bad0f66d30c56290c1f6bb3fb",
+          "profile": "US06",
+          "role": "held_out_test",
+          "window_required": true,
+          "cell_id": "SP20-2",
+          "ecm_identification_permitted": false,
+          "validation_tuning_permitted": false,
+          "ocv_calibration_permitted": false,
+          "capacity_calibration_permitted": false,
+          "final_test_untouched": true,
+          "scoring_permitted": false
+        },
+        "window": {
+          "run_id": "11_11_2015_SP20-2_US06_50SOC",
+          "source_file": "11_11_2015_SP20-2_US06_50SOC.xls",
+          "file_sha256": "a431e8649f39526cf86bdfec75938fd5f481496672b1c1b4cac8e2000f907b94",
+          "row_convention": "zero_based_inclusive_observation_rows",
+          "preconditioning_rows": "1438",
+          "dynamic_start_row": "1438",
+          "dynamic_end_row": "8320",
+          "dynamic_start_excel_row": "1440",
+          "dynamic_end_excel_row": "8322",
+          "start_time_s": "14421.654750369862",
+          "end_time_s": "21319.02068138867",
+          "step_ids": "[7, 8]",
+          "window_status": "VERIFIED",
+          "segmentation_version": "reviewed_v1",
+          "evidence": "Per-run inspected step table: initial CCCV and rest, constant discharge-to-target and rest followed by sustained bidirectional changing-current profile. Start at first profile observation including zero-current lead-in; retain all remaining rows and transition events through final recorded cutoff. Observed dynamic step IDs 7/8; IDs are evidence, not parser rules. Visual current plots checked alongside per-run voltage/step tables before any metric or fit.",
+          "role": "held_out_test"
+        },
+        "archive": "SP2_25C_US06.zip",
+        "archive_sha256": "cedf99281bad6c1f17a879d614f867451cf5994bad0f66d30c56290c1f6bb3fb"
+      },
+      "11_11_2015_SP20-2_US06_80SOC": {
+        "split": {
+          "run_id": "11_11_2015_SP20-2_US06_80SOC",
+          "file": "11_11_2015_SP20-2_US06_80SOC.xls",
+          "file_sha256": "faf52bf0be8b027c0f7abaa0c08a8eccf11b7b566feb5d7739dbd789277edb53",
+          "archive_sha256": "cedf99281bad6c1f17a879d614f867451cf5994bad0f66d30c56290c1f6bb3fb",
+          "profile": "US06",
+          "role": "held_out_test",
+          "window_required": true,
+          "cell_id": "SP20-2",
+          "ecm_identification_permitted": false,
+          "validation_tuning_permitted": false,
+          "ocv_calibration_permitted": false,
+          "capacity_calibration_permitted": false,
+          "final_test_untouched": true,
+          "scoring_permitted": false
+        },
+        "window": {
+          "run_id": "11_11_2015_SP20-2_US06_80SOC",
+          "source_file": "11_11_2015_SP20-2_US06_80SOC.xls",
+          "file_sha256": "faf52bf0be8b027c0f7abaa0c08a8eccf11b7b566feb5d7739dbd789277edb53",
+          "row_convention": "zero_based_inclusive_observation_rows",
+          "preconditioning_rows": "1204",
+          "dynamic_start_row": "1204",
+          "dynamic_end_row": "11897",
+          "dynamic_start_excel_row": "1206",
+          "dynamic_end_excel_row": "11899",
+          "start_time_s": "12086.349845812138",
+          "end_time_s": "22863.21860510373",
+          "step_ids": "[7, 8]",
+          "window_status": "VERIFIED",
+          "segmentation_version": "reviewed_v1",
+          "evidence": "Per-run inspected step table: initial CCCV and rest, constant discharge-to-target and rest followed by sustained bidirectional changing-current profile. Start at first profile observation including zero-current lead-in; retain all remaining rows and transition events through final recorded cutoff. Observed dynamic step IDs 7/8; IDs are evidence, not parser rules. Visual current plots checked alongside per-run voltage/step tables before any metric or fit.",
+          "role": "held_out_test"
+        },
+        "archive": "SP2_25C_US06.zip",
+        "archive_sha256": "cedf99281bad6c1f17a879d614f867451cf5994bad0f66d30c56290c1f6bb3fb"
+      },
+      "11_12_2015_SP20-2_BJDST_80SOC": {
+        "split": {
+          "run_id": "11_12_2015_SP20-2_BJDST_80SOC",
+          "file": "11_12_2015_SP20-2_BJDST_80SOC.xls",
+          "file_sha256": "6ff84c4fabf8897bb03d8574c6fb89069cdc164e8462f22c54b19c00dba677d7",
+          "archive_sha256": "df372646a75f495186a58c3f549baecf86e70e0478bf55a97e122bab10f5bf21",
+          "profile": "BJDST",
+          "role": "held_out_test",
+          "window_required": true,
+          "cell_id": "SP20-2",
+          "ecm_identification_permitted": false,
+          "validation_tuning_permitted": false,
+          "ocv_calibration_permitted": false,
+          "capacity_calibration_permitted": false,
+          "final_test_untouched": true,
+          "scoring_permitted": false
+        },
+        "window": {
+          "run_id": "11_12_2015_SP20-2_BJDST_80SOC",
+          "source_file": "11_12_2015_SP20-2_BJDST_80SOC.xls",
+          "file_sha256": "6ff84c4fabf8897bb03d8574c6fb89069cdc164e8462f22c54b19c00dba677d7",
+          "row_convention": "zero_based_inclusive_observation_rows",
+          "preconditioning_rows": "1223",
+          "dynamic_start_row": "1223",
+          "dynamic_end_row": "12436",
+          "dynamic_start_excel_row": "1225",
+          "dynamic_end_excel_row": "12438",
+          "start_time_s": "12265.16801577386",
+          "end_time_s": "23493.61065234742",
+          "step_ids": "[7, 8]",
+          "window_status": "VERIFIED",
+          "segmentation_version": "reviewed_v1",
+          "evidence": "Per-run inspected step table: initial CCCV and rest, constant discharge-to-target and rest followed by sustained bidirectional changing-current profile. Start at first profile observation including zero-current lead-in; retain all remaining rows and transition events through final recorded cutoff. Observed dynamic step IDs 7/8; IDs are evidence, not parser rules. Visual current plots checked alongside per-run voltage/step tables before any metric or fit.",
+          "role": "held_out_test"
+        },
+        "archive": "SP2_25C_BJDST.zip",
+        "archive_sha256": "df372646a75f495186a58c3f549baecf86e70e0478bf55a97e122bab10f5bf21"
+      },
+      "11_13_2015_SP20-2_BJDST_50SOC": {
+        "split": {
+          "run_id": "11_13_2015_SP20-2_BJDST_50SOC",
+          "file": "11_13_2015_SP20-2_BJDST_50SOC.xls",
+          "file_sha256": "195126f2cd08bc3d8635da4d91cb7d067edaca57ea4ec67a8bc7b87dd5b4442d",
+          "archive_sha256": "df372646a75f495186a58c3f549baecf86e70e0478bf55a97e122bab10f5bf21",
+          "profile": "BJDST",
+          "role": "held_out_test",
+          "window_required": true,
+          "cell_id": "SP20-2",
+          "ecm_identification_permitted": false,
+          "validation_tuning_permitted": false,
+          "ocv_calibration_permitted": false,
+          "capacity_calibration_permitted": false,
+          "final_test_untouched": true,
+          "scoring_permitted": false
+        },
+        "window": {
+          "run_id": "11_13_2015_SP20-2_BJDST_50SOC",
+          "source_file": "11_13_2015_SP20-2_BJDST_50SOC.xls",
+          "file_sha256": "195126f2cd08bc3d8635da4d91cb7d067edaca57ea4ec67a8bc7b87dd5b4442d",
+          "row_convention": "zero_based_inclusive_observation_rows",
+          "preconditioning_rows": "1439",
+          "dynamic_start_row": "1439",
+          "dynamic_end_row": "8384",
+          "dynamic_start_excel_row": "1441",
+          "dynamic_end_excel_row": "8386",
+          "start_time_s": "14430.672923786104",
+          "end_time_s": "21438.743591640592",
+          "step_ids": "[7, 8]",
+          "window_status": "VERIFIED",
+          "segmentation_version": "reviewed_v1",
+          "evidence": "Per-run inspected step table: initial CCCV and rest, constant discharge-to-target and rest followed by sustained bidirectional changing-current profile. Start at first profile observation including zero-current lead-in; retain all remaining rows and transition events through final recorded cutoff. Observed dynamic step IDs 7/8; IDs are evidence, not parser rules. Visual current plots checked alongside per-run voltage/step tables before any metric or fit.",
+          "role": "held_out_test"
+        },
+        "archive": "SP2_25C_BJDST.zip",
+        "archive_sha256": "df372646a75f495186a58c3f549baecf86e70e0478bf55a97e122bab10f5bf21"
+      }
+    },
+    "scientific_release": false
+  }
+}

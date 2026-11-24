@@ -1,0 +1,31 @@
+{
+  "platform": "Windows-10-10.0.26300-SP0",
+  "cpu": "",
+  "logical_processors": 16,
+  "physical_ram_bytes": 16497901568,
+  "python": "3.11.9",
+  "runtime_kind": "local Windows development CPU, F5 production runtime unmeasured",
+  "rf_threads": 1,
+  "elapsed_load_ms": 373.74219999765046,
+  "load_includes_sha256": true,
+  "memory_method": "Windows OS process peak working set",
+  "baseline_peak_bytes": 135057408,
+  "post_load_peak_bytes": 281776128,
+  "post_infer_peak_bytes": 281776128,
+  "inference_scope": "200 sampled dev sessions, precomputed features, warmed in-process",
+  "peak_infer_includes_sample_input_preparation": true,
+  "predict": {
+    "sessions": 200,
+    "p50_ms": 12.676050002482953,
+    "p95_ms": 14.772775004166757,
+    "p99_ms": 16.163679001474517
+  },
+  "predict_plus_sigma": {
+    "sessions": 200,
+    "p50_ms": 22.197000002051936,
+    "p95_ms": 23.996524992980994,
+    "p99_ms": 26.330693997442708
+  },
+  "rf_sha256": "9287ef0c874bb152390afa5c57c6ca1e982c42fb6d6a2a374fd8dd8905e3d9de",
+  "rf_size_bytes": 28577815
+}

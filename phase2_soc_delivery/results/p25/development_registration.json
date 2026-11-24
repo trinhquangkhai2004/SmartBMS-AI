@@ -1,0 +1,179 @@
+{
+  "plan_sha256": "b418e34fc673cb39b3be121ad294bfca5ee7393ad516e236b41c07c76b45ff54",
+  "plan": {
+    "version": "p25-dev-grid-1",
+    "seed": 20261112,
+    "profiles": [
+      "DST",
+      "FUDS"
+    ],
+    "scope": "P2.5 offline development, SP20-2 nominal 25 C",
+    "initial_z_sd_fraction": [
+      0.04,
+      0.12
+    ],
+    "initial_vrc_sd_v": 0.02,
+    "process_variance_per_second_pairs": [
+      [
+        1e-09,
+        1e-06
+      ],
+      [
+        1e-08,
+        1e-05
+      ]
+    ],
+    "measurement_voltage_sd_v": [
+      0.02,
+      0.06
+    ],
+    "initial_vrc_v": 0.0,
+    "initial_vrc_basis": "Frozen development windows start after verified preconditioning rest. Zero is a polarization prior assumption.",
+    "Q_model": "Diagonal continuous variance density times actual elapsed seconds; zero process noise on zero-dt transitions.",
+    "gap_rule": "Three times the pooled DST 99.5th percentile of positive dynamic intervals, linear percentile. No gap evidence inferred from endpoint currents.",
+    "candidate_selection": "Lexicographic minimization on nominal FUDS: worst per-run missing fraction, worst per-run FULL_DYNAMIC MAX absolute error (pp), unweighted mean per-run FULL_DYNAMIC RMSE (pp), grid order. DST nominal metrics retained as identification diagnostics.",
+    "scenarios": {
+      "nominal": {},
+      "prior_minus_20pp": {
+        "prior_offset_pp": -20
+      },
+      "prior_minus_10pp": {
+        "prior_offset_pp": -10
+      },
+      "prior_plus_10pp": {
+        "prior_offset_pp": 10
+      },
+      "prior_plus_20pp": {
+        "prior_offset_pp": 20
+      },
+      "current_bias_minus": {
+        "current_bias_a": -0.05
+      },
+      "current_bias_plus": {
+        "current_bias_a": 0.05
+      },
+      "vi_noise": {
+        "voltage_noise_sd_v": 0.01,
+        "current_noise_sd_a": 0.02
+      }
+    },
+    "noise_model": "Independent zero-mean Gaussian voltage and current perturbations, one pair per distinct observation. Repeated identical observations share the original perturbation. Per-run seed uses the declared seed and frozen run order.",
+    "stress_scope": "Illustrative injected conditions, not measured sensor specifications. Stress metrics are descriptive and do not select noise parameters.",
+    "convergence": {
+      "abs_error_pp": 5.0,
+      "continuous_s": 60.0
+    },
+    "exclusions": "None based on voltage, warning or error. Physically impossible initial-offset scenarios are marked inapplicable rather than clipped."
+  },
+  "development_run_ids": [
+    "11_05_2015_SP20-2_DST_50SOC",
+    "11_05_2015_SP20-2_DST_80SOC",
+    "11_06_2015_SP20-2_FUDS_80SOC",
+    "11_09_2015_SP20-2_FUDS_50SOC"
+  ],
+  "candidate_grid": [
+    {
+      "id": "grid-01",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0004
+    },
+    {
+      "id": "grid-02",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0036
+    },
+    {
+      "id": "grid-03",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0004
+    },
+    {
+      "id": "grid-04",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0036
+    },
+    {
+      "id": "grid-05",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0004
+    },
+    {
+      "id": "grid-06",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0036
+    },
+    {
+      "id": "grid-07",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0004
+    },
+    {
+      "id": "grid-08",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0036
+    }
+  ],
+  "candidate_ecm_sha256": "4105b629aad216ec88de49084c629a14359537dbd670a65a6d79be93fbfffa34",
+  "driver_sha256": "e8ddc833a9dfac2c8a94d1c1efae54bed3f2e9cb169b2ad59434c64d52d81a85",
+  "runtime_sha256": "ca8359c969781c29ed9a09f143dccd9e953319a3abf6862cd28d069a4418a828",
+  "p24_metrics_sha256": "6edd67d7e6f3c00b4c645687e1dbad11b47ea509db0c36f3f4358a90755ac59f",
+  "model_current_domain": "Union of the four already documented development observed ranges",
+  "test_trajectory_access": false,
+  "registered_utc": "2026-11-19T09:56:24.222543+00:00"
+}

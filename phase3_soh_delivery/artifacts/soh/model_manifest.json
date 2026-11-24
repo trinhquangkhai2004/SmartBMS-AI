@@ -1,0 +1,70 @@
+{
+  "manifest_version": "p3.8-v1",
+  "spec_version": "1.2",
+  "model_version": "p36-r1",
+  "feature_schema_version": "p35-r1",
+  "primary_features": [
+    "delta_q_350_358_ah",
+    "q_cc_ah",
+    "q_cv_ah",
+    "q_cv_over_q_cc"
+  ],
+  "supported_domain_id": "RT_BATT_LFP_30C",
+  "supported_chemistry": "LFP",
+  "supported_cell_model": "A123_APR18650M1A",
+  "supported_nominal_capacity_ah": 1.1,
+  "training_domain": "RT-Batt LFP, 30C experimental domain",
+  "soh_reference_definition": "cell_relative_operational_capacity (100 * Q_discharge_next / median(Q_1..Q_5))",
+  "inference_event": "end_of_valid_charge",
+  "current_sign_convention": "DISCHARGE_POSITIVE_CHARGE_NEGATIVE",
+  "deployment_budget_bytes": 50000000,
+  "rf_model_bytes": 28577815,
+  "f3_to_f2_capacity_feedback": false,
+  "lishen_hardware_validated": false,
+  "forbid_raw_pickle_after_p3_1": true,
+  "online_stale_policy": {
+    "decision_id": "D13",
+    "status": "PROPOSED_FOR_P3_8_REVIEW",
+    "max_observation_age_seconds": 86400.0,
+    "max_future_skew_seconds": 5.0,
+    "missing_or_naive_timestamp_behavior": "STALE",
+    "offline_replay_mode": "NOT_APPLICABLE_OFFLINE_CYCLE_REPLAY",
+    "note": "End-of-charge SoH updates once per charge cycle; 86400 s (24 h) is the P3.8 candidate online freshness threshold (configurable per F5 deployment), distinct from Phase 1 real-time 5 s telemetry polling."
+  },
+  "artifacts": {
+    "rf_model": {
+      "path": "artifacts/soh/rf_model.joblib",
+      "sha256": "9287ef0c874bb152390afa5c57c6ca1e982c42fb6d6a2a374fd8dd8905e3d9de",
+      "bytes": 28577815
+    },
+    "feature_schema": {
+      "path": "artifacts/soh/feature_schema.json",
+      "sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc"
+    },
+    "ood_policy": {
+      "path": "artifacts/soh/ood_policy.json",
+      "sha256": "bc85165b0349a0ca155251af602a19e9aae11735507446d2c4e31b58f1c5fcea"
+    },
+    "feature_extractor": {
+      "path": "src/soh/feature_extractor.py",
+      "sha256": "397555190fc21c0120b139cec0438590c44a154c2e6657339f1e971cdc4953d0"
+    },
+    "evaluation_guard": {
+      "path": "src/soh/evaluation_guard.py",
+      "sha256": "7d5f5e1c6ca879448f3f8941c39fd33278b77985923f5231a8211db1c6bfe3b2"
+    },
+    "model_freeze": {
+      "path": "manifests/p3_model_freeze.json",
+      "sha256": "934ca32afcc4a13b83bba5e08d30edbf6912fad448fa92c23617199495c631c7"
+    },
+    "er5_evaluation_config": {
+      "path": "configs/p3_er5_evaluation.json",
+      "sha256": "838e663ef5e2c3bce9826c103b7e5693d4187fdabb5c4c5f70c250f34556a203"
+    },
+    "p3_7_evaluation_result": {
+      "path": "manifests/p3_7_evaluation_result.json",
+      "sha256": "73e4aafff181d8cb76cd4836628031d001ec0eb46292d637dce14db014ec97fd"
+    }
+  }
+}
+

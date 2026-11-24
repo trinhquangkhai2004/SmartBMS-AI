@@ -1,0 +1,1202 @@
+[
+  {
+    "candidate": {
+      "id": "grid-01",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0004
+    },
+    "selection_tuple": [
+      0.0,
+      1.9840018810363569,
+      0.755831918467843,
+      0
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6322949346997632,
+          "RMSE_pp": 0.7914965066970171,
+          "P95_abs_pp": 1.3941905454197643,
+          "MAX_abs_pp": 1.8516181565659207
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6459745238849016,
+          "RMSE_pp": 0.8041932806150042,
+          "P95_abs_pp": 1.4044407498211768,
+          "MAX_abs_pp": 1.8516181565659207
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.32220813391296615,
+          "RMSE_pp": 0.40891764520943125,
+          "P95_abs_pp": 0.880561777458276,
+          "MAX_abs_pp": 1.0009430726387765
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10645,
+          "denominator": 10645,
+          "missing_count": 0,
+          "MAE_pp": 0.8611381215076612,
+          "RMSE_pp": 0.9699433330309631,
+          "P95_abs_pp": 1.7598696540126373,
+          "MAX_abs_pp": 1.8786864669984915
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.8702832243016602,
+          "RMSE_pp": 0.9781000986608308,
+          "P95_abs_pp": 1.7667303233186573,
+          "MAX_abs_pp": 1.8786864669984915
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.5175672125548553,
+          "RMSE_pp": 0.5863712106844049,
+          "P95_abs_pp": 0.9650035637899703,
+          "MAX_abs_pp": 1.0109756006640103
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6189645240631746,
+          "RMSE_pp": 0.7442399890533211,
+          "P95_abs_pp": 1.3370372669154433,
+          "MAX_abs_pp": 1.8133721496599289
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.6157033947483864,
+          "RMSE_pp": 0.7375016377626192,
+          "P95_abs_pp": 1.329791458048769,
+          "MAX_abs_pp": 1.8086441346342783
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.7497478878428951,
+          "RMSE_pp": 0.9768871043377889,
+          "P95_abs_pp": 1.7271995171596455,
+          "MAX_abs_pp": 1.8133721496599289
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.6095299106904734,
+          "RMSE_pp": 0.7674238478823648,
+          "P95_abs_pp": 1.640842980580955,
+          "MAX_abs_pp": 1.9840018810363569
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.5995803023615208,
+          "RMSE_pp": 0.7527134134689737,
+          "P95_abs_pp": 1.6030257747363337,
+          "MAX_abs_pp": 1.9840018810363569
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.8145102674675045,
+          "RMSE_pp": 1.0245171987454407,
+          "P95_abs_pp": 1.7624012758035374,
+          "MAX_abs_pp": 1.8565138571263893
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-02",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0036
+    },
+    "selection_tuple": [
+      0.0,
+      1.9075761981982575,
+      0.6831920770523158,
+      1
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6257634367353532,
+          "RMSE_pp": 0.7900916602617634,
+          "P95_abs_pp": 1.3543411441768538,
+          "MAX_abs_pp": 1.7861660546800329
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6415244886283153,
+          "RMSE_pp": 0.8037846802429074,
+          "P95_abs_pp": 1.364074091204569,
+          "MAX_abs_pp": 1.7861660546800329
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.2684943629072559,
+          "RMSE_pp": 0.3598882676001158,
+          "P95_abs_pp": 0.7268721834919903,
+          "MAX_abs_pp": 1.0035235207239812
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10645,
+          "denominator": 10645,
+          "missing_count": 0,
+          "MAE_pp": 0.9051179410716195,
+          "RMSE_pp": 0.9887058744887361,
+          "P95_abs_pp": 1.4514203149475247,
+          "MAX_abs_pp": 1.513171347573683
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.9143684016712202,
+          "RMSE_pp": 0.9957928924451821,
+          "P95_abs_pp": 1.4519397866647688,
+          "MAX_abs_pp": 1.513171347573683
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.5575888615163226,
+          "RMSE_pp": 0.6701973069267886,
+          "P95_abs_pp": 1.0981382960331159,
+          "MAX_abs_pp": 1.110189006857104
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6150059455576765,
+          "RMSE_pp": 0.6872838164866807,
+          "P95_abs_pp": 1.0851202629697798,
+          "MAX_abs_pp": 1.2896111893933033
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.614937682481591,
+          "RMSE_pp": 0.6861045426680691,
+          "P95_abs_pp": 1.083251824072442,
+          "MAX_abs_pp": 1.2733075572363701
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.6177435477349158,
+          "RMSE_pp": 0.7330150342315198,
+          "P95_abs_pp": 1.2619919413854817,
+          "MAX_abs_pp": 1.2896111893933033
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.532220397443666,
+          "RMSE_pp": 0.6791003376179509,
+          "P95_abs_pp": 1.38506286429472,
+          "MAX_abs_pp": 1.9075761981982575
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.527768415713087,
+          "RMSE_pp": 0.6741215613939013,
+          "P95_abs_pp": 1.391450271888219,
+          "MAX_abs_pp": 1.9075761981982575
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.6239394655042029,
+          "RMSE_pp": 0.7745837326864062,
+          "P95_abs_pp": 1.356287310201628,
+          "MAX_abs_pp": 1.436370338656455
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-03",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0004
+    },
+    "selection_tuple": [
+      0.0,
+      2.0040175181692064,
+      0.776292503859333,
+      2
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6316474058613307,
+          "RMSE_pp": 0.7797622602166796,
+          "P95_abs_pp": 1.3564753942549614,
+          "MAX_abs_pp": 1.816330073442446
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6450039636519812,
+          "RMSE_pp": 0.7917166172343261,
+          "P95_abs_pp": 1.361072778512991,
+          "MAX_abs_pp": 1.816330073442446
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.3288830305008264,
+          "RMSE_pp": 0.4268379225974251,
+          "P95_abs_pp": 0.9522944219388444,
+          "MAX_abs_pp": 1.2667208889443615
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10643,
+          "denominator": 10645,
+          "missing_count": 2,
+          "MAE_pp": 0.8278790787834841,
+          "RMSE_pp": 0.9612557964012625,
+          "P95_abs_pp": 1.8560223997221725,
+          "MAX_abs_pp": 2.010256855449033
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.8366795696149844,
+          "RMSE_pp": 0.9693312994367437,
+          "P95_abs_pp": 1.8592714697568893,
+          "MAX_abs_pp": 2.010256855449033
+        },
+        "FLAGGED": {
+          "numerator": 274,
+          "denominator": 276,
+          "missing_count": 2,
+          "MAE_pp": 0.49484152611258836,
+          "RMSE_pp": 0.577946217435536,
+          "P95_abs_pp": 0.985919762836456,
+          "MAX_abs_pp": 1.6454774270904693
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6025161467492613,
+          "RMSE_pp": 0.7622059269173698,
+          "P95_abs_pp": 1.434210870629981,
+          "MAX_abs_pp": 1.9952098566133774
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.5989910565187504,
+          "RMSE_pp": 0.7547958747664376,
+          "P95_abs_pp": 1.4280847046666172,
+          "MAX_abs_pp": 1.9952098566133774
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.7438853208824955,
+          "RMSE_pp": 1.0157588854548136,
+          "P95_abs_pp": 1.8269284807393038,
+          "MAX_abs_pp": 1.992794369648851
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.6343721405841667,
+          "RMSE_pp": 0.7903790808012963,
+          "P95_abs_pp": 1.6954710315683323,
+          "MAX_abs_pp": 2.0040175181692064
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.6230079701492264,
+          "RMSE_pp": 0.772777157492143,
+          "P95_abs_pp": 1.6387165529098477,
+          "MAX_abs_pp": 2.0040175181692064
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.8684950963040026,
+          "RMSE_pp": 1.091581376957078,
+          "P95_abs_pp": 1.8915636526291422,
+          "MAX_abs_pp": 1.9968092547222136
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-04",
+      "p0_diag": [
+        0.0016,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0036
+    },
+    "selection_tuple": [
+      0.0,
+      1.8700954042069258,
+      0.745829318333171,
+      3
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6195121494128352,
+          "RMSE_pp": 0.7702535975510015,
+          "P95_abs_pp": 1.327635874022077,
+          "MAX_abs_pp": 1.7614338942376628
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6325999070531783,
+          "RMSE_pp": 0.7823463457010357,
+          "P95_abs_pp": 1.3329460528503485,
+          "MAX_abs_pp": 1.7614338942376628
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.32284089406725147,
+          "RMSE_pp": 0.40950859329008915,
+          "P95_abs_pp": 0.8885774356111609,
+          "MAX_abs_pp": 1.0101204834629915
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10645,
+          "denominator": 10645,
+          "missing_count": 0,
+          "MAE_pp": 0.8550533392179472,
+          "RMSE_pp": 0.9665987871075817,
+          "P95_abs_pp": 1.7675788119883815,
+          "MAX_abs_pp": 1.8883629676201497
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.8640798838834992,
+          "RMSE_pp": 0.974724834918514,
+          "P95_abs_pp": 1.773780828240048,
+          "MAX_abs_pp": 1.8883629676201497
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.5159365216921934,
+          "RMSE_pp": 0.5845116884094769,
+          "P95_abs_pp": 0.9601012031954168,
+          "MAX_abs_pp": 1.0220863125709843
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6149100897103291,
+          "RMSE_pp": 0.7432003852908909,
+          "P95_abs_pp": 1.3439885393738604,
+          "MAX_abs_pp": 1.8294827694008828
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.6114866637451607,
+          "RMSE_pp": 0.7362231764107519,
+          "P95_abs_pp": 1.3371913967211395,
+          "MAX_abs_pp": 1.8251236730752822
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.7522021502690086,
+          "RMSE_pp": 0.9830092351807522,
+          "P95_abs_pp": 1.7393859874934772,
+          "MAX_abs_pp": 1.8294827694008828
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.5986223410347625,
+          "RMSE_pp": 0.748458251375451,
+          "P95_abs_pp": 1.5816443463654057,
+          "MAX_abs_pp": 1.8700954042069258
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.5878693744871647,
+          "RMSE_pp": 0.7318845653989309,
+          "P95_abs_pp": 1.5431529501461778,
+          "MAX_abs_pp": 1.8681263514077056
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.8201533648162913,
+          "RMSE_pp": 1.0323036232601925,
+          "P95_abs_pp": 1.775770704661935,
+          "MAX_abs_pp": 1.8700954042069258
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-05",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0004
+    },
+    "selection_tuple": [
+      0.0,
+      1.9907945639874192,
+      0.7574541507665342,
+      4
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6349251803605818,
+          "RMSE_pp": 0.7955341110576866,
+          "P95_abs_pp": 1.4047201874277062,
+          "MAX_abs_pp": 1.8912627475482835
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6487171078053143,
+          "RMSE_pp": 0.8083384339531318,
+          "P95_abs_pp": 1.4159023862686326,
+          "MAX_abs_pp": 1.8912627475482835
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.3222919133713291,
+          "RMSE_pp": 0.4090920295244041,
+          "P95_abs_pp": 0.880577678811253,
+          "MAX_abs_pp": 1.0009571044698673
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10645,
+          "denominator": 10645,
+          "missing_count": 0,
+          "MAE_pp": 0.861312226952282,
+          "RMSE_pp": 0.9700228472525936,
+          "P95_abs_pp": 1.7599107538758922,
+          "MAX_abs_pp": 1.878721043635434
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.8704619199648269,
+          "RMSE_pp": 0.9781810134899704,
+          "P95_abs_pp": 1.7667590423462156,
+          "MAX_abs_pp": 1.878721043635434
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.5175688688107009,
+          "RMSE_pp": 0.5863734107004273,
+          "P95_abs_pp": 0.9650079587333139,
+          "MAX_abs_pp": 1.0109802547903668
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6191752927375523,
+          "RMSE_pp": 0.7443962050707997,
+          "P95_abs_pp": 1.3370533107308318,
+          "MAX_abs_pp": 1.813372111269522
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.615919408904783,
+          "RMSE_pp": 0.7376632075384487,
+          "P95_abs_pp": 1.329809743227322,
+          "MAX_abs_pp": 1.808644096076971
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.7497482932606153,
+          "RMSE_pp": 0.9768872162298688,
+          "P95_abs_pp": 1.7271994799141188,
+          "MAX_abs_pp": 1.813372111269522
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.6116557723475091,
+          "RMSE_pp": 0.7705120964622686,
+          "P95_abs_pp": 1.645935723917884,
+          "MAX_abs_pp": 1.9907945639874192
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.601807120873524,
+          "RMSE_pp": 0.7560128397351583,
+          "P95_abs_pp": 1.6140137722752848,
+          "MAX_abs_pp": 1.9907945639874192
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.8145562309550736,
+          "RMSE_pp": 1.0245386785721462,
+          "P95_abs_pp": 1.7624149093713446,
+          "MAX_abs_pp": 1.8565242104480713
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-06",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-09,
+        1e-06
+      ],
+      "r_v2": 0.0036
+    },
+    "selection_tuple": [
+      0.0,
+      1.9322380206622858,
+      0.6887223753756503,
+      5
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.634997106375076,
+          "RMSE_pp": 0.8026510980406972,
+          "P95_abs_pp": 1.3937683908319072,
+          "MAX_abs_pp": 1.8086850644817076
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6511287988929121,
+          "RMSE_pp": 0.8166417186608412,
+          "P95_abs_pp": 1.403135247949877,
+          "MAX_abs_pp": 1.8086850644817076
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.26932640848843603,
+          "RMSE_pp": 0.36153945050399905,
+          "P95_abs_pp": 0.7272664898111677,
+          "MAX_abs_pp": 1.0113849836232036
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10645,
+          "denominator": 10645,
+          "missing_count": 0,
+          "MAE_pp": 0.9058453733676213,
+          "RMSE_pp": 0.9891784094219432,
+          "P95_abs_pp": 1.45193374689486,
+          "MAX_abs_pp": 1.5136880513752282
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.9151128538761447,
+          "RMSE_pp": 0.9962723847479102,
+          "P95_abs_pp": 1.4524490367984488,
+          "MAX_abs_pp": 1.5136880513752282
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.557676875567343,
+          "RMSE_pp": 0.6703182927862814,
+          "P95_abs_pp": 1.0983906761577171,
+          "MAX_abs_pp": 1.110417948885828
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6157447544513078,
+          "RMSE_pp": 0.6878688680066648,
+          "P95_abs_pp": 1.0854570564261745,
+          "MAX_abs_pp": 1.2895980389655706
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.6156942468288029,
+          "RMSE_pp": 0.6867048986630481,
+          "P95_abs_pp": 1.0835768955929381,
+          "MAX_abs_pp": 1.2732939335585933
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.6177702971790303,
+          "RMSE_pp": 0.7330265824151005,
+          "P95_abs_pp": 1.2619785453188894,
+          "MAX_abs_pp": 1.2895980389655706
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.5389393678007427,
+          "RMSE_pp": 0.6895758827446358,
+          "P95_abs_pp": 1.4232821632621404,
+          "MAX_abs_pp": 1.9322380206622858
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.5348042197356631,
+          "RMSE_pp": 0.6851619154822114,
+          "P95_abs_pp": 1.4281115945529408,
+          "MAX_abs_pp": 1.9322380206622858
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.624131075622984,
+          "RMSE_pp": 0.7749373629433446,
+          "P95_abs_pp": 1.356600191088097,
+          "MAX_abs_pp": 1.4366889680822454
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-07",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0004
+    },
+    "selection_tuple": [
+      0.0,
+      2.0040320021422655,
+      0.7809573557682512,
+      6
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6397611150220917,
+          "RMSE_pp": 0.7922905187606214,
+          "P95_abs_pp": 1.3875788540111629,
+          "MAX_abs_pp": 1.847468836842292
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6534654826671726,
+          "RMSE_pp": 0.8045840664427424,
+          "P95_abs_pp": 1.3992317345304168,
+          "MAX_abs_pp": 1.847468836842292
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.3291126399577992,
+          "RMSE_pp": 0.42746468383845687,
+          "P95_abs_pp": 0.952285762463414,
+          "MAX_abs_pp": 1.2667208889443615
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10643,
+          "denominator": 10645,
+          "missing_count": 2,
+          "MAE_pp": 0.8282734937317492,
+          "RMSE_pp": 0.9614418111934196,
+          "P95_abs_pp": 1.8560958484367152,
+          "MAX_abs_pp": 2.0103382132737435
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.8370843478162069,
+          "RMSE_pp": 0.9695205980490694,
+          "P95_abs_pp": 1.859336389034805,
+          "MAX_abs_pp": 2.0103382132737435
+        },
+        "FLAGGED": {
+          "numerator": 274,
+          "denominator": 276,
+          "missing_count": 2,
+          "MAE_pp": 0.494843763798384,
+          "RMSE_pp": 0.577948807109574,
+          "P95_abs_pp": 0.9859217646486703,
+          "MAX_abs_pp": 1.6454774270904693
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6030190775935736,
+          "RMSE_pp": 0.7625612716688452,
+          "P95_abs_pp": 1.434234552135482,
+          "MAX_abs_pp": 1.9952098426190654
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.5995065188659361,
+          "RMSE_pp": 0.7551636489934667,
+          "P95_abs_pp": 1.4281187037686454,
+          "MAX_abs_pp": 1.9952098426190654
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.7438856920486133,
+          "RMSE_pp": 1.0157589693145563,
+          "P95_abs_pp": 1.8269284656702445,
+          "MAX_abs_pp": 1.992794355697123
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.6405711445951249,
+          "RMSE_pp": 0.7993534398676571,
+          "P95_abs_pp": 1.7064386780699052,
+          "MAX_abs_pp": 2.0040320021422655
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.629516759829874,
+          "RMSE_pp": 0.7823923530753664,
+          "P95_abs_pp": 1.6494031273685,
+          "MAX_abs_pp": 2.0040320021422655
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.8683119418421872,
+          "RMSE_pp": 1.0916386919221894,
+          "P95_abs_pp": 1.8915819474377418,
+          "MAX_abs_pp": 1.996823687277747
+        }
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "grid-08",
+      "p0_diag": [
+        0.0144,
+        0.0004
+      ],
+      "q_per_s_diag": [
+        1e-08,
+        1e-05
+      ],
+      "r_v2": 0.0036
+    },
+    "selection_tuple": [
+      0.0,
+      1.905509282008766,
+      0.7533398399739822,
+      7
+    ],
+    "nominal_development_metrics": {
+      "11_05_2015_SP20-2_DST_50SOC": {
+        "flagged_count": 283,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.042251418333830996,
+        "FULL_DYNAMIC": {
+          "numerator": 6698,
+          "denominator": 6698,
+          "missing_count": 0,
+          "MAE_pp": 0.6328136269026847,
+          "RMSE_pp": 0.7898961303234007,
+          "P95_abs_pp": 1.3815639562648583,
+          "MAX_abs_pp": 1.8077853832505042
+        },
+        "NON_FLAGGED": {
+          "numerator": 6415,
+          "denominator": 6415,
+          "missing_count": 0,
+          "MAE_pp": 0.6464587548554055,
+          "RMSE_pp": 0.802505246142748,
+          "P95_abs_pp": 1.3916500381156613,
+          "MAX_abs_pp": 1.8077853832505042
+        },
+        "FLAGGED": {
+          "numerator": 283,
+          "denominator": 283,
+          "missing_count": 0,
+          "MAE_pp": 0.32350798797440494,
+          "RMSE_pp": 0.41084471927618305,
+          "P95_abs_pp": 0.8886927598121925,
+          "MAX_abs_pp": 1.0102219795992982
+        }
+      },
+      "11_05_2015_SP20-2_DST_80SOC": {
+        "flagged_count": 276,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.025927665570690466,
+        "FULL_DYNAMIC": {
+          "numerator": 10645,
+          "denominator": 10645,
+          "missing_count": 0,
+          "MAE_pp": 0.8557751130700465,
+          "RMSE_pp": 0.9669658142434999,
+          "P95_abs_pp": 1.7678738043055395,
+          "MAX_abs_pp": 1.8886518965956722
+        },
+        "NON_FLAGGED": {
+          "numerator": 10369,
+          "denominator": 10369,
+          "missing_count": 0,
+          "MAE_pp": 0.8648205171289308,
+          "RMSE_pp": 0.9750982111443598,
+          "P95_abs_pp": 1.7740818896913568,
+          "MAX_abs_pp": 1.8886518965956722
+        },
+        "FLAGGED": {
+          "numerator": 276,
+          "denominator": 276,
+          "missing_count": 0,
+          "MAE_pp": 0.5159497700027575,
+          "RMSE_pp": 0.5845291379346463,
+          "P95_abs_pp": 0.9601484055647826,
+          "MAX_abs_pp": 1.022085571591972
+        }
+      },
+      "11_06_2015_SP20-2_FUDS_80SOC": {
+        "flagged_count": 270,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.024328707875292847,
+        "FULL_DYNAMIC": {
+          "numerator": 11098,
+          "denominator": 11098,
+          "missing_count": 0,
+          "MAE_pp": 0.6157551838244462,
+          "RMSE_pp": 0.7437779747916294,
+          "P95_abs_pp": 1.3441024628919167,
+          "MAX_abs_pp": 1.8294824862976753
+        },
+        "NON_FLAGGED": {
+          "numerator": 10828,
+          "denominator": 10828,
+          "missing_count": 0,
+          "MAE_pp": 0.6123527512639431,
+          "RMSE_pp": 0.7368207392098498,
+          "P95_abs_pp": 1.3373593194884614,
+          "MAX_abs_pp": 1.8251233887097942
+        },
+        "FLAGGED": {
+          "numerator": 270,
+          "denominator": 270,
+          "missing_count": 0,
+          "MAE_pp": 0.7522053311027009,
+          "RMSE_pp": 0.9830101102184033,
+          "P95_abs_pp": 1.7393857130474333,
+          "MAX_abs_pp": 1.8294824862976753
+        }
+      },
+      "11_09_2015_SP20-2_FUDS_50SOC": {
+        "flagged_count": 324,
+        "missing_voltage_count": 0,
+        "flagged_fraction": 0.04629232747535362,
+        "FULL_DYNAMIC": {
+          "numerator": 6999,
+          "denominator": 6999,
+          "missing_count": 0,
+          "MAE_pp": 0.6088843213323027,
+          "RMSE_pp": 0.762901705156335,
+          "P95_abs_pp": 1.6152758899294661,
+          "MAX_abs_pp": 1.905509282008766
+        },
+        "NON_FLAGGED": {
+          "numerator": 6675,
+          "denominator": 6675,
+          "missing_count": 0,
+          "MAE_pp": 0.598612036050835,
+          "RMSE_pp": 0.7473471294254354,
+          "P95_abs_pp": 1.5802110229915352,
+          "MAX_abs_pp": 1.905509282008766
+        },
+        "FLAGGED": {
+          "numerator": 324,
+          "denominator": 324,
+          "missing_count": 0,
+          "MAE_pp": 0.8205124208810567,
+          "RMSE_pp": 1.0324644688427205,
+          "P95_abs_pp": 1.7758532596415744,
+          "MAX_abs_pp": 1.87016408749624
+        }
+      }
+    }
+  }
+]

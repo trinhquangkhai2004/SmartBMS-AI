@@ -1,0 +1,8 @@
+{
+  "sha256": {
+    "configs/p3_rf_training.yaml": "e4a1e002c25dc60385a41d81af0410a6501fe8f753c36cdc401a729b33968553",
+    "configs/p3_xgb_training.yaml": "44ffc9f88e6fc6f781e99922a10ec3120efb88c81c7b523aad0d08ce9919d5ec",
+    "configs/p3_training_requirements.txt": "9a66173397d9791a08da72b0c7dd6a88daf97a33e5c6a2bc2c651f9c1b800389"
+  },
+  "locked_at": "2026-11-22T11:30:06+07:00"
+}

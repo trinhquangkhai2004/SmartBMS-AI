@@ -1,0 +1,66 @@
+{
+  "p22_delivery_sha256": "101934ecc5a9bd89c8877a426a7346d1e89d3ffb752eef4ecdc365638ff8cd89",
+  "members_read": [
+    {
+      "member": "results/p2_2/p2_2_gate_status.json",
+      "sha256": "6e8c46db4045a135b14d4e60b3ade61c48cb06c6ec6fc8e0329341f5fd9ded23",
+      "bytes": 3147
+    },
+    {
+      "member": "artifacts/capacity_metadata.json",
+      "sha256": "bcd2f28b57d9b21ed43f99561d6b8dfc263aaf2ba38c2e60759584f27479e8e0",
+      "bytes": 13046
+    },
+    {
+      "member": "configs/p2_2_reference_policy.yaml",
+      "sha256": "ba532f1960f289a2cb4be2471366af3989e541ecfe908a43ba8531e79a53f783",
+      "bytes": 1549
+    },
+    {
+      "member": "reference_protocol_P2_2.md",
+      "sha256": "9fbf8db8a572ac88d999d76a824befaa0af75fc7b1d05c05253c7289df471cd0",
+      "bytes": 1908
+    },
+    {
+      "member": "configs/evaluation_protocol.yaml",
+      "sha256": "f3696870f1090a6c8559d920d9b20b11dc83fe8029086fbb961a4e35d8b65c04",
+      "bytes": 1982
+    },
+    {
+      "member": "manifests/p2_2_reference_manifest.json",
+      "sha256": "84e643cf1d5f9c96edba1e684cd1f59ad7791af9d39fdb06cfb7721d4702a6e7",
+      "bytes": 25402
+    },
+    {
+      "member": "manifests/split_manifest.json",
+      "sha256": "eb79154c99dacf0b512150d9970bbd0d26b9dff64324d8516c39a12c4fdc9278",
+      "bytes": 7002
+    },
+    {
+      "member": "manifests/window_manifest.csv",
+      "sha256": "8dc268c21976980b4adc391c4af99b33b50385e62e050127321e6aeb0e310025",
+      "bytes": 6089
+    },
+    {
+      "member": "data/processed/p2_2/reference/11_05_2015_SP20-2_DST_50SOC.parquet",
+      "sha256": "9c449eaa7b726ab4f358c0d4e704ea5cdd5f7d13272dd9ebeb7a50b294d612c9",
+      "bytes": 674971
+    },
+    {
+      "member": "data/processed/p2_2/reference/11_05_2015_SP20-2_DST_80SOC.parquet",
+      "sha256": "0984b9352fdf5fd219edb08fdb0da5e13ed4a138e49bad28d73b67247de1b819",
+      "bytes": 905609
+    },
+    {
+      "member": "data/processed/p2_2/reference/11_06_2015_SP20-2_FUDS_80SOC.parquet",
+      "sha256": "34a5cd01584e697533069a8e899388adff8aa276a46d337b42c0b83bfb5e0d69",
+      "bytes": 1038484
+    },
+    {
+      "member": "data/processed/p2_2/reference/11_09_2015_SP20-2_FUDS_50SOC.parquet",
+      "sha256": "356f1624fbaa683ac5e3174b5fe6c838782669b289513aab03347fb0ec5df85f",
+      "bytes": 702062
+    }
+  ],
+  "heldout_trajectory_reads": 0
+}

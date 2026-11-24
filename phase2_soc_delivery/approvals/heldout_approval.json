@@ -1,0 +1,10 @@
+{
+  "decision":"APPROVED_ONCE_AFTER_LOCK",
+  "coverage_required":1.0,
+  "max_abs_error_pp":10.0,
+  "scope":"P2.6",
+  "approval_source":"Người phụ trách, chat ngày 19/11/2026: Duyệt tiêu chí 100% và chạy khi P2.4/P2.5 đạt",
+  "full_window":true,
+  "per_run":true,
+  "scientific_release":false
+}

@@ -1,0 +1,23 @@
+P3-DT-01 PASS: Size and SHA-256 match publisher; path/link/quota checks and CRC pass across 78 entries.
+P3-DT-02 PARTIAL: 77 pickle streams parsed statically; 0 scanner findings; conversion controls and staging pending.
+P3-DT-04 NOT_RUN: No conversion runtime used.
+Raw SHA-256: 071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db
+Python 3.11.9
+Command: py -3.11 -B -m unittest discover -s tests -v
+
+test_accepts_regular_file_under_directory (test_source_security.SourceAuditTests.test_accepts_regular_file_under_directory) ... ok
+test_flags_unknown_global_and_trailing_bytes (test_source_security.SourceAuditTests.test_flags_unknown_global_and_trailing_bytes) ... ok
+test_flags_unresolved_stack_global (test_source_security.SourceAuditTests.test_flags_unresolved_stack_global) ... ok
+test_rejects_backslash_in_raw_zip_directory (test_source_security.SourceAuditTests.test_rejects_backslash_in_raw_zip_directory) ... ok
+test_rejects_duplicate_or_conflicting_paths (test_source_security.SourceAuditTests.test_rejects_duplicate_or_conflicting_paths) ... ok
+test_rejects_expansion_ratio_over_limit (test_source_security.SourceAuditTests.test_rejects_expansion_ratio_over_limit) ... ok
+test_rejects_path_traversal_and_windows_aliases (test_source_security.SourceAuditTests.test_rejects_path_traversal_and_windows_aliases) ... ok
+test_rejects_symlink_entry (test_source_security.SourceAuditTests.test_rejects_symlink_entry) ... ok
+test_rejects_truncated_pickle (test_source_security.SourceAuditTests.test_rejects_truncated_pickle) ... ok
+test_resolves_stack_global_from_memoized_strings (test_source_security.SourceAuditTests.test_resolves_stack_global_from_memoized_strings) ... ok
+test_zip_library_detects_bad_crc (test_source_security.SourceAuditTests.test_zip_library_detects_bad_crc) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.005s
+
+OK

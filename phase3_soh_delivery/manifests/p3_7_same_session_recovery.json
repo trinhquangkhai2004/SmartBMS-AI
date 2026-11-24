@@ -1,0 +1,30 @@
+{
+  "resumed_at": "2026-11-22T16:10:41+07:00",
+  "receipt": {
+    "path": "manifests/p3_7_open_receipt.json",
+    "sha256": "5639ae3c3852ffbad692ee4d42d77a34b4f80168601d7f622547901bb7ccb056"
+  },
+  "exposure_count": 1,
+  "previous_error": "ArrowInvalid: label_status belongs to pairing trace; released labels use release_status",
+  "failure_point": "Arrow scanner field projection validation before materializing any rows",
+  "previous_heldout_label_rows_materialized": 0,
+  "previous_heldout_signal_files_accessed": 0,
+  "previous_prediction_parts": 0,
+  "archived_code": {
+    "scripts/evaluate_p37.py": {
+      "path": "manifests/p37_initial_evaluate_p37.py.txt",
+      "sha256": "f1ccf8befaf2cb64fec6abbba995938bdc681e14d2796239fb180ebb1a04aff3"
+    },
+    "scripts/report_p37.py": {
+      "path": "manifests/p37_initial_report_p37.py.txt",
+      "sha256": "6d3fbfa20e677085189f107b49d0fbb42206fb1fe99d180b7760ac38a1830237"
+    }
+  },
+  "code_hashes": {
+    "scripts/p37_governance.py": "2393cf9b4fd0285616afa4048a76d6d91ad8a4f67b08fa03d241e296f0a26925",
+    "scripts/evaluate_p37.py": "63ebd5f101c3c75291cfb7da21a9e5b4cecc00b8070a9ac3a56f07f24c6f723a",
+    "scripts/p37_metrics.py": "8a5f7a7e0819a375b89bfeaaa12f0e04d2052acc19203914c1e92506ba67ed9e",
+    "scripts/report_p37.py": "fbdc1d508a7e94b22ca844674ee20233c2692f3e777dc68249daeb79fa4d9975",
+    "tests/test_p37.py": "af8bcb82fe958444129f9f4ab28455ba94e090e69d26c0ade1df227eab485b3d"
+  }
+}

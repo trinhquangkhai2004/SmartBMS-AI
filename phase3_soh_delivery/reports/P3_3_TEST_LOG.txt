@@ -1,0 +1,15 @@
+test_contested_cell_is_held_without_substitution (test_p33.P33Tests.test_contested_cell_is_held_without_substitution) ... ok
+test_cross_cell_missing_event_and_reversed_events_do_not_pair (test_p33.P33Tests.test_cross_cell_missing_event_and_reversed_events_do_not_pair) ... ok
+test_missing_cycle_does_not_slide_commissioning (test_p33.P33Tests.test_missing_cycle_does_not_slide_commissioning) ... ok
+test_nonpositive_capacity_and_counter_disagreement (test_p33.P33Tests.test_nonpositive_capacity_and_counter_disagreement) ... ok
+test_real_cell_1_1_reference_and_cycle_six (test_p33.P33Tests.test_real_cell_1_1_reference_and_cycle_six) ... ok
+test_reference_median_and_fifth_discharge_availability (test_p33.P33Tests.test_reference_median_and_fifth_discharge_availability) ... ok
+test_rejected_pair_preserves_p32_duplicate (test_p33.P33Tests.test_rejected_pair_preserves_p32_duplicate) ... ok
+test_reset_clock_and_warmup_never_leak (test_p33.P33Tests.test_reset_clock_and_warmup_never_leak) ... ok
+test_short_commissioning_and_mismatched_early_trace (test_p33.P33Tests.test_short_commissioning_and_mismatched_early_trace) ... ok
+test_two_cells_with_same_cycle_do_not_mix (test_p33.P33Tests.test_two_cells_with_same_cycle_do_not_mix) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.016s
+
+OK

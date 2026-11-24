@@ -1,0 +1,167 @@
+{
+  "version": "p35-r1",
+  "primary_features": [
+    "delta_q_350_358_ah",
+    "q_cc_ah",
+    "q_cv_ah",
+    "q_cv_over_q_cc"
+  ],
+  "features": [
+    {
+      "name": "delta_q_345_355_ah",
+      "units": "Ah",
+      "formula": "Điện lượng sạc trong đoạn sạc dòng thấp CC–CV, nội suy tuyến tính biên điện áp và dòng.",
+      "voltage_band": [
+        3.45,
+        3.55
+      ],
+      "charge_stage": "CC_TOPUP/CV",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "delta_q_350_358_ah",
+      "units": "Ah",
+      "formula": "Điện lượng sạc trong đoạn sạc dòng thấp CC–CV, nội suy tuyến tính biên điện áp và dòng.",
+      "voltage_band": [
+        3.5,
+        3.58
+      ],
+      "charge_stage": "CC_TOPUP/CV",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": true
+    },
+    {
+      "name": "delta_q_345_360_ah",
+      "units": "Ah",
+      "formula": "Điện lượng sạc trong đoạn sạc dòng thấp CC–CV, nội suy tuyến tính biên điện áp và dòng.",
+      "voltage_band": [
+        3.45,
+        3.6
+      ],
+      "charge_stage": "CC_TOPUP/CV",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "q_cc_fast_ah",
+      "units": "Ah",
+      "formula": "Tích phân dòng sạc dương theo độ lớn trên đoạn CC nhanh đã kiểm.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "q_cc_topup_ah",
+      "units": "Ah",
+      "formula": "Tích phân trên đoạn CC dòng thấp trước mẫu đầu của CV đã kiểm.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "q_cc_ah",
+      "units": "Ah",
+      "formula": "Tổng q_cc_fast_ah và q_cc_topup_ah.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": true
+    },
+    {
+      "name": "q_cv_ah",
+      "units": "Ah",
+      "formula": "Tích phân từ mẫu đầu CV đã xác minh tới cuối sạc.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": true
+    },
+    {
+      "name": "q_cv_over_q_cc",
+      "units": "1",
+      "formula": "q_cv_ah / q_cc_ah khi mẫu số > 1e-8 Ah.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": true
+    },
+    {
+      "name": "q_cv_fraction_total",
+      "units": "1",
+      "formula": "q_cv_ah / (q_cv_ah + q_cc_ah) trên các khoảng quan sát được.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "cv_duration_s",
+      "units": "s",
+      "formula": "Thời điểm mẫu cuối trừ mẫu đầu CV.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "charge_duration_s",
+      "units": "s",
+      "formula": "Thời điểm cuối trừ đầu sạc. Biến đối chứng.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    },
+    {
+      "name": "start_charge_voltage_v",
+      "units": "V",
+      "formula": "Điện áp mẫu sạc đầu tiên. Biến đối chứng.",
+      "voltage_band": null,
+      "charge_stage": "see_formula",
+      "available_at": "end_of_valid_charge",
+      "missing_rule": "null with feature-specific reason; preserve row",
+      "source_schema_version": "p3.2-rt-batt-v1",
+      "required": false
+    }
+  ],
+  "key_columns": [
+    "cell_id",
+    "cycle_id",
+    "validation_fold",
+    "end_charge_sample_index"
+  ],
+  "optional_time_ablation": [
+    "charge_duration_s",
+    "start_charge_voltage_v"
+  ],
+  "omitted_modes": [
+    "thermal: no measured channel",
+    "IC: not qualified for plateau derivatives",
+    "commissioning_relative_hi: not enabled"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "trajectory_sha256_checks": 30,
+  "trajectory_rows_rechecked": 261777,
+  "nominal_rows_rechecked": 35440,
+  "inapplicable_scenarios_rechecked": 2,
+  "notebook_code_cells_executed": 3,
+  "frozen_source_hashes_verified": true,
+  "heldout_files_read": 0
+}

@@ -1,0 +1,10 @@
+.venv/
+.venv-py314/
+.uv-cache/
+.wheelhouse/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+data/
+.runtime/

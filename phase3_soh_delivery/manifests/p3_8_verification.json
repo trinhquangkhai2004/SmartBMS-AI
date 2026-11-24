@@ -1,0 +1,98 @@
+{
+  "verified_at": "2026-11-23T21:13:42+07:00",
+  "status": "PASS",
+  "model_version": "p36-r1",
+  "feature_schema_version": "p35-r1",
+  "model_size_bytes": 28577815,
+  "deployment_budget_bytes": 50000000,
+  "within_budget": true,
+  "p37_full_parity": {
+    "rows_checked": 37130,
+    "status_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_raw_abs_diff_pp": 5.684341886080802e-14,
+    "max_sigma_abs_diff_pp": 0.0,
+    "max_valid_abs_diff_pp": 5.684341886080802e-14
+  },
+  "dev_e2e_staging_parity": {
+    "cell_id": "1-1",
+    "cycles_checked": 25,
+    "max_hi_abs_diff": 0.0,
+    "e2e_p95_ms": 123.83385500288568,
+    "e2e_p99_ms": 125.04309100913815
+  },
+  "runtime_benchmark": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9",
+    "logical_cores": 16,
+    "physical_ram_bytes": 16497901568,
+    "verified_load_ms": 4310.885500017321,
+    "memory_before_load": {
+      "rss_bytes": 55861248,
+      "peak_working_set_bytes": 61906944
+    },
+    "memory_after_load": {
+      "rss_bytes": 197558272,
+      "peak_working_set_bytes": 260829184
+    },
+    "memory_after_inference": {
+      "rss_bytes": 449753088,
+      "peak_working_set_bytes": 586764288
+    },
+    "single_session_f33_f34_samples": 100,
+    "single_session_f33_f34_p95_ms": 130.7271000157925,
+    "single_session_f33_f34_p99_ms": 156.163855016057,
+    "single_session_f33_f34_throughput_per_s": 9.375850389573719
+  },
+  "phase1_schema_compat": {
+    "checked": true,
+    "passed": true,
+    "cases_validated": 4,
+    "output": "PHASE1_SCHEMA_COMPAT_OK ['NOT_READY', 'VALID', 'NOT_READY', 'INVALID_INPUT']"
+  },
+  "phase2_immutable_hashes": {
+    "artifacts/capacity_metadata.json": "bcd2f28b57d9b21ed43f99561d6b8dfc263aaf2ba38c2e60759584f27479e8e0",
+    "results/p25/ekf_config.json": "1508778b1d827c80e844641bde0bc4029494eaf5c1b662bd1a190f80647ce7c8",
+    "results/p26/metrics.json": "47cc07535ab1dc6f6e10cc9247a342dcb73d41a80b25cbcc838b23d61f2eaa4e"
+  },
+  "p38_review_audit_checks": {
+    "p3_it_03_unknown_cell_model_status": "NOT_VALIDATED_FOR_DEVICE",
+    "p3_it_03_unknown_cell_model_soh_percent": null,
+    "p3_it_03_missing_device_metadata_status": "NOT_VALIDATED_FOR_DEVICE",
+    "p3_it_03_missing_device_metadata_soh_percent": null,
+    "p3_it_03_missing_device_metadata_reasons": [
+      "MISSING_DOMAIN_ID",
+      "MISSING_CHEMISTRY",
+      "MISSING_CELL_MODEL",
+      "MISSING_NOMINAL_CAPACITY_AH"
+    ],
+    "d13_naive_now_utc_status": "STALE",
+    "d13_naive_now_utc_reasons": [
+      "UNTRUSTED_REFERENCE_CLOCK"
+    ],
+    "p3_it_01_f5_display_25h_status": "STALE",
+    "p3_it_01_f5_display_25h_display_mode": "HELD_STALE",
+    "p3_it_01_f5_display_25h_current_soh": null,
+    "p3_it_01_f5_display_25h_held_soh": 99.56290127203421,
+    "p3_it_01_f5_display_25h_age_seconds": 90000.0,
+    "contract_empty_cell_id_status": "INVALID_INPUT",
+    "contract_empty_cell_id_value": null
+  },
+  "unittest": {
+    "command": "C:\\Users\\quang\\OneDrive\\Tài liệu\\ChatGPT\\Khải mượn làm PBL\\phase3_soh_delivery\\.p36_env\\Scripts\\python.exe -B -m unittest discover -s tests -v",
+    "returncode": 0,
+    "log_sha256": "cbb316011d79b5ef9f78b7e0d47e3c5456666cae021c124fd0d74a07c6f134a9"
+  },
+  "outputs": {
+    "contracts/soh_inference.schema.json": "7637e6cc1a660ffc48f4b279c3ce578a13d5eef7de4aabfd4193e145a003aa00",
+    "artifacts/soh/model_manifest.json": "031e42f32c638692bf440b2d5de3038938a656b0c9821c0bb96f278add285099",
+    "src/soh/ood.py": "16151e3fd77fac376dde779fbb3b53db831b53f64408ce94d83f2b8b298b78ee",
+    "src/soh/inference.py": "69e2c97cb9ddb0801158b05f988e2810239028e414bcbb6e511ef9b195363ba1",
+    "src/soh/output_validation.py": "2aeebf36b0fd0390751cc5e8c0b194e3cb6e69dbdc9d70dd48a352b41d49f485",
+    "src/soh/f5_adapter.py": "09fe047a98446bfcbb0131a1231a481ad678fcb18ee2ba69b35a95b2deee7a98",
+    "tests/test_p38.py": "911ad25e71ef5331065efd6d7a134632f5581f4defbd90f6ff6755f229d60a76",
+    "scripts/verify_p38.py": "f4cd1d3ff66df2b1cb6a4f202173eb6fd6c8b4c877fdc0c317c560197c056a0e",
+    "reports/P3_8_TEST_LOG.txt": "cbb316011d79b5ef9f78b7e0d47e3c5456666cae021c124fd0d74a07c6f134a9",
+    "reports/P3_8_INTEGRATION_TEST.md": "df58e5f895feb175b063b6038d872a0a6951f2283cb74170612f887a94ae5bef"
+  }
+}

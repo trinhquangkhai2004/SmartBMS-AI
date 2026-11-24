@@ -1,0 +1,17 @@
+UT-010 / UT-10
+test_confirmed_stages_and_ratio (test_p35.ChargeFeatureTests.test_confirmed_stages_and_ratio) ... ok
+test_empty_band_and_noisy_plateau (test_p35.ChargeFeatureTests.test_empty_band_and_noisy_plateau) ... ok
+test_flat_voltage_integrates_finitely (test_p35.ChargeFeatureTests.test_flat_voltage_integrates_finitely) ... ok
+test_individual_plateau_violations (test_p35.ChargeFeatureTests.test_individual_plateau_violations) ... ok
+test_invalid_current_time_and_future_phase (test_p35.ChargeFeatureTests.test_invalid_current_time_and_future_phase) ... ok
+test_linear_crossings_and_units (test_p35.ChargeFeatureTests.test_linear_crossings_and_units) ... ok
+test_missing_crossing_or_gap (test_p35.ChargeFeatureTests.test_missing_crossing_or_gap) ... ok
+test_ratio_denominator_below_epsilon (test_p35.ChargeFeatureTests.test_ratio_denominator_below_epsilon) ... ok
+test_real_development_parity_each_validation_fold (test_p35.ChargeFeatureTests.test_real_development_parity_each_validation_fold) ... ok
+test_unconfirmed_tail_is_missing (test_p35.ChargeFeatureTests.test_unconfirmed_tail_is_missing) ... ok
+test_unsupported_features_and_inputs (test_p35.ChargeFeatureTests.test_unsupported_features_and_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.182s
+
+OK

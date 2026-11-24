@@ -1,0 +1,70 @@
+{
+  "decision_id": "D11",
+  "status": "D11_APPROVED_CONVERSION_PENDING",
+  "archive_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db",
+  "routing_needed": "PICKLE_CONVERSION_REQUIRED",
+  "preferred_route": "LOCAL_DOCKER_HARDENED",
+  "conversion_route": "LOCAL_DOCKER_HARDENED",
+  "approved": true,
+  "reviewer": "Reviewer D11 do người dùng xác nhận, chưa có tên",
+  "approved_at": "2026-11-20T13:42:00.6881485+07:00",
+  "risk_acceptance": null,
+  "local_docker_engine_check": "REACHABLE_LINUX",
+  "fallback_route": "COLAB_EPHEMERAL_CONDITIONAL",
+  "fallback_requires_risk_acceptance": "APPROVED_CONDITIONAL_COLAB",
+  "static_inventory": "manifests/p3_pickle_opcode_inventory.json",
+  "static_scan_status": "STATIC_SCAN_COMPLETE_PENDING_REVIEW",
+  "staging_status": "NOT_CREATED",
+  "raw_pickle_deserialized": false,
+  "local_docker_server": {
+    "desktop": "Docker Desktop 4.43.2 (199162)",
+    "engine_version": "28.3.2",
+    "os": "linux",
+    "arch": "amd64",
+    "checked_at": "2026-11-20T13:20:56.1678984+07:00"
+  },
+  "upstream_reference_review": {
+    "status": "UPSTREAM_MATCHED_AND_RESOLVED_IN_CANDIDATE",
+    "matched_globals": 10,
+    "upstream_numpy": "1.20.1",
+    "upstream_pandas": "1.2.4",
+    "evidence": "reports/P3_1_PICKLE_SECURITY.md"
+  },
+  "approval_evidence": "Người dùng xác nhận trong chat: D11 đã được reviewer chấp thuận. Câu hỏi nêu rõ LOCAL_DOCKER_HARDENED, image d11-r1 và ID kết thúc 69eaa.",
+  "candidate": {
+    "revision": "d11-r1",
+    "status": "APPROVED_AS_REPORTED_BY_REQUESTER",
+    "route": "LOCAL_DOCKER_HARDENED",
+    "image_id": "sha256:611d52fe746196d5a771e5fb2b38e7660c623bb045f09933d3525796ced69eaa",
+    "image_tag": "pbl5-rtbatt-converter:d11-r1",
+    "platform": "linux/amd64",
+    "base_image": "docker.io/library/python@sha256:e8c69d86735f6df3efa06b324694fe51f0422785f83a3bd463052636c2421944",
+    "converter_sha256": "64e56ef00e724fbde068553e3d4ac31e0729b48c1728577f379814a275601ea7",
+    "dependency_lock_sha256": "b45604177f2f90a25494ebe8642d82dd49c7e10a00af79ae32d8cc79e5a9f9ff",
+    "scanner_sha256": "1a38af6591714bf5886f6379d86e243b2ffe5e280775534000cf649b6dd3ab22",
+    "dockerfile_sha256": "2e3ab4ec82abefc291e23fc3e7b60cef25f7bb01a7a77829059c80e5747b7d0e",
+    "synthetic_test_source_sha256": "c114e5de1ace253ec48e69cdbb7c64c09b6cba6119284dfd95fb2d6af2a42494",
+    "packages": {
+      "python": "3.11.18",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pyarrow": "22.0.0"
+    },
+    "image_globals_resolved": 10,
+    "synthetic_tests_passed": 9,
+    "no_approval_guard": "PASS",
+    "test_log": "reports/P3_1_D11_CANDIDATE_TEST_LOG.txt"
+  },
+  "staging_readback_preparation": {
+    "script": "conversion/verify_staging.py",
+    "sha256": "45e6b1cc66426054b8330b3f32119f30f51794cad5fb06c63559039cf1db4b68",
+    "synthetic_readback": "PASS",
+    "detects_modified_artifact": "PASS",
+    "real_staging": "NOT_RUN"
+  },
+  "approved_at_basis": "REQUESTER_ATTESTATION_RECORDED_AT",
+  "original_reviewer_name": null,
+  "original_reviewer_role": null,
+  "original_review_approved_at": null,
+  "original_review_record": null
+}

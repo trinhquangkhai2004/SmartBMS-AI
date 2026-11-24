@@ -1,0 +1,8 @@
+{
+  "run_id": "11_12_2015_SP20-2_BJDST_80SOC",
+  "lock_sha256": "6433b63f0538eeaea250c56b966e910f68f84aeb23ed5c93d1ced9b624a138d3",
+  "source_sha256": "6ff84c4fabf8897bb03d8574c6fb89069cdc164e8462f22c54b19c00dba677d7",
+  "time_utc": "2026-11-19T10:01:41.571158+00:00",
+  "test_exposed": true,
+  "action": "open_workbook_once"
+}

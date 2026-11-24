@@ -1,0 +1,43 @@
+phase: P3
+spec_version: '1.2'
+status: GROUP_APPROVAL_REPORTED_PENDING_RECORD_DETAILS
+source:
+  dataset: RT-Batt
+  version: 2
+  doi: 10.17632/nsc7hnsg4s.2
+  archive: our_data.zip
+  domain: RT-Batt LFP/graphite at 30 C
+prediction:
+  unit: physical_cell
+  output: SoH_percent
+  measurement_basis: capacity
+  inference_event_proposal: end_of_valid_charge
+  label_event_proposal: subsequent_valid_discharge_same_cell
+  timing_status: PENDING_SOURCE_AUDIT
+  qref_proposal: median_first_5_consecutive_valid_discharge_capacities
+  qref_condition: same_cell_and_discharge_protocol
+  qref_status: PENDING_SOURCE_AUDIT_AND_REVIEW
+  availability_order: qref_available_at <= feature_available_at < label_observed_at
+  primary_feature_mode: zero_commissioning_features
+  allow_qref_as_ml_feature: false
+  allow_future_capacity_as_feature: false
+model:
+  primary: RandomForestRegressor
+  required_baseline: Ridge
+  sanity_baseline: train_median
+  research_comparator: XGBoost
+evaluation:
+  split_unit: physical_cell
+  development_fraction: 0.75
+  heldout_fraction: 0.25
+  development_validation: GroupKFold
+  development_fold_count: 5
+  er5_acceptance_status: PENDING_REVIEWER_APPROVAL
+integration:
+  source_module: F3
+  output_module: F5
+  f2_q_model_policy: fixed_phase2_calibration
+  f3_to_f5_scope_fields: [soh_percent, status, observed_at, model_version]
+  f3_to_f2_capacity_feedback: false
+  f3_to_f2_guard_test: P3-IT-02
+  lishen_2s1p_validated: false

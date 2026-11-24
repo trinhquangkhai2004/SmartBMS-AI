@@ -1,0 +1,10 @@
+test_canonical_id_rejects_alias_and_invalid_id (test_p34.P34Tests.test_canonical_id_rejects_alias_and_invalid_id) ... ok
+test_fold_assignments_cover_every_dev_cell_once (test_p34.P34Tests.test_fold_assignments_cover_every_dev_cell_once) ... ok
+test_missing_or_invalid_stratum_quota_stops_before_draw (test_p34.P34Tests.test_missing_or_invalid_stratum_quota_stops_before_draw) ... ok
+test_reconciliation_counts_only_whole_cells (test_p34.P34Tests.test_reconciliation_counts_only_whole_cells) ... ok
+test_split_is_deterministic_independent_of_input_order (test_p34.P34Tests.test_split_is_deterministic_independent_of_input_order) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK

@@ -1,0 +1,647 @@
+{
+  "revision": "p34-r1",
+  "status": "CANDIDATE_FROZEN_PENDING_D05",
+  "label_release": "APPROVED_V1",
+  "policy_sha256": "ac23c1af90e519d1cdcb173d69fe8a77e33f09fde15eadd66c0695d49ea56d72",
+  "eligibility_table_sha256": "787f15c335439b8f2f4f7ce54e510c8d7b4fd19f648df55e638741e18c2dd5dd",
+  "input_sha256": {
+    "label_policy": "911037d6dbbca64581eeb1e5f6d74524f80a37c47e48fb407444047a686c5d61",
+    "labels": "de1df883846f5ee475d02f363a7c808ef84ac164ce896423dcfdee72250329f2",
+    "protocol_inventory": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b",
+    "canonical_signals": "c7269d2a7e6c1a98f059b1fcfbf79bffb593135f0cff948c04c54accb7e2b7cb",
+    "p3_milestone_status_before_p34": "1e81325b9d5117fc2589307c9f03e1473207c9aa5210dc56baef2283679a0ad0"
+  },
+  "seed": 42,
+  "algorithm": "Python random.Random(42).shuffle; one generator shared across ascending strata",
+  "python_version": "3.11.18",
+  "stratum": "stage_1_c",
+  "strata_order_c": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "held_out_quotas": {
+    "2": 1,
+    "3": 6,
+    "4": 6,
+    "5": 6
+  },
+  "excluded_cells": {
+    "7-5": "QREF_COMMISSIONING_BLOCKED"
+  },
+  "development_cell_ids": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-7",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7",
+    "3-1",
+    "3-2",
+    "3-3",
+    "3-6",
+    "3-7",
+    "3-8",
+    "4-1",
+    "4-2",
+    "4-3",
+    "4-5",
+    "4-6",
+    "4-7",
+    "4-8",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "6-4",
+    "6-5",
+    "6-6",
+    "7-1",
+    "7-2",
+    "7-3",
+    "7-4",
+    "7-6",
+    "7-7",
+    "7-8",
+    "8-1",
+    "8-3",
+    "8-4",
+    "8-5",
+    "8-7",
+    "8-8",
+    "9-1",
+    "9-3",
+    "9-4",
+    "9-5",
+    "9-7",
+    "9-8",
+    "10-3",
+    "10-4",
+    "10-5",
+    "10-6",
+    "10-8"
+  ],
+  "held_out_cell_ids": [
+    "1-6",
+    "1-8",
+    "2-2",
+    "2-8",
+    "3-4",
+    "3-5",
+    "4-4",
+    "5-1",
+    "6-1",
+    "6-2",
+    "6-3",
+    "6-8",
+    "8-2",
+    "8-6",
+    "9-2",
+    "9-6",
+    "10-1",
+    "10-2",
+    "10-7"
+  ],
+  "cell_metadata": [
+    {
+      "cell_id": "1-1",
+      "stage_1_c": 5,
+      "stage_2_c": 1,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "1-2",
+      "stage_1_c": 5,
+      "stage_2_c": 1,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "1-3",
+      "stage_1_c": 5,
+      "stage_2_c": 1,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "1-4",
+      "stage_1_c": 5,
+      "stage_2_c": 1,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "1-5",
+      "stage_1_c": 5,
+      "stage_2_c": 1,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "1-6",
+      "stage_1_c": 5,
+      "stage_2_c": 2,
+      "stage_3_c": 1,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "1-7",
+      "stage_1_c": 5,
+      "stage_2_c": 2,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "1-8",
+      "stage_1_c": 5,
+      "stage_2_c": 2,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "2-2",
+      "stage_1_c": 5,
+      "stage_2_c": 2,
+      "stage_3_c": 5,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "2-3",
+      "stage_1_c": 5,
+      "stage_2_c": 3,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "2-4",
+      "stage_1_c": 5,
+      "stage_2_c": 3,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "2-5",
+      "stage_1_c": 5,
+      "stage_2_c": 3,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "2-6",
+      "stage_1_c": 5,
+      "stage_2_c": 3,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "2-7",
+      "stage_1_c": 5,
+      "stage_2_c": 3,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "2-8",
+      "stage_1_c": 5,
+      "stage_2_c": 4,
+      "stage_3_c": 1,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "3-1",
+      "stage_1_c": 5,
+      "stage_2_c": 4,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "3-2",
+      "stage_1_c": 5,
+      "stage_2_c": 4,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "3-3",
+      "stage_1_c": 5,
+      "stage_2_c": 4,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "3-4",
+      "stage_1_c": 5,
+      "stage_2_c": 4,
+      "stage_3_c": 5,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "3-5",
+      "stage_1_c": 5,
+      "stage_2_c": 5,
+      "stage_3_c": 1,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "3-6",
+      "stage_1_c": 5,
+      "stage_2_c": 5,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "3-7",
+      "stage_1_c": 5,
+      "stage_2_c": 5,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "3-8",
+      "stage_1_c": 5,
+      "stage_2_c": 5,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-1",
+      "stage_1_c": 5,
+      "stage_2_c": 5,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-2",
+      "stage_1_c": 4,
+      "stage_2_c": 1,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-3",
+      "stage_1_c": 4,
+      "stage_2_c": 1,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-4",
+      "stage_1_c": 4,
+      "stage_2_c": 1,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "4-5",
+      "stage_1_c": 4,
+      "stage_2_c": 1,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-6",
+      "stage_1_c": 4,
+      "stage_2_c": 1,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-7",
+      "stage_1_c": 4,
+      "stage_2_c": 2,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "4-8",
+      "stage_1_c": 4,
+      "stage_2_c": 2,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "5-1",
+      "stage_1_c": 4,
+      "stage_2_c": 2,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "5-2",
+      "stage_1_c": 4,
+      "stage_2_c": 2,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "5-3",
+      "stage_1_c": 4,
+      "stage_2_c": 2,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "5-4",
+      "stage_1_c": 4,
+      "stage_2_c": 3,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "5-5",
+      "stage_1_c": 4,
+      "stage_2_c": 3,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "5-6",
+      "stage_1_c": 4,
+      "stage_2_c": 3,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "5-7",
+      "stage_1_c": 4,
+      "stage_2_c": 3,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "6-1",
+      "stage_1_c": 4,
+      "stage_2_c": 4,
+      "stage_3_c": 1,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "6-2",
+      "stage_1_c": 4,
+      "stage_2_c": 4,
+      "stage_3_c": 2,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "6-3",
+      "stage_1_c": 4,
+      "stage_2_c": 4,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "6-4",
+      "stage_1_c": 4,
+      "stage_2_c": 4,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "6-5",
+      "stage_1_c": 4,
+      "stage_2_c": 4,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "6-6",
+      "stage_1_c": 4,
+      "stage_2_c": 5,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "6-8",
+      "stage_1_c": 4,
+      "stage_2_c": 5,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "7-1",
+      "stage_1_c": 4,
+      "stage_2_c": 5,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "7-2",
+      "stage_1_c": 4,
+      "stage_2_c": 5,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "7-3",
+      "stage_1_c": 3,
+      "stage_2_c": 1,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "7-4",
+      "stage_1_c": 3,
+      "stage_2_c": 1,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "7-6",
+      "stage_1_c": 3,
+      "stage_2_c": 1,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "7-7",
+      "stage_1_c": 3,
+      "stage_2_c": 1,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "7-8",
+      "stage_1_c": 3,
+      "stage_2_c": 2,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "8-1",
+      "stage_1_c": 3,
+      "stage_2_c": 2,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "8-2",
+      "stage_1_c": 3,
+      "stage_2_c": 2,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "8-3",
+      "stage_1_c": 3,
+      "stage_2_c": 2,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "8-4",
+      "stage_1_c": 3,
+      "stage_2_c": 2,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "8-5",
+      "stage_1_c": 3,
+      "stage_2_c": 3,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "8-6",
+      "stage_1_c": 3,
+      "stage_2_c": 3,
+      "stage_3_c": 2,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "8-7",
+      "stage_1_c": 3,
+      "stage_2_c": 3,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "8-8",
+      "stage_1_c": 3,
+      "stage_2_c": 3,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "9-1",
+      "stage_1_c": 3,
+      "stage_2_c": 3,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "9-2",
+      "stage_1_c": 3,
+      "stage_2_c": 4,
+      "stage_3_c": 1,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "9-3",
+      "stage_1_c": 3,
+      "stage_2_c": 4,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "9-4",
+      "stage_1_c": 3,
+      "stage_2_c": 4,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "9-5",
+      "stage_1_c": 3,
+      "stage_2_c": 4,
+      "stage_3_c": 4,
+      "partition": "development"
+    },
+    {
+      "cell_id": "9-6",
+      "stage_1_c": 3,
+      "stage_2_c": 4,
+      "stage_3_c": 5,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "9-7",
+      "stage_1_c": 3,
+      "stage_2_c": 5,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "9-8",
+      "stage_1_c": 3,
+      "stage_2_c": 5,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "10-1",
+      "stage_1_c": 3,
+      "stage_2_c": 5,
+      "stage_3_c": 3,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "10-2",
+      "stage_1_c": 3,
+      "stage_2_c": 5,
+      "stage_3_c": 4,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "10-3",
+      "stage_1_c": 3,
+      "stage_2_c": 5,
+      "stage_3_c": 5,
+      "partition": "development"
+    },
+    {
+      "cell_id": "10-4",
+      "stage_1_c": 2,
+      "stage_2_c": 4,
+      "stage_3_c": 1,
+      "partition": "development"
+    },
+    {
+      "cell_id": "10-5",
+      "stage_1_c": 2,
+      "stage_2_c": 5,
+      "stage_3_c": 2,
+      "partition": "development"
+    },
+    {
+      "cell_id": "10-6",
+      "stage_1_c": 2,
+      "stage_2_c": 3,
+      "stage_3_c": 3,
+      "partition": "development"
+    },
+    {
+      "cell_id": "10-7",
+      "stage_1_c": 2,
+      "stage_2_c": 2,
+      "stage_3_c": 4,
+      "partition": "held_out"
+    },
+    {
+      "cell_id": "10-8",
+      "stage_1_c": 2,
+      "stage_2_c": 1,
+      "stage_3_c": 5,
+      "partition": "development"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "approval_record_id":"PBL5-SOC-20261119-RESEARCH",
+  "policy_version":"v1.2",
+  "ecm_sha256":"4105b629aad216ec88de49084c629a14359537dbd670a65a6d79be93fbfffa34",
+  "scientific_release":false,
+  "default_load":"DENY",
+  "conditional_profiles":["DST","FUDS"],
+  "warning_flag":"LOW_SOC_MODEL_UNCERTAIN",
+  "warning_threshold_v":3.2976,
+  "warning_rule":"finite measured V < threshold; equality false; missing voltage null",
+  "warning_effect":"telemetry only; keep measurement correction and retain flagged events in full-window scoring",
+  "heldout_access":"separate P2.6 one-shot lock and approval required"
+}

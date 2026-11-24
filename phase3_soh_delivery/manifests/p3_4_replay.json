@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "first_candidate_frozen_at": "2026-11-20T20:14:15.676233+07:00",
+  "split_sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a",
+  "fold_sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274",
+  "split_replay_byte_identical": true,
+  "fold_replay_byte_identical": true,
+  "outer_allocator_dataset_mounted": false,
+  "outer_allocator_columns": [
+    "cell_id",
+    "stage_1_c",
+    "stage_2_c",
+    "stage_3_c"
+  ],
+  "eligibility_replay_from_presplit_snapshot_byte_identical": true,
+  "presplit_snapshot_sha256": "1e81325b9d5117fc2589307c9f03e1473207c9aa5210dc56baef2283679a0ad0"
+}

@@ -1,0 +1,166 @@
+{
+  "source_member": "our_data/1-1.pkl",
+  "cell_id": "1-1",
+  "scanned_rows": 13163,
+  "scanned_cycles": 16,
+  "observed_status_values": {
+    "Constant current charge": 1824,
+    "Constant current-constant voltage charge": 4116,
+    "Constant current discharge_0": 896,
+    "Constant current discharge_1": 2336,
+    "Constant current discharge_2": 2336,
+    "Constant current discharge_3": 1655
+  },
+  "charge": {
+    "rows": 383,
+    "raw_status_values": {
+      "Constant current charge": 114,
+      "Constant current-constant voltage charge": 269
+    },
+    "first": {
+      "cell_id": "1-1",
+      "cycle_id": 1,
+      "cycle_source_order": 0,
+      "sample_index": 0,
+      "raw_status": "Constant current charge",
+      "time_s_raw": 0.0,
+      "voltage_v_raw": 2.7731,
+      "current_ma_raw": 5498.13,
+      "capacity_mah_raw": 0.0
+    },
+    "last": {
+      "cell_id": "1-1",
+      "cycle_id": 1,
+      "cycle_source_order": 0,
+      "sample_index": 382,
+      "raw_status": "Constant current-constant voltage charge",
+      "time_s_raw": 1927.0,
+      "voltage_v_raw": 3.5999,
+      "current_ma_raw": 54.811,
+      "capacity_mah_raw": 1175.6222044444444
+    },
+    "time_duplicates": 0,
+    "time_reversals": 0,
+    "time_missing": 0,
+    "signed_current_integral_mah": 1202.3336954166648,
+    "current_sign_counts": {
+      "positive": 383,
+      "negative": 0,
+      "zero": 0,
+      "missing": 0
+    }
+  },
+  "discharge": {
+    "rows": 453,
+    "raw_status_values": {
+      "Constant current discharge_0": 56,
+      "Constant current discharge_1": 146,
+      "Constant current discharge_2": 146,
+      "Constant current discharge_3": 105
+    },
+    "first": {
+      "cell_id": "1-1",
+      "cycle_id": 1,
+      "cycle_source_order": 0,
+      "sample_index": 383,
+      "raw_status": "Constant current discharge_0",
+      "time_s_raw": 1933.0,
+      "voltage_v_raw": 3.4021,
+      "current_ma_raw": -5498.13,
+      "capacity_mah_raw": 1175.6222044444444
+    },
+    "last": {
+      "cell_id": "1-1",
+      "cycle_id": 1,
+      "cycle_source_order": 0,
+      "sample_index": 835,
+      "raw_status": "Constant current discharge_3",
+      "time_s_raw": 4179.0,
+      "voltage_v_raw": 1.9481,
+      "current_ma_raw": -2199.77,
+      "capacity_mah_raw": 1.3230044444443365
+    },
+    "time_duplicates": 0,
+    "time_reversals": 0,
+    "time_missing": 0,
+    "signed_current_integral_mah": -1181.6323124999992,
+    "current_sign_counts": {
+      "positive": 0,
+      "negative": 453,
+      "zero": 0,
+      "missing": 0
+    }
+  },
+  "intervening": [],
+  "same_raw_cycle": true,
+  "discharge_cycle_dq_raw": 1174.2992,
+  "nearby_runs": [
+    {
+      "cycle_id": 1,
+      "cycle_source_order": 0,
+      "phase": "charge",
+      "statuses": {
+        "Constant current charge": 114,
+        "Constant current-constant voltage charge": 269
+      },
+      "rows": 383,
+      "first_sample": 0,
+      "last_sample": 382
+    },
+    {
+      "cycle_id": 1,
+      "cycle_source_order": 0,
+      "phase": "discharge",
+      "statuses": {
+        "Constant current discharge_0": 56,
+        "Constant current discharge_1": 146,
+        "Constant current discharge_2": 146,
+        "Constant current discharge_3": 105
+      },
+      "rows": 453,
+      "first_sample": 383,
+      "last_sample": 835
+    },
+    {
+      "cycle_id": 2,
+      "cycle_source_order": 1,
+      "phase": "charge",
+      "statuses": {
+        "Constant current charge": 114,
+        "Constant current-constant voltage charge": 256
+      },
+      "rows": 370,
+      "first_sample": 0,
+      "last_sample": 369
+    },
+    {
+      "cycle_id": 2,
+      "cycle_source_order": 1,
+      "phase": "discharge",
+      "statuses": {
+        "Constant current discharge_0": 56,
+        "Constant current discharge_1": 146,
+        "Constant current discharge_2": 146,
+        "Constant current discharge_3": 104
+      },
+      "rows": 452,
+      "first_sample": 370,
+      "last_sample": 821
+    }
+  ],
+  "status": "FIRST_CELL_TRACE_REPRODUCED",
+  "input_trace": {
+    "path": "data/staging/rt_batt_v2/1-1.parquet",
+    "sha256": "083884c7cacb9c8bd3435e2b3b26444fa2617b999a9de224f826f75a9595cccb"
+  },
+  "input_summary": {
+    "path": "data/staging/rt_batt_v2/1-1.json",
+    "sha256": "2e4954c2e57847908f8573ca799723c506165926ffdb0f389807469e60f033db"
+  },
+  "trace_script": {
+    "path": "scripts/trace_staged_charge_discharge.py",
+    "sha256": "dbf3fd875b26781862d4ddc18f42c484fbddb992d1fbc96e31a534a110667da8"
+  },
+  "staging_manifest_sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e",
+  "raw_zip_mounted": false
+}

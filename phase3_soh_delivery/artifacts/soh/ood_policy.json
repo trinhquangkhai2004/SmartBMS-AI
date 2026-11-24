@@ -1,0 +1,89 @@
+{
+  "min_feature_violations": 2,
+  "sigma_quantile": 0.95,
+  "sigma_threshold_pp": 1.5453424556388986,
+  "primary_features": [
+    "delta_q_350_358_ah",
+    "q_cc_ah",
+    "q_cv_ah",
+    "q_cv_over_q_cc"
+  ],
+  "feature_bounds": {
+    "delta_q_350_358_ah": {
+      "weighted": [
+        0.01648545955011807,
+        0.04657805870691656
+      ],
+      "unweighted": [
+        0.016282811116859083,
+        0.0466939457411958
+      ],
+      "cells_with_finite": 57,
+      "rows_finite": 106733,
+      "missing": 0,
+      "min_finite_rows_per_cell": 1137
+    },
+    "q_cc_ah": {
+      "weighted": [
+        0.8491138416666667,
+        1.163289063888889
+      ],
+      "unweighted": [
+        0.8504108000000001,
+        1.1636307138888888
+      ],
+      "cells_with_finite": 57,
+      "rows_finite": 106733,
+      "missing": 0,
+      "min_finite_rows_per_cell": 1137
+    },
+    "q_cv_ah": {
+      "weighted": [
+        0.01691761875,
+        0.05986544694444444
+      ],
+      "unweighted": [
+        0.016605720416666667,
+        0.0602416775
+      ],
+      "cells_with_finite": 57,
+      "rows_finite": 106733,
+      "missing": 0,
+      "min_finite_rows_per_cell": 1137
+    },
+    "q_cv_over_q_cc": {
+      "weighted": [
+        0.017000508583444984,
+        0.060651853522500625
+      ],
+      "unweighted": [
+        0.016782933149028467,
+        0.060628467745765205
+      ],
+      "cells_with_finite": 57,
+      "rows_finite": 106733,
+      "missing": 0,
+      "min_finite_rows_per_cell": 1137
+    }
+  },
+  "reference_diagnostic_pp": 5,
+  "delta_max_pp": 5,
+  "resync_confirm_k": 2,
+  "resync_stability_pp": 2,
+  "max_confirmation_gap_cycles": 2,
+  "revision": "p36-r1",
+  "release_status": "CANDIDATE_PENDING_REVIEW",
+  "feature_quantile_method": "cell_equal_mass_left_inverse_empirical_cdf",
+  "tree_sigma": "population_sd_rf_tree_predictions_pp",
+  "status_priority": [
+    "STALE_INPUT",
+    "INSUFFICIENT_HISTORY",
+    "MISSING_FEATURE",
+    "OUT_OF_DOMAIN",
+    "MODEL_UNCERTAIN",
+    "SOH_JUMP_ANOMALY"
+  ],
+  "pending_on_nonvalid": "clear_keep_previous_baseline",
+  "confirmation_gap_unit": "source_cycle_id_difference",
+  "model_version_change": "discard_prior_model_state"
+}

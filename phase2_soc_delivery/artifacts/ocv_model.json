@@ -1,0 +1,258 @@
+{
+  "source_cell_id": "SP20-3",
+  "target_cell_id": "SP20-2",
+  "transfer_assumption": true,
+  "selected_branch": "discharge",
+  "z_knots": [
+    0.0,
+    0.09805943230879521,
+    0.19827609686931158,
+    0.29849516451933655,
+    0.3987136054337971,
+    0.4989308820835887,
+    0.5991489029176007,
+    0.6993658662953306,
+    0.7995752895827939,
+    0.8997877073387295,
+    1.0
+  ],
+  "ocv_v_knots": [
+    3.297609806060791,
+    3.4714267253875732,
+    3.5621421337127686,
+    3.601344108581543,
+    3.62872052192688,
+    3.6710004806518555,
+    3.7591238021850586,
+    3.8470852375030518,
+    3.9475200176239014,
+    4.057998180389404,
+    4.183541774749756
+  ],
+  "extrapolate": false,
+  "schema_version": "p2.2.1",
+  "status": "VALID",
+  "interpolator": "PCHIP",
+  "units": {
+    "z": "fraction",
+    "ocv": "V",
+    "docv_dz": "V/fraction"
+  },
+  "z_min": 0.0,
+  "z_max": 1.0,
+  "source_sha256": "efceda8b2deff13acd9eb1d595dbd0e300b98a41946b49e3f85fab614a625f00",
+  "source_run_id": "12_2_2015_Incremental_OCV_test_SP20-3",
+  "raw_archive_sha256": "4c658862790ea6cc59d8dae634acd7db87cefd357905cc36e0f622c51da88244",
+  "selection_reason": "discharge branch covers observed full-rest to 2.5V cutoff/rest with uniform incremental pulses; selected from calibration before any estimator/test metrics; no branch averaging",
+  "normalization": {
+    "discharge_capacity_sp20_3_ah": 1.995968100642635,
+    "charge_capacity_sp20_3_ah": 1.9717594700041579,
+    "method": "separate operational full/empty endpoints of this SP20-3 run",
+    "discharge_full_anchor": {
+      "row": 768,
+      "time_s": 7680.214623722079,
+      "source_sheet": "Channel_1-006_1",
+      "source_excel_row": 770,
+      "charge_cc_rows": [
+        6,
+        6
+      ],
+      "charge_cv_rows": [
+        7,
+        48
+      ],
+      "cv_end_current_a": -0.09997652471065521,
+      "cv_end_voltage_v": 4.2000651359558105,
+      "rest_rows": [
+        49,
+        768
+      ],
+      "rest_duration_observed_s": 7190.012658371409,
+      "rest_step_time_end_s": 7200.012684035658,
+      "anchor_fraction": 1.0,
+      "anchor_kind": "historical_prior",
+      "definition": "operational full after recorded CC-CV and rest; not exact physical 100%",
+      "absolute_soc_anchor_error_bound": null
+    },
+    "empty_rest": {
+      "row0": 72025,
+      "row1": 79151,
+      "step_index": 8,
+      "cycle_index": 10,
+      "n": 7127,
+      "kind": "REST",
+      "start_s": 79666.07118167976,
+      "end_s": 86865.08267468504,
+      "duration_observed_s": 7199.0114930052805,
+      "step_time_start_s": 1.000140120222245,
+      "step_time_end_s": 7200.011633205708,
+      "current_min_a": -0.0,
+      "current_max_a": -0.0,
+      "current_first_a": -0.0,
+      "current_last_a": -0.0,
+      "voltage_first_v": 2.7265894412994385,
+      "voltage_last_v": 3.297609806060791,
+      "voltage_min_v": 2.7265894412994385,
+      "voltage_max_v": 3.297771692276001,
+      "charge_first_ah": 0.018384840270551,
+      "charge_last_ah": 0.018384840270551,
+      "discharge_first_ah": 1.995968100642635,
+      "discharge_last_ah": 1.995968100642635,
+      "source_sheet_first": "Channel_1-006_2",
+      "source_sheet_last": "Channel_1-006_2",
+      "source_excel_row_first": 8037,
+      "source_excel_row_last": 15163
+    },
+    "charge_full_anchor": {
+      "row": 165695,
+      "time_s": 174278.3648525683,
+      "source_sheet": "Channel_1-006_3",
+      "source_excel_row": 37717,
+      "charge_cc_rows": [
+        156902,
+        156931
+      ],
+      "charge_cv_rows": [
+        156932,
+        158567
+      ],
+      "cv_end_current_a": -0.09997652471065521,
+      "cv_end_voltage_v": 4.2000651359558105,
+      "rest_rows": [
+        158568,
+        165695
+      ],
+      "rest_duration_observed_s": 7198.996927920642,
+      "rest_step_time_end_s": 7200.012597054208,
+      "anchor_fraction": 1.0,
+      "anchor_kind": "historical_prior",
+      "definition": "operational full after recorded CC-CV and rest; not exact physical 100%",
+      "absolute_soc_anchor_error_bound": null,
+      "calculation_view_row_offset": 79152
+    },
+    "sp20_2_capacity_used": false
+  },
+  "branches": {
+    "discharge": {
+      "source_cell_id": "SP20-3",
+      "target_cell_id": "SP20-2",
+      "transfer_assumption": true,
+      "selected_branch": "discharge",
+      "z_knots": [
+        0.0,
+        0.09805943230879521,
+        0.19827609686931158,
+        0.29849516451933655,
+        0.3987136054337971,
+        0.4989308820835887,
+        0.5991489029176007,
+        0.6993658662953306,
+        0.7995752895827939,
+        0.8997877073387295,
+        1.0
+      ],
+      "ocv_v_knots": [
+        3.297609806060791,
+        3.4714267253875732,
+        3.5621421337127686,
+        3.601344108581543,
+        3.62872052192688,
+        3.6710004806518555,
+        3.7591238021850586,
+        3.8470852375030518,
+        3.9475200176239014,
+        4.057998180389404,
+        4.183541774749756
+      ],
+      "extrapolate": false
+    },
+    "charge": {
+      "source_cell_id": "SP20-3",
+      "target_cell_id": "SP20-2",
+      "transfer_assumption": true,
+      "selected_branch": "charge",
+      "z_knots": [
+        0.0,
+        0.10142237808503655,
+        0.20284521878029962,
+        0.3042692829634671,
+        0.40569419678676993,
+        0.5071217760990566,
+        0.6085488142733412,
+        0.7099764981035065,
+        0.8114027926882319,
+        0.9128267841389414,
+        0.9200677890826366,
+        1.0
+      ],
+      "ocv_v_knots": [
+        3.297609806060791,
+        3.48746395111084,
+        3.580933094024658,
+        3.6123595237731934,
+        3.6400599479675293,
+        3.6800718307495117,
+        3.772245168685913,
+        3.8613405227661133,
+        3.961289405822754,
+        4.07047176361084,
+        4.077761173248291,
+        4.1731743812561035
+      ],
+      "extrapolate": false
+    }
+  },
+  "excluded_knots": [],
+  "apparent_charge_minus_discharge_v": {
+    "min": -0.010546449697351967,
+    "max": 0.016696246992665476,
+    "grid_n": 1001,
+    "interpretation": "includes hysteresis, endpoint and branch-specific capacity normalization differences; not pure thermodynamic hysteresis"
+  },
+  "uncertainty": {
+    "absolute_equilibrium_ocv_error_bound_v": null,
+    "limitations": [
+      "finite observed rests, not proven equilibrium",
+      "initial one-sample charge overshoot retained and audited",
+      "OCV full-charge termination about 0.1 A differs from SP20-2 capacity protocol about 0.02 A",
+      "separate branch capacities define operational axes; no independent absolute SoC truth",
+      "cross-cell OCV transfer SP20-3 to SP20-2 unvalidated",
+      "sparse SoC knots and plateau/edge sensitivity; no extrapolation"
+    ]
+  },
+  "source_provenance": {
+    "claimed_cell_id": "SP20-3",
+    "info_cell_ids": [
+      "SP20-1",
+      "SP20-13",
+      "SP20-3"
+    ],
+    "test_report_name": "12_2_SP20-13_OCV-SOC_PULSE",
+    "measurement_channel_ids": [
+      "1-006"
+    ],
+    "measurement_channel_cell": "SP20-3",
+    "channel_cell_mapping": {
+      "1-006": "SP20-3"
+    },
+    "info_comments": [
+      "ch5_sp20-1_x000D_\nch6_sp20-3"
+    ],
+    "channel_evidence": [
+      {
+        "channel": "1-006",
+        "observation_sheets": [
+          "Channel_1-006_1",
+          "Channel_1-006_2",
+          "Channel_1-006_3"
+        ],
+        "info_excel_row": 6,
+        "comments_raw": "ch5_sp20-1_x000D_\nch6_sp20-3"
+      }
+    ],
+    "resolved_cell_id": "SP20-3",
+    "provenance_status": "RESOLVED_CHANNEL_AND_FILENAME",
+    "resolution_reason": "selected measurement channel Comments agree with filename; report name retained separately"
+  },
+  "policy_sha256": "a75905379787c991ee7183fc62a7b049fb4187d1d0a17755a0f92d356275eb99"
+}

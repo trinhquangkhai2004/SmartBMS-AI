@@ -1,0 +1,19 @@
+{
+  "version": "p26-final-v1",
+  "profiles": ["US06", "BJDST"],
+  "run_order": ["11_11_2015_SP20-2_US06_50SOC", "11_11_2015_SP20-2_US06_80SOC", "11_12_2015_SP20-2_BJDST_80SOC", "11_13_2015_SP20-2_BJDST_50SOC"],
+  "coverage_required": 1.0,
+  "max_abs_error_pp": 10.0,
+  "official_scenario": "nominal",
+  "official_population": "FULL_DYNAMIC",
+  "threshold_comparison": "inclusive maximum absolute estimator error against the P2.2 Arbin counter reference, in percentage points, independently for every nominal run",
+  "source_order": "Frozen P2.1 inclusive window. Retain original row order, startup, duplicates, and cutoff.",
+  "reference": "Unchanged P2.2 operational_full_anchor and build_reference on the frozen source. Counter resets/unresolved intervals or non-VALID reference make that run not assessable. No clipping.",
+  "prior": "Shared historical counter-derived SoC through the first dynamic observation only. A short rest cannot establish zero polarization. Solve the loaded terminal equation vRC0=OCV(z0)-R0*I0-V0 from the first observed (scenario-specific) voltage and current. Count that voltage once for initialization, suppress its measurement correction. The inferred RC state includes any terminal-model mismatch.",
+  "clock": "Use previous current for each positive dt. Zero dt integrates no charge. Preserve P2.1 clock event semantics. Unverified nominal gaps beyond the selected development gap threshold make acceptance unavailable.",
+  "evaluation": "Count every raw row and every effective event, requiring valid EKF displayable estimates and finite references in both populations for nominal acceptance. NON_FLAGGED is a diagnostic using finite measured V >= 3.2976 V. NaN/invalid estimates remain in denominators.",
+  "scenarios": "Reuse locked P2.5 prior offsets, noise and bias, preserving the original reference. Record outside-range priors as inapplicable. Nominal acceptance is independent of these sensitivity results.",
+  "fault_probes": "Injected timestamp gaps and NaN on synthetic observations are checked in the locked EKF tests. No injected observation is substituted into the nominal acceptance population.",
+  "exposure": "One claim per source run written to immutable storage before any workbook read. Previously claimed runs use persisted results or remain NOT_ASSESSABLE after an interrupted exposure. Never replay a claimed run.",
+  "on_failure": "Preserve the initial outcome and marked exposure. Return to P2.3 via change control. An independent future holdout is required for a new pristine acceptance claim."
+}

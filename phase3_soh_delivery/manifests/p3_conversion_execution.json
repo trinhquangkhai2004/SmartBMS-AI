@@ -1,0 +1,44 @@
+{
+  "image_id": "sha256:611d52fe746196d5a771e5fb2b38e7660c623bb045f09933d3525796ced69eaa",
+  "approval_record_sha256": "715f77e9dd4b48cd3ff453af2ab6b9c47330d0696e8626e1f20507eb2b495415",
+  "archive_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db",
+  "converter_sha256": "64e56ef00e724fbde068553e3d4ac31e0729b48c1728577f379814a275601ea7",
+  "container_id": "f1e42f870e201c0185abe702ec2b459f69a064fb048b2cf86d7347d3688e26ea",
+  "started_at_utc": "2026-11-20T06:42:01.2389189+00:00",
+  "status": "CONVERTED_PENDING_READBACK",
+  "controls": {
+    "network": "none",
+    "readonly_root": true,
+    "user": "1000:1000",
+    "memory_bytes": 4294967296,
+    "cpu_limit": 2,
+    "pid_limit": 128,
+    "capabilities_dropped": [
+      "ALL"
+    ],
+    "security_options": [
+      "no-new-privileges"
+    ],
+    "tmpfs": {
+      "/tmp": "rw,nosuid,nodev,noexec,size=512m"
+    },
+    "mounts": [
+      {
+        "destination": "/raw/our_data.zip",
+        "read_only": true
+      },
+      {
+        "destination": "/approval/p3_conversion_route.json",
+        "read_only": true
+      },
+      {
+        "destination": "/out",
+        "read_only": false
+      }
+    ]
+  },
+  "exit_code": 0,
+  "completed_at_utc": "2026-11-20T06:48:20.6595702+00:00",
+  "log": "reports/P3_1_CONVERSION_LOG.txt",
+  "log_sha256": "eef17dc087a95ee8c5978426179434af96924952be569ddc9510bb2c5888e1ba"
+}

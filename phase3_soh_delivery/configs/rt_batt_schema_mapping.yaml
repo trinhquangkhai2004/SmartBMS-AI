@@ -1,0 +1,50 @@
+schema_version: p3.2-rt-batt-v1
+source:
+  doi: 10.17632/nsc7hnsg4s.2
+  input_staging: data/staging/rt_batt_v2
+  source_manifest: data/staging/rt_batt_v2/conversion_manifest.json
+  raw_access: false
+  nominal_capacity_ah: 1.1
+  chamber_temperature_c: 30
+  protocol_reference: configs/rt_batt_protocol_reference.json
+join:
+  key: [cell_id, cycle_id]
+  order: [cycle_source_order, sample_index]
+  phase_order: [cycle_source_order, operation_number, sample_index]
+  cycle_time: preserve_raw_local_seconds
+fields:
+  cell_id: {source: cell_id, source_unit: null, target: cell_id, transform: identity, missing: error}
+  cycle_id: {source: cycle_id, source_unit: null, target: cycle_id, transform: identity, missing: error}
+  cycle_source_order: {source: cycle_source_order, source_unit: ordinal, target: cycle_source_order, transform: identity, missing: error}
+  sample_index: {source: sample_index, source_unit: ordinal, target: sample_index, transform: identity, missing: error}
+  raw_status: {source: raw_status, source_unit: null, target: raw_status, transform: preserve_original_text, missing: classify_other_and_retain}
+  time_s: {source: time_s_raw, source_unit: s, target: time_s, unit: s, transform: identity, missing: retain_null_and_flag}
+  voltage_v: {source: voltage_v_raw, source_unit: V, target: voltage_v, unit: V, transform: identity, missing: retain_null_and_flag}
+  current_a: {source: current_ma_raw, source_unit: mA, target: current_a, unit: A, transform: '-current_ma_raw / 1000', missing: retain_null_and_flag}
+  capacity_counter_ah: {source: capacity_mah_raw, source_unit: mAh, target: capacity_counter_ah, unit: Ah, transform: 'capacity_mah_raw / 1000', missing: retain_null_and_flag}
+  dq_raw: {source: dq_by_cycle_raw, source_unit: audited_as_mAh_on_paired_discharges, target: dq_raw, transform: join_by_cell_and_cycle, missing: retain_trace_and_exclude_unresolved_pair}
+  temperature_c: {source: null, source_unit: null, target: temperature_c, unit: Celsius, transform: null, missing: null_per_sample}
+  operation_id: {source: [cell_id, cycle_id, raw_status, sample_index], target: operation_id, transform: 'cell_id:cycle_id:operation_number', missing: other_phase_runs_retained}
+  charge_stage: {source: raw_status, target: charge_stage, transform: UNKNOWN_for_charge_until_stage_audit, missing: null_outside_charge}
+  protocol_id: {source: static_early_trace_and_BatteryML_reference, target: protocol_id, transform: observed_early_discharge_levels, missing: null_when_unresolved}
+status_mapping:
+  precedence: [discharge, charge, rest, other]
+  discharge_contains: discharge
+  charge_contains: charge
+  rest_contains_any: [rest, pause, sleep]
+  default: other
+  observed_charge_labels: [Constant current charge, Constant current-constant voltage charge]
+quality:
+  current_sign_convention: DISCHARGE_POSITIVE_CHARGE_NEGATIVE
+  retain_order_and_all_input_samples: true
+  nonfinite_staging_values: count_null_nan_and_inf_separately
+  time_gap_diagnostic: "max(30 s, 5 * median positive within-phase interval)"
+  voltage_jump_diagnostic_v: 0.20
+  voltage_jump_applies_to: adjacent_samples_same_raw_status
+  candidate_voltage_window_v: [3.45, 3.60]
+  dq_counter_numerical_tolerance_mah: 0.000001
+  discharge_integral: trapezoid_within_discharge_only
+  discharge_integral_omit: [missing_or_nonfinite_endpoints, nonpositive_dt, gaps, wrong_sign_current]
+  d03_cross_cycle_policy: adjacent_source_cycle_and_auditable_continuous_clock_required
+  dq_diff_percent_as_exclusion_threshold: null
+  label_freeze: pending_P3_3_review

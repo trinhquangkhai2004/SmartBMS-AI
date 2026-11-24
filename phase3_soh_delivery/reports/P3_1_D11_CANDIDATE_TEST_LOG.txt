@@ -1,0 +1,53 @@
+D11 candidate verification. Synthetic data only.
+Docker container options and installed packages:
+{
+  "image_id": "sha256:611d52fe746196d5a771e5fb2b38e7660c623bb045f09933d3525796ced69eaa",
+  "candidate_tag": "pbl5-rtbatt-converter:d11-r1",
+  "platform": "linux/amd64",
+  "package_versions": {
+    "python": "3.11.18",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pyarrow": "22.0.0"
+  },
+  "synthetic_tests_passed": 9,
+  "missing_approval_guard": "PASS",
+  "raw_archive_mounted": false,
+  "verified_container_controls": {
+    "network": "none",
+    "readonly_root": true,
+    "user": "1000:1000",
+    "memory_bytes": 4294967296,
+    "cpu_count": 2,
+    "pid_limit": 128,
+    "capabilities_dropped": [
+      "ALL"
+    ],
+    "security_options": [
+      "no-new-privileges"
+    ],
+    "temporary_filesystem": {
+      "/tmp": "rw,nosuid,nodev,noexec,size=512m"
+    },
+    "fixture_mount_read_only": true
+  }
+}
+
+Synthetic suite:
+test_all_upstream_globals_resolve_inside_image (test_secure_source_converter.ConverterTests.test_all_upstream_globals_resolve_inside_image) ... ok
+test_legacy_pandas_dataframe_path_with_synthetic_data (test_secure_source_converter.ConverterTests.test_legacy_pandas_dataframe_path_with_synthetic_data) ... ok
+test_mismatched_cell_id_is_rejected (test_secure_source_converter.ConverterTests.test_mismatched_cell_id_is_rejected) ... ok
+test_restricted_read_refuses_unlisted_benign_global (test_secure_source_converter.ConverterTests.test_restricted_read_refuses_unlisted_benign_global) ... ok
+test_restricted_read_rejects_bytes_after_stop (test_secure_source_converter.ConverterTests.test_restricted_read_rejects_bytes_after_stop) ... ok
+test_restricted_read_round_trips_known_types (test_secure_source_converter.ConverterTests.test_restricted_read_round_trips_known_types) ... ok
+test_source_identity_failure_on_other_file (test_secure_source_converter.ConverterTests.test_source_identity_failure_on_other_file) ... ok
+test_staging_reports_missing_required_columns (test_secure_source_converter.ConverterTests.test_staging_reports_missing_required_columns) ... ok
+test_staging_round_trip_preserves_cycle_order_and_raw_values (test_secure_source_converter.ConverterTests.test_staging_round_trip_preserves_cycle_order_and_raw_values) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.038s
+
+OK
+
+Missing approval command:
+D11 approval record is required

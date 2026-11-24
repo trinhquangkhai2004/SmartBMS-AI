@@ -1,0 +1,40 @@
+revision: p36-r1
+seed: 42
+n_jobs: 8
+selection_metric: pooled_oof_macro_cell_mae_pp
+weighting: N_over_C_times_cell_row_count
+hyperparameter_search:
+  strategy: preregistered_compact_depth_leaf_and_tree_comparisons
+  max_candidates: 8
+  weighted_cv_max_fits: 40
+  max_full_development_candidate_refits: 8
+  candidates:
+    - {n_estimators: 100, max_depth: 8, min_samples_leaf: 20, max_features: sqrt}
+    - {n_estimators: 100, max_depth: 12, min_samples_leaf: 10, max_features: 0.5}
+    - {n_estimators: 100, max_depth: 16, min_samples_leaf: 5, max_features: 0.7}
+    - {n_estimators: 200, max_depth: 8, min_samples_leaf: 10, max_features: 0.7}
+    - {n_estimators: 200, max_depth: 12, min_samples_leaf: 5, max_features: sqrt}
+    - {n_estimators: 200, max_depth: 16, min_samples_leaf: 20, max_features: 0.5}
+    - {n_estimators: 300, max_depth: 12, min_samples_leaf: 20, max_features: 0.7}
+    - {n_estimators: 300, max_depth: 16, min_samples_leaf: 10, max_features: sqrt}
+artifact:
+  max_bytes: 50000000
+  mb_definition: 1000000
+  joblib_compression_level: 3
+ridge_alphas: [0.1, 1.0, 10.0, 100.0, 1000.0]
+hi_ablation:
+  voltage_window_only: [delta_q_350_358_ah]
+  cc_cv_only: [q_cc_ah, q_cv_ah]
+  phase_and_ratio: [q_cc_ah, q_cv_ah, q_cv_over_q_cc]
+ood:
+  min_violations_candidates: [1, 2, 3]
+  sigma_quantile_candidates: [0.90, 0.95, 0.99]
+  max_feature_flag_fraction: 0.05
+  max_sigma_flag_fraction: 0.05
+  jump_threshold_candidates_pp: [4, 5, 7]
+  resync_confirmations_candidates: [2, 3]
+  resync_stability_candidates_pp: [1, 2]
+  gap_candidates_cycles: [1, 2, 5]
+  max_jump_rejection_fraction: 0.01
+  max_resync_events_per_1000_eligible: 2
+  jump_reference_change_diagnostic_pp: 5

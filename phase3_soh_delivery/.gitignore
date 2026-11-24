@@ -1,0 +1,12 @@
+/data/
+/.p36_env/
+/.p33_work/
+/.p34_work/
+__pycache__/
+*.py[cod]
+artifacts/soh/*.joblib
+manifests/cell_cycle_inventory.csv
+manifests/cycle_label_pairing.parquet
+reports/*.parquet
+reports/rejected_records.csv
+releases/*.zip

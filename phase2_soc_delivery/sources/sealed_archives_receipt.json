@@ -1,0 +1,16 @@
+[
+  {
+    "archive": "SP2_25C_US06.zip",
+    "sha256": "cedf99281bad6c1f17a879d614f867451cf5994bad0f66d30c56290c1f6bb3fb",
+    "bytes": 3372078,
+    "source": "https://web.calce.umd.edu/batteries/data/SP2_25C_US06.zip",
+    "worksheet_content_read": false
+  },
+  {
+    "archive": "SP2_25C_BJDST.zip",
+    "sha256": "df372646a75f495186a58c3f549baecf86e70e0478bf55a97e122bab10f5bf21",
+    "bytes": 3005609,
+    "source": "https://web.calce.umd.edu/batteries/data/SP2_25C_BJDST.zip",
+    "worksheet_content_read": false
+  }
+]

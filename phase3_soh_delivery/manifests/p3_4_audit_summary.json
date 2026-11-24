@@ -1,0 +1,566 @@
+{
+  "status": "PASS_STRUCTURAL_AUDIT_PENDING_D05",
+  "split_manifest_sha256": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a",
+  "cv_fold_manifest_sha256": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274",
+  "metadata_columns_for_draw": [
+    "cell_id",
+    "stage_1_c",
+    "stage_2_c",
+    "stage_3_c"
+  ],
+  "label_columns_for_post_split_audit": [
+    "cell_id",
+    "cycle_id"
+  ],
+  "canonical_columns_for_post_split_audit": [
+    "cell_id"
+  ],
+  "counts": {
+    "eligible_cells": 76,
+    "development_cells": 57,
+    "held_out_cells": 19,
+    "excluded_cells": 1,
+    "development_labels": 106733,
+    "held_out_labels": 37130,
+    "labels_total": 143863,
+    "signal_rows": {
+      "development": 67248432,
+      "held_out": 23150670,
+      "excluded_v1": 1337557
+    }
+  },
+  "overlap": {
+    "cell_ids": 0,
+    "labeled_keys": 0,
+    "canonical_rows": 0,
+    "held_out_cells_in_cv": 0
+  },
+  "validation_frequency": {
+    "1-1": 1,
+    "1-2": 1,
+    "1-3": 1,
+    "1-4": 1,
+    "1-5": 1,
+    "1-7": 1,
+    "2-3": 1,
+    "2-4": 1,
+    "2-5": 1,
+    "2-6": 1,
+    "2-7": 1,
+    "3-1": 1,
+    "3-2": 1,
+    "3-3": 1,
+    "3-6": 1,
+    "3-7": 1,
+    "3-8": 1,
+    "4-1": 1,
+    "4-2": 1,
+    "4-3": 1,
+    "4-5": 1,
+    "4-6": 1,
+    "4-7": 1,
+    "4-8": 1,
+    "5-2": 1,
+    "5-3": 1,
+    "5-4": 1,
+    "5-5": 1,
+    "5-6": 1,
+    "5-7": 1,
+    "6-4": 1,
+    "6-5": 1,
+    "6-6": 1,
+    "7-1": 1,
+    "7-2": 1,
+    "7-3": 1,
+    "7-4": 1,
+    "7-6": 1,
+    "7-7": 1,
+    "7-8": 1,
+    "8-1": 1,
+    "8-3": 1,
+    "8-4": 1,
+    "8-5": 1,
+    "8-7": 1,
+    "8-8": 1,
+    "9-1": 1,
+    "9-3": 1,
+    "9-4": 1,
+    "9-5": 1,
+    "9-7": 1,
+    "9-8": 1,
+    "10-3": 1,
+    "10-4": 1,
+    "10-5": 1,
+    "10-6": 1,
+    "10-8": 1
+  },
+  "reference_cell_1_1": {
+    "partition": "development",
+    "labels": 1499
+  },
+  "per_cell_counts": [
+    {
+      "cell_id": "1-1",
+      "partition": "development",
+      "labels": 1499,
+      "canonical_rows": 1163166
+    },
+    {
+      "cell_id": "1-2",
+      "partition": "development",
+      "labels": 2673,
+      "canonical_rows": 1913792
+    },
+    {
+      "cell_id": "1-3",
+      "partition": "development",
+      "labels": 1853,
+      "canonical_rows": 1242010
+    },
+    {
+      "cell_id": "1-4",
+      "partition": "development",
+      "labels": 1495,
+      "canonical_rows": 981157
+    },
+    {
+      "cell_id": "1-5",
+      "partition": "development",
+      "labels": 1966,
+      "canonical_rows": 1260162
+    },
+    {
+      "cell_id": "1-6",
+      "partition": "held_out",
+      "labels": 1138,
+      "canonical_rows": 820387
+    },
+    {
+      "cell_id": "1-7",
+      "partition": "development",
+      "labels": 1673,
+      "canonical_rows": 1053689
+    },
+    {
+      "cell_id": "1-8",
+      "partition": "held_out",
+      "labels": 2280,
+      "canonical_rows": 1387536
+    },
+    {
+      "cell_id": "2-2",
+      "partition": "held_out",
+      "labels": 2646,
+      "canonical_rows": 1563012
+    },
+    {
+      "cell_id": "2-3",
+      "partition": "development",
+      "labels": 1746,
+      "canonical_rows": 1183394
+    },
+    {
+      "cell_id": "2-4",
+      "partition": "development",
+      "labels": 1494,
+      "canonical_rows": 899513
+    },
+    {
+      "cell_id": "2-5",
+      "partition": "development",
+      "labels": 1381,
+      "canonical_rows": 791546
+    },
+    {
+      "cell_id": "2-6",
+      "partition": "development",
+      "labels": 1567,
+      "canonical_rows": 880103
+    },
+    {
+      "cell_id": "2-7",
+      "partition": "development",
+      "labels": 2197,
+      "canonical_rows": 1203658
+    },
+    {
+      "cell_id": "2-8",
+      "partition": "held_out",
+      "labels": 1476,
+      "canonical_rows": 959981
+    },
+    {
+      "cell_id": "3-1",
+      "partition": "development",
+      "labels": 1933,
+      "canonical_rows": 1121303
+    },
+    {
+      "cell_id": "3-2",
+      "partition": "development",
+      "labels": 2278,
+      "canonical_rows": 1241348
+    },
+    {
+      "cell_id": "3-3",
+      "partition": "development",
+      "labels": 1644,
+      "canonical_rows": 875176
+    },
+    {
+      "cell_id": "3-4",
+      "partition": "held_out",
+      "labels": 1761,
+      "canonical_rows": 901113
+    },
+    {
+      "cell_id": "3-5",
+      "partition": "held_out",
+      "labels": 2652,
+      "canonical_rows": 1757238
+    },
+    {
+      "cell_id": "3-6",
+      "partition": "development",
+      "labels": 2486,
+      "canonical_rows": 1399694
+    },
+    {
+      "cell_id": "3-7",
+      "partition": "development",
+      "labels": 2474,
+      "canonical_rows": 1279716
+    },
+    {
+      "cell_id": "3-8",
+      "partition": "development",
+      "labels": 2337,
+      "canonical_rows": 1242728
+    },
+    {
+      "cell_id": "4-1",
+      "partition": "development",
+      "labels": 2212,
+      "canonical_rows": 1082059
+    },
+    {
+      "cell_id": "4-2",
+      "partition": "development",
+      "labels": 1777,
+      "canonical_rows": 1413962
+    },
+    {
+      "cell_id": "4-3",
+      "partition": "development",
+      "labels": 1137,
+      "canonical_rows": 811807
+    },
+    {
+      "cell_id": "4-4",
+      "partition": "held_out",
+      "labels": 1486,
+      "canonical_rows": 1009490
+    },
+    {
+      "cell_id": "4-5",
+      "partition": "development",
+      "labels": 1555,
+      "canonical_rows": 1050541
+    },
+    {
+      "cell_id": "4-6",
+      "partition": "development",
+      "labels": 1375,
+      "canonical_rows": 883485
+    },
+    {
+      "cell_id": "4-7",
+      "partition": "development",
+      "labels": 2211,
+      "canonical_rows": 1669494
+    },
+    {
+      "cell_id": "4-8",
+      "partition": "development",
+      "labels": 1701,
+      "canonical_rows": 1112935
+    },
+    {
+      "cell_id": "5-1",
+      "partition": "held_out",
+      "labels": 2502,
+      "canonical_rows": 1582288
+    },
+    {
+      "cell_id": "5-2",
+      "partition": "development",
+      "labels": 1921,
+      "canonical_rows": 1155984
+    },
+    {
+      "cell_id": "5-3",
+      "partition": "development",
+      "labels": 2684,
+      "canonical_rows": 1616635
+    },
+    {
+      "cell_id": "5-4",
+      "partition": "development",
+      "labels": 1957,
+      "canonical_rows": 1386486
+    },
+    {
+      "cell_id": "5-5",
+      "partition": "development",
+      "labels": 1578,
+      "canonical_rows": 990462
+    },
+    {
+      "cell_id": "5-6",
+      "partition": "development",
+      "labels": 2455,
+      "canonical_rows": 1485704
+    },
+    {
+      "cell_id": "5-7",
+      "partition": "development",
+      "labels": 1443,
+      "canonical_rows": 828946
+    },
+    {
+      "cell_id": "6-1",
+      "partition": "held_out",
+      "labels": 1604,
+      "canonical_rows": 1089985
+    },
+    {
+      "cell_id": "6-2",
+      "partition": "held_out",
+      "labels": 1903,
+      "canonical_rows": 1176542
+    },
+    {
+      "cell_id": "6-3",
+      "partition": "held_out",
+      "labels": 1799,
+      "canonical_rows": 1036689
+    },
+    {
+      "cell_id": "6-4",
+      "partition": "development",
+      "labels": 1712,
+      "canonical_rows": 948575
+    },
+    {
+      "cell_id": "6-5",
+      "partition": "development",
+      "labels": 2173,
+      "canonical_rows": 1225651
+    },
+    {
+      "cell_id": "6-6",
+      "partition": "development",
+      "labels": 2463,
+      "canonical_rows": 1673190
+    },
+    {
+      "cell_id": "6-8",
+      "partition": "held_out",
+      "labels": 2445,
+      "canonical_rows": 1358891
+    },
+    {
+      "cell_id": "7-1",
+      "partition": "development",
+      "labels": 1685,
+      "canonical_rows": 889003
+    },
+    {
+      "cell_id": "7-2",
+      "partition": "development",
+      "labels": 2025,
+      "canonical_rows": 1047774
+    },
+    {
+      "cell_id": "7-3",
+      "partition": "development",
+      "labels": 1290,
+      "canonical_rows": 1054964
+    },
+    {
+      "cell_id": "7-4",
+      "partition": "development",
+      "labels": 1388,
+      "canonical_rows": 1030916
+    },
+    {
+      "cell_id": "7-5",
+      "partition": "excluded_v1",
+      "labels": 0,
+      "canonical_rows": 1337557
+    },
+    {
+      "cell_id": "7-6",
+      "partition": "development",
+      "labels": 1414,
+      "canonical_rows": 980456
+    },
+    {
+      "cell_id": "7-7",
+      "partition": "development",
+      "labels": 1680,
+      "canonical_rows": 1136164
+    },
+    {
+      "cell_id": "7-8",
+      "partition": "development",
+      "labels": 1933,
+      "canonical_rows": 1462466
+    },
+    {
+      "cell_id": "8-1",
+      "partition": "development",
+      "labels": 1303,
+      "canonical_rows": 871263
+    },
+    {
+      "cell_id": "8-2",
+      "partition": "held_out",
+      "labels": 2036,
+      "canonical_rows": 1324048
+    },
+    {
+      "cell_id": "8-3",
+      "partition": "development",
+      "labels": 2285,
+      "canonical_rows": 1423900
+    },
+    {
+      "cell_id": "8-4",
+      "partition": "development",
+      "labels": 1880,
+      "canonical_rows": 1147194
+    },
+    {
+      "cell_id": "8-5",
+      "partition": "development",
+      "labels": 1343,
+      "canonical_rows": 967713
+    },
+    {
+      "cell_id": "8-6",
+      "partition": "held_out",
+      "labels": 2360,
+      "canonical_rows": 1582671
+    },
+    {
+      "cell_id": "8-7",
+      "partition": "development",
+      "labels": 2042,
+      "canonical_rows": 1273676
+    },
+    {
+      "cell_id": "8-8",
+      "partition": "development",
+      "labels": 1674,
+      "canonical_rows": 1013600
+    },
+    {
+      "cell_id": "9-1",
+      "partition": "development",
+      "labels": 2052,
+      "canonical_rows": 1193138
+    },
+    {
+      "cell_id": "9-2",
+      "partition": "held_out",
+      "labels": 2138,
+      "canonical_rows": 1507147
+    },
+    {
+      "cell_id": "9-3",
+      "partition": "development",
+      "labels": 1900,
+      "canonical_rows": 1193519
+    },
+    {
+      "cell_id": "9-4",
+      "partition": "development",
+      "labels": 1970,
+      "canonical_rows": 1176320
+    },
+    {
+      "cell_id": "9-5",
+      "partition": "development",
+      "labels": 2161,
+      "canonical_rows": 1240834
+    },
+    {
+      "cell_id": "9-6",
+      "partition": "held_out",
+      "labels": 1737,
+      "canonical_rows": 973748
+    },
+    {
+      "cell_id": "9-7",
+      "partition": "development",
+      "labels": 2006,
+      "canonical_rows": 1375255
+    },
+    {
+      "cell_id": "9-8",
+      "partition": "development",
+      "labels": 2303,
+      "canonical_rows": 1397172
+    },
+    {
+      "cell_id": "10-1",
+      "partition": "held_out",
+      "labels": 1697,
+      "canonical_rows": 971079
+    },
+    {
+      "cell_id": "10-2",
+      "partition": "held_out",
+      "labels": 1692,
+      "canonical_rows": 948213
+    },
+    {
+      "cell_id": "10-3",
+      "partition": "development",
+      "labels": 1843,
+      "canonical_rows": 998166
+    },
+    {
+      "cell_id": "10-4",
+      "partition": "development",
+      "labels": 1806,
+      "canonical_rows": 1360658
+    },
+    {
+      "cell_id": "10-5",
+      "partition": "development",
+      "labels": 2025,
+      "canonical_rows": 1343705
+    },
+    {
+      "cell_id": "10-6",
+      "partition": "development",
+      "labels": 2280,
+      "canonical_rows": 1579974
+    },
+    {
+      "cell_id": "10-7",
+      "partition": "held_out",
+      "labels": 1778,
+      "canonical_rows": 1200612
+    },
+    {
+      "cell_id": "10-8",
+      "partition": "development",
+      "labels": 1395,
+      "canonical_rows": 1022531
+    }
+  ],
+  "shared_profile_first_three_c": []
+}

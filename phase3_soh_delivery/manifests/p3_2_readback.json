@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "canonical_rows": 91736659,
+  "unique_cycle_keys": 146122,
+  "protocol_cell_keys": 77,
+  "candidate_pairs": 146118,
+  "quality_ledger_rows": 351968,
+  "quality_ledger_reason_counts": {
+    "CHARGE_OR_DISCHARGE_SIGNAL_REVIEW": 4,
+    "TIME_DUPLICATE": 4,
+    "TIME_GAP": 146072,
+    "VOLTAGE_JUMP": 205888
+  },
+  "output_sha256": {
+    "canonical_cycles.parquet": "c7269d2a7e6c1a98f059b1fcfbf79bffb593135f0cff948c04c54accb7e2b7cb",
+    "cell_cycle_inventory.csv": "72cad61dbd56e9fe1b0e50564cb47a5817f21523ec0c088f0b8a68e127acca22",
+    "protocol_inventory.csv": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b",
+    "rejected_records.csv": "7baa0ceb15517f241dc3b23f3b75da942647a1aafddd43ed81d65d5041a9417f",
+    "p3_2_audit_summary.json": "ec33e63aae06a72a8d7c89fd16d68a1ceb32e3f751525ab148e91a18ca1228c5"
+  },
+  "readback_image_id": "sha256:611d52fe746196d5a771e5fb2b38e7660c623bb045f09933d3525796ced69eaa",
+  "verifier_sha256": "44c7c2875ba69ee81c20d4983fc357e74f60bf7b019d2c86b522afb353bb1db7",
+  "staging_or_raw_mounted": false,
+  "verified_at_utc": "2026-11-20T18:13:14.5258634+07:00",
+  "full_replay": {
+    "status": "PASS",
+    "first_batch_size": 32768,
+    "replay_batch_size": 16384,
+    "byte_identical_outputs": {
+      "canonical_cycles.parquet": "c7269d2a7e6c1a98f059b1fcfbf79bffb593135f0cff948c04c54accb7e2b7cb",
+      "cell_cycle_inventory.csv": "72cad61dbd56e9fe1b0e50564cb47a5817f21523ec0c088f0b8a68e127acca22",
+      "protocol_inventory.csv": "dbd53cbccdd66a8a794346fe3825034d5a2d677e67556031821403073f92526b",
+      "rejected_records.csv": "7baa0ceb15517f241dc3b23f3b75da942647a1aafddd43ed81d65d5041a9417f",
+      "p3_2_audit_summary.json": "ec33e63aae06a72a8d7c89fd16d68a1ceb32e3f751525ab148e91a18ca1228c5"
+    }
+  }
+}

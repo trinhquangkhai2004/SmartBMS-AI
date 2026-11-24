@@ -1,0 +1,21 @@
+{
+  "approval_record_id": "PBL5-SOC-20261119-RESEARCH",
+  "decision": "APPROVED_CONDITIONAL",
+  "date_local": "2026-11-19",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "approved_by": "Người phụ trách dự án, trực tiếp xác nhận trong cuộc trò chuyện bàn giao",
+  "recorded_by": "Codex",
+  "approval_source": "Tin nhắn người dùng ngày 19/11/2026 trong cuộc trò chuyện hiện tại; nối tiếp phạm vi nghiên cứu tại mục 3.2 của spec v1.2.",
+  "quote": "Oke vậy hướng đi của bạn đề xuất là Hiệu chuẩn tham số Offline + Ước lượng SoC Online bằng EKF theo Spec v1.2 phải không ? Tôi thấy hướng đi này phù hợp và tôi xác nhận. Hãy bám đúng theo plan bạn đã đề ra để thực hiện sau đó bàn giao cho tôi.",
+  "scope": ["P2.4","P2.5"],
+  "conditional_execution_allowed": true,
+  "scientific_release": false,
+  "G10": "NEEDS_REVIEW",
+  "ecm_sha256": "4105b629aad216ec88de49084c629a14359537dbd670a65a6d79be93fbfffa34",
+  "ecm_bytes": 25025,
+  "baseline_verified_sha256": "101934ecc5a9bd89c8877a426a7346d1e89d3ffb752eef4ecdc365638ff8cd89",
+  "p23_source_archive_sha256": "34af412228a96d0e38ba46eea7df613f443f46fbd64ff6f455a6acf1f125601f",
+  "warning_threshold_v": 3.2976,
+  "policy_version": "v1.2",
+  "ecm_identity_source": "Drive, p2_3_delivery_manifest.json, files[path=artifacts/ecm_params.json]: 25025 bytes. Text from Drive ECM preview was restored to UTF-8/LF and independently matched this manifest bit for bit."
+}

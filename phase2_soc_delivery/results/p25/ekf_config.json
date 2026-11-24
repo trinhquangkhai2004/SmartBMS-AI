@@ -1,0 +1,42 @@
+{
+  "selected": {
+    "id": "grid-04",
+    "p0_diag": [
+      0.0016,
+      0.0004
+    ],
+    "q_per_s_diag": [
+      1e-08,
+      1e-05
+    ],
+    "r_v2": 0.0036
+  },
+  "max_gap_active_s": 3.0482512133956337,
+  "gap_source": "positive DST dynamic intervals only",
+  "dst_positive_dt_s": {
+    "0": 8.491375410812907e-05,
+    "50": 1.0155099975672783,
+    "95": 1.0157111230655573,
+    "99": 1.0160156268095306,
+    "99.5": 1.0160837377985446,
+    "100": 1.0175513267531642
+  },
+  "current_range_a": [
+    -2.1421873569488525,
+    4.001959800720215
+  ],
+  "candidate_ecm_sha256": "4105b629aad216ec88de49084c629a14359537dbd670a65a6d79be93fbfffa34",
+  "approval_record_id": "PBL5-SOC-20261119-RESEARCH",
+  "context": "P2.5 development selection",
+  "scientific_release": false,
+  "ER4": "NOT_EVALUATED",
+  "plan_sha256": "b418e34fc673cb39b3be121ad294bfca5ee7393ad516e236b41c07c76b45ff54",
+  "runtime_sha256": "ca8359c969781c29ed9a09f143dccd9e953319a3abf6862cd28d069a4418a828",
+  "driver_sha256": "e8ddc833a9dfac2c8a94d1c1efae54bed3f2e9cb169b2ad59434c64d52d81a85",
+  "warning_threshold_v": 3.2976,
+  "seed": 20261112,
+  "estimated_state": [
+    "z_fraction",
+    "v_rc_v"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "notebook": "notebooks/04_coulomb_counting.ipynb",
+  "method": "nbclient/Jupyter, isolated temporary project copy",
+  "seed_data": "four verified DST/FUDS development parquet tables",
+  "heldout_workbook_reads": 0,
+  "executed_cells": 2,
+  "initial_notebook_sha256": "ca8443c9b18fceec5e5c19e4d0096aa2796a16e66d87fd77a4d4a7f32573a821",
+  "executed_notebook_sha256": "cacfdeb26a4918b025e723de4f0186941112a131e1add6ff2090f30a7a9e7119",
+  "sealed_p24_metrics_sha256": "6edd67d7e6f3c00b4c645687e1dbad11b47ea509db0c36f3f4358a90755ac59f",
+  "runs": {
+    "11_05_2015_SP20-2_DST_50SOC": {
+      "rows": 6698,
+      "sealed_sha256": "621472eecb12c5df54d94aba51323786cb53dd2b73cfee11d10b57b4d295938b",
+      "replay_sha256": "621472eecb12c5df54d94aba51323786cb53dd2b73cfee11d10b57b4d295938b",
+      "match": true
+    },
+    "11_05_2015_SP20-2_DST_80SOC": {
+      "rows": 10645,
+      "sealed_sha256": "e04697834c64e22133c48131b0f4f95fc271d6e72f776d184aa945e663be6fd2",
+      "replay_sha256": "e04697834c64e22133c48131b0f4f95fc271d6e72f776d184aa945e663be6fd2",
+      "match": true
+    },
+    "11_06_2015_SP20-2_FUDS_80SOC": {
+      "rows": 11098,
+      "sealed_sha256": "054b7f3d237993d2d9d612ff5e91fe7b474d2ab5bf36651d612bd2699f2ebbb9",
+      "replay_sha256": "054b7f3d237993d2d9d612ff5e91fe7b474d2ab5bf36651d612bd2699f2ebbb9",
+      "match": true
+    },
+    "11_09_2015_SP20-2_FUDS_50SOC": {
+      "rows": 6999,
+      "sealed_sha256": "120b796962757425272a7a4b53993db90ef3d301c1a580742223b4c8a6e0892d",
+      "replay_sha256": "120b796962757425272a7a4b53993db90ef3d301c1a580742223b4c8a6e0892d",
+      "match": true
+    }
+  },
+  "completed_utc": "2026-11-19T10:02:26.156772+00:00",
+  "environment": {
+    "nbclient": "0.11.0",
+    "nbformat": "5.11.1",
+    "ipykernel": "7.4.0",
+    "numpy": "2.4.6",
+    "pyarrow": "26.0.1"
+  }
+}

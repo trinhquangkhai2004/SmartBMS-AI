@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "image_id": "sha256:611d52fe746196d5a771e5fb2b38e7660c623bb045f09933d3525796ced69eaa",
+  "container_id": "320c5f4616e321cfa65543abb03287c959c47e42feed11c8981b290ad48851cc",
+  "started_at_utc": "2026-11-20T06:48:34.2106949+00:00",
+  "completed_at_utc": "2026-11-20T06:49:19.4726153+00:00",
+  "verifier_sha256": "45e6b1cc66426054b8330b3f32119f30f51794cad5fb06c63559039cf1db4b68",
+  "conversion_manifest": "data/staging/rt_batt_v2/conversion_manifest.json",
+  "conversion_manifest_sha256": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e",
+  "source_manifest_sha256": "5a27b29cb0eb15eaf12ed88143b741dea86ad75a73184c59a3ee4a259cd97cb5",
+  "source_sha256": "071d24617153693b0d29059568525e620f6af6512acc9d00c98c7adcf15125db",
+  "source_files": 77,
+  "sample_rows": 91736659,
+  "cycles": 146122,
+  "checks": [
+    "source-to-staging map",
+    "Parquet schema and full batch readback",
+    "cycle and sample counts",
+    "JSON schema and record counts",
+    "file names and SHA-256"
+  ],
+  "network": "none",
+  "readonly_root": true,
+  "raw_zip_mounted": false,
+  "mounts": [
+    "/check/source.json",
+    "/check/route.json",
+    "/staged",
+    "/check/verify_staging.py"
+  ]
+}

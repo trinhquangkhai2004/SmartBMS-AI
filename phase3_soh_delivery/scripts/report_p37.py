@@ -1,0 +1,313 @@
+"""Report only from the captured P3.7 predictions and run receipt."""
+import csv
+import json
+from collections import Counter, defaultdict
+
+import numpy as np
+import pyarrow.parquet as pq
+
+from scripts.evaluate_p37 import OUTPUT, RUN, TEST_LOG
+from scripts.p36_inputs import LEDGER, PRIMARY, ROOT, dump_json, require, sha
+from scripts.p37_governance import (
+    CANDIDATE, D07, FREEZE, PRECHECK, RECEIPT, STATUS, append_ledger,
+    binding, read, refresh_ledger_bindings, verify_candidate,
+)
+from scripts.p37_metrics import acceptance, band, describe, errors_for, metric_pack
+from src.soh.evaluation_guard import EvaluationGuard
+
+
+BASE = "reports/P3_7_"
+SUMMARY = BASE + "TEST_SUMMARY.md"
+ANALYSIS = BASE + "FAILURE_ANALYSIS.md"
+RUNTIME = BASE + "RUNTIME.md"
+CELL = BASE + "TEST_METRICS_PER_CELL.csv"
+OOD = BASE + "OOD_COVERAGE_BY_CELL.csv"
+BANDS = BASE + "SOH_BAND_DIAGNOSTICS.csv"
+SUBGROUPS = BASE + "PROTOCOL_PERIOD_DIAGNOSTICS.csv"
+ABLATION = BASE + "ABLATION.csv"
+RESULT = "manifests/p3_7_evaluation_result.json"
+MODEL_FIELDS = [name + "_raw" for name in (
+    "train_median", "ridge", "rf", "rf_unweighted", "xgb",
+    "voltage_window_only", "cc_cv_only", "phase_and_ratio")]
+STATUSES = ("VALID", "OUT_OF_DOMAIN", "MODEL_UNCERTAIN", "SOH_JUMP_ANOMALY",
+            "MISSING_FEATURE", "STALE_INPUT", "INSUFFICIENT_HISTORY", "ALL_NON_VALID")
+
+
+def md(path, lines):
+    (ROOT / path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def write_csv(path, rows):
+    fields = list(dict.fromkeys(key for row in rows for key in row))
+    with (ROOT / path).open("w", encoding="utf-8", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def fmt(value):
+    return "—" if value is None else f"{value:.4f}"
+
+
+def pct(value):
+    return "—" if value is None else f"{value:.2%}"
+
+
+def reference_range(rows):
+    refs = [r["soh_ref_percent"] for r in rows]
+    return dict(reference_min=min(refs) if refs else None, reference_max=max(refs) if refs else None)
+
+
+def diagnostics(rows, threshold):
+    dev_y = pq.read_table(ROOT / "reports/P3_6_OOF_DEVELOPMENT.parquet",
+                          columns=["soh_ref_percent"])[0].to_numpy()
+    bands = []
+    for name in ("SOH_GE_80", "SOH_LT_80"):
+        group = [r for r in rows if r["soh_band"] == name]
+        s = describe(group)
+        state = "NOT_OBSERVED" if not group else "INSUFFICIENT_EVIDENCE" if s["cells"] < 2 else "OBSERVED"
+        bands.append(dict(soh_band=name, evidence_status=state, **s, **reference_range(group),
+                          y_train_min=float(dev_y.min()), y_train_max=float(dev_y.max()),
+                          ood_rate=s["n_out_of_domain"]/len(group) if group else None,
+                          jump_rate=s["n_jump"]/len(group) if group else None,
+                          raw_over_10_count=sum(abs(e) > threshold for e in errors_for(group, "rf_raw")),
+                          valid_over_10_count=sum(abs(e) > threshold for e in errors_for(
+                              [r for r in group if r["status"] == "VALID"], "soh_percent"))))
+    require(sum(s["eligible"] for s in bands) == len(rows), "Band populations do not reconcile")
+    write_csv(BANDS, bands)
+    subgroups = []
+    for key in ("stage_1_c", "cycle_period"):
+        for value in sorted({r[key] for r in rows}):
+            group = [r for r in rows if r[key] == value]
+            subgroups.append(dict(axis=key, subgroup=value, **describe(group), **reference_range(group)))
+    write_csv(SUBGROUPS, subgroups)
+    return bands
+
+
+def compare_models(rows):
+    matched = [r for r in rows if all(r[f] is not None for f in MODEL_FIELDS)]
+    output = []
+    for field in MODEL_FIELDS:
+        for population, group in (("FULL_ELIGIBLE", rows), ("MATCHED_ALL_MODELS", matched)):
+            by_cell = defaultdict(list)
+            for r in group:
+                if r[field] is not None:
+                    by_cell[r["cell_id"]].append(r[field]-r["soh_ref_percent"])
+            scores = [metric_pack(e, "cell") for e in by_cell.values()]
+            err = errors_for(group, field)
+            output.append(dict(model=field.removesuffix("_raw"), population=population, eligible=len(group),
+                               numeric=len(err), cells_with_numeric=len(by_cell),
+                               coverage=len(err)/len(group) if group else None,
+                               macro_mae_pp=float(np.mean([s["cell_mae_pp"] for s in scores])) if scores else None,
+                               macro_rmse_pp=float(np.mean([s["cell_rmse_pp"] for s in scores])) if scores else None,
+                               **metric_pack(err, "micro")))
+    write_csv(ABLATION, output)
+    return output
+
+
+def per_cell_records(by_cell, config, excluded):
+    metrics = {cell: describe(rows) for cell, rows in by_cell.items()}
+    cells = [dict(cell_id=cell, stage_1_c=by_cell[cell][0]["stage_1_c"],
+                  pre_eligibility_excluded=excluded[cell], **m, **reference_range(by_cell[cell]))
+             for cell, m in metrics.items()]
+    write_csv(CELL, cells)
+    coverage = []
+    for row in cells:
+        group = by_cell[row["cell_id"]]
+        s = dict(row, low_valid_diagnostic=row["valid_coverage"] < config["low_valid_diagnostic_below"])
+        for status in STATUSES:
+            items = [r for r in group if (r["status"] != "VALID" if status == "ALL_NON_VALID"
+                                          else r["status"] == status)]
+            key = status.lower()
+            s[f"{key}_fraction"] = len(items)/len(group)
+            s.update(metric_pack(errors_for(items, "rf_raw"), key + "_rf_raw"))
+        s["feature_missing_reasons"] = json.dumps(Counter(
+            f"{feature}:{reason}" for r in group for feature, reason in json.loads(r["feature_notes"]).items()),
+            ensure_ascii=False, sort_keys=True)
+        coverage.append(s)
+    write_csv(OOD, coverage)
+    return metrics, coverage
+
+
+def summary_report(full, cells, models, bands, result, low, exclusions):
+    macro = {}
+    for mode in ("raw", "valid"):
+        for metric in ("mae", "rmse"):
+            key = f"{mode}_{metric}_pp"
+            scores = [s[key] for s in cells.values() if s[key] is not None]
+            macro[key] = float(np.mean(scores)) if scores else None
+    g = full
+    lines = [
+        "# P3.7 — Kết quả held-out RT-Batt v2", "",
+        f"**{result['status']}** theo D07. FULL_ELIGIBLE có **{g['eligible']:,} khóa trên {g['cells']} cell**. "
+        "SoH tham chiếu là dung lượng vận hành tương đối của cell LFP.",
+        "", "| Chỉ số RF (pp nếu là sai số) | Raw | VALID |", "|---|---:|---:|",
+        f"| Số dự đoán | {g['raw_count']:,} | {g['valid_count']:,} |",
+        f"| Độ phủ | {pct(g['raw_coverage'])} | {pct(g['valid_coverage'])} |"]
+    for metric in ("mae", "rmse"):
+        lines.append(f"| Macro {metric.upper()} | {fmt(macro[f'raw_{metric}_pp'])} | "
+                     f"{fmt(macro[f'valid_{metric}_pp'])} |")
+    for metric in ("mae", "rmse", "p95", "max"):
+        lines.append(f"| Micro {metric.upper()} | {fmt(g[f'raw_{metric}_pp'])} | {fmt(g[f'valid_{metric}_pp'])} |")
+    lines += [
+        "", f"Guard ghi {g['n_out_of_domain']:,} OOD, {g['n_model_uncertain']:,} uncertain, "
+        f"{g['n_jump']:,} jump, {g['n_missing_feature']:,} thiếu HI và {g['n_resync']:,} resync. "
+        f"Có {exclusions:,} cycle ngoài eligibility đã khóa ở P3.3. Mọi khóa đủ điều kiện vẫn nằm trong mẫu số.",
+        "", "| Mô hình trên FULL_ELIGIBLE | Số dự đoán | Macro-MAE raw (pp) |", "|---|---:|---:|"]
+    for r in models:
+        if r["population"] == "FULL_ELIGIBLE":
+            lines.append(f"| {r['model']} | {r['numeric']:,} | {fmt(r['macro_mae_pp'])} |")
+    lines += ["", "| Dải SoH tham chiếu | Phiên | Cell | Raw MAX (pp) | VALID |",
+              "|---|---:|---:|---:|---:|"]
+    for r in bands:
+        lines.append(f"| {r['soh_band']} | {r['eligible']:,} | {r['cells']} | "
+                     f"{fmt(r['raw_max_pp'])} | {pct(r['valid_coverage'])} |")
+    lines += ["", f"Có {len(low)} cell dưới 90% VALID. Hai dải SoH dùng để chẩn đoán.",
+              "", "[Chỉ số theo cell](P3_7_TEST_METRICS_PER_CELL.csv) · [Độ phủ OOD](P3_7_OOD_COVERAGE_BY_CELL.csv) · "
+              "[Hai dải SoH](P3_7_SOH_BAND_DIAGNOSTICS.csv) · [Profile và cycle](P3_7_PROTOCOL_PERIOD_DIAGNOSTICS.csv) · "
+              "[Ablation](P3_7_ABLATION.csv) · [Phân tích lỗi](P3_7_FAILURE_ANALYSIS.md)"]
+    md(SUMMARY, lines)
+    return macro
+
+
+def failure_report(result, full, cells, low, rows, cfg):
+    lines = ["# P3.7 — Phân tích lỗi và điều kiện D07", "", f"**{result['status']}**.", "",
+             "| Tiêu chí vi phạm | Giá trị | Ngưỡng |", "|---|---:|---:|"]
+    for term in result["failures"]:
+        scope, metric = term.split(".")
+        if scope == "global":
+            actual = full[metric]
+            expected = cfg["raw_coverage_global_min" if metric == "raw_coverage" else "valid_coverage_global_min"]
+        else:
+            actual = cells[scope][metric]
+            expected = cfg["raw_coverage_per_cell_min" if metric == "raw_coverage" else "max_abs_error_pp"]
+        display = pct if "coverage" in metric else fmt
+        lines.append(f"| {term} | {display(actual)} | {display(expected)} |")
+    lines.extend(["", "Tiêu chí chưa đủ dữ liệu " + (", ".join(result["unassessable"]) or "không có") + ".",
+                  "", "### Cell dưới 90% VALID", "",
+                  "| Cell | VALID | OOD | Uncertain | Jump | Thiếu HI | MAE/P95/MAX raw (pp) |",
+                  "|---|---:|---:|---:|---:|---:|---|"])
+    for r in low:
+        lines.append(f"| {r['cell_id']} | {pct(r['valid_coverage'])} | {pct(r['out_of_domain_fraction'])} | "
+                     f"{pct(r['model_uncertain_fraction'])} | {pct(r['soh_jump_anomaly_fraction'])} | "
+                     f"{pct(r['missing_feature_fraction'])} | {fmt(r['raw_mae_pp'])} / "
+                     f"{fmt(r['raw_p95_pp'])} / {fmt(r['raw_max_pp'])} |")
+    lines += ["", "### Mười sai số raw lớn nhất", "", "| Cell | Cycle | SoH nhãn | SoH raw | Sai số (pp) | Status |",
+              "|---|---:|---:|---:|---:|---|"]
+    with_raw = [r for r in rows if r["rf_raw"] is not None]
+    for r in sorted(with_raw, key=lambda r: abs(r["rf_raw"]-r["soh_ref_percent"]), reverse=True)[:10]:
+        lines.append(f"| {r['cell_id']} | {r['cycle_id']} | {fmt(r['soh_ref_percent'])} | {fmt(r['rf_raw'])} | "
+                     f"{fmt(abs(r['rf_raw']-r['soh_ref_percent']))} | {r['status']} |")
+    md(ANALYSIS, lines)
+
+
+def runtime_report(rt):
+    platform = rt["runtime"]
+    lines = ["# P3.7 — Đo tài nguyên", "",
+             f"{platform['platform']}, CPU {platform['cpu']}, {platform['logical_processors']} CPU logic, "
+             f"Python {platform['python']}. RF có cấu hình {rt['frozen_rf_threads']} luồng đã khóa.",
+             "",
+             f"RF **{rt['rf_bytes']:,} byte**. Kiểm SHA-256 và nạp tám mô hình mất {rt['all_models_verified_load_ms']:.1f} ms.",
+             f"Peak working set trước nạp {rt['memory_before_load']['peak_working_set_bytes']:,} byte, "
+             f"sau nạp {rt['memory_after_load']['peak_working_set_bytes']:,} byte, "
+             f"cuối lượt {rt['memory_after_evaluation']['peak_working_set_bytes']:,} byte. "
+             f"Tổng thời gian từ lúc mở nhãn đến hết đo inference {rt['elapsed_s']:.1f} s.",
+             "", "Peak toàn lượt gồm Arrow, tám mô hình, tín hiệu tạm và ghi bằng chứng."]
+    bench = rt["rf_predict_sigma_guard"]
+    if bench:
+        lines.append(f"RF predict + sigma + guard trên {bench['samples']} phiên đã tính HI có "
+                     f"p95 **{bench['p95_ms']:.3f} ms**, p99 **{bench['p99_ms']:.3f} ms** và "
+                     f"throughput **{bench['throughput']:.2f} phiên/s**.")
+    else:
+        lines.append("Latency ở trạng thái NOT_OBSERVED vì thiếu đầu vào số.")
+    lines.append("Đo trên Windows development. F5 thực tế và embedded còn chưa đo.")
+    md(RUNTIME, lines)
+
+
+def main():
+    freeze, cfg, receipt, run = map(read, (FREEZE, D07, RECEIPT, RUN))
+    require(run["status"] == "PREDICTIONS_PRESERVED" and receipt["exposure_count"] == run["exposure_count"] == 1,
+            "One-run evidence not available")
+    for key in ("signed_freeze", "d07", "split", "preflight"):
+        require(sha(ROOT / receipt[key]["path"]) == receipt[key]["sha256"], f"Receipt mismatch: {key}")
+    used_code = run["code_hashes"]
+    require(all(sha(ROOT / p) == h for p, h in used_code.items()), "Evaluator changed")
+    if run["recovery"]:
+        repair = run["recovery"]
+        require(repair == binding(repair["path"]), "Recovery evidence changed")
+        info = read(repair["path"])
+        require(info["receipt"] == binding(RECEIPT) and info["code_hashes"] == used_code,
+                "Recovered session does not bind to the original receipt")
+        for path, snap in info["archived_code"].items():
+            require(snap == binding(snap["path"]) and snap["sha256"] == receipt["code_hashes"][path],
+                    "Original evaluator snapshot changed")
+    else:
+        require(used_code == receipt["code_hashes"], "Evaluator differs from opening")
+    verify_candidate(read(CANDIDATE), (ROOT / LEDGER).read_bytes(), freeze["ledger_snapshot_prefix_bytes"])
+    require(sha(ROOT / OUTPUT) == run["prediction_output"]["sha256"], "Saved prediction hash mismatch")
+    for entry in run["per_cell"].values():
+        require(sha(ROOT / entry["path"]) == entry["sha256"], "Per-cell output changed")
+    rows = pq.read_table(ROOT / OUTPUT).to_pylist()
+    by_cell = defaultdict(list)
+    for row in rows:
+        by_cell[row["cell_id"]].append(row)
+        require(row["soh_band"] == band(row["soh_ref_percent"], cfg["band_cutoff_percent"])
+                and row["stale"] is False and row["stale_policy"] == cfg["offline_stale"]["reason"],
+                "Band or stale mode differs from D07")
+        require((row["status"] == "VALID") == (row["soh_percent"] is not None), "Guard result inconsistent")
+    require(len(rows) == len({(r["cell_id"], r["cycle_id"]) for r in rows}) == cfg["expected_rows"]
+            and set(by_cell) == set(read(receipt["split"]["path"])["held_out_cell_ids"])
+            and len(by_cell) == cfg["expected_cells"], "Prediction keys do not match D07")
+    require(all(len(group) == run["per_cell"][cell]["eligible"] for cell, group in by_cell.items()),
+            "Counts differ from run evidence")
+    guard = EvaluationGuard(freeze["policy"])
+    for row in rows:
+        check = guard.evaluate(row["cell_id"], freeze["revision"], row["cycle_id"],
+                               [row[f] for f in PRIMARY], row["rf_raw"], row["sigma_trees_pp"], stale=False)
+        require(all(check.get(k) == row[k] for k in ("status", "soh_percent", "reason", "last_valid_soh",
+                "last_valid_cycle", "baseline_version", "previous_baseline_pp", "confirmation_count")),
+                "Frozen guard replay from saved predictions differs")
+    excluded = {c: e["pre_eligibility_exclusions"] for c,e in run["per_cell"].items()}
+    cells, coverage = per_cell_records(by_cell, cfg, excluded)
+    full = describe(rows)
+    result = acceptance(full, cells, cfg)
+    bands = diagnostics(rows, cfg["max_abs_error_pp"])
+    models = compare_models(rows)
+    low = [r for r in coverage if r["low_valid_diagnostic"]]
+    macro = summary_report(full, cells, models, bands, result, low, sum(excluded.values()))
+    failure_report(result, full, cells, low, rows, cfg)
+    runtime_report(run["runtime"])
+    files = [OUTPUT, RUN, TEST_LOG, CELL, OOD, BANDS, SUBGROUPS, ABLATION, SUMMARY, ANALYSIS, RUNTIME, PRECHECK, RECEIPT]
+    if run["recovery"]:
+        files.append(run["recovery"]["path"])
+        files.extend(x["path"] for x in info["archived_code"].values())
+    bindings = [binding(path) for path in files]
+    release = "TEST_REPORTED_PENDING_AUDIT_ACCEPTANCE"
+    report = dict(status=release, evaluated_at=run["completed_at"], er5=result, cohort="FULL_ELIGIBLE",
+                  exposure_count=1, full=full, per_cell=cells, macro=macro, bands=bands,
+                  saved_prediction_guard_replay_verified_rows=len(rows),
+                  diagnostic_low_valid_cells=[r["cell_id"] for r in low], outputs=bindings,
+                  heldout_evaluation="OPENED_ONCE", model_revision=freeze["revision"])
+    dump_json(ROOT / RESULT, report)
+    if "### P3.7 — Hoàn tất" not in (ROOT / LEDGER).read_text(encoding="utf-8"):
+        append_ledger(f"""### P3.7 — Hoàn tất lần đánh giá duy nhất
+
+{run['completed_at']} · 37.130 khóa trên 19 cell. [Dự đoán và trạng thái guard](../{OUTPUT})
+có SHA-256 {run['prediction_output']['sha256']}. Kết quả D07 **{result['status']}**.
+[Biên bản kết quả](../{RESULT})
+""")
+    state = read(STATUS)
+    p37, = [m for m in state["milestones"] if m["milestone_id"] == "P3.7"]
+    require(p37["heldout_evaluation"] == "OPENED_ONCE", "Exposure state mismatch")
+    p37.update(status="IN_PROGRESS", release_status=release, er5=result["status"],
+               outputs=bindings+[binding(RESULT), binding(LEDGER)],
+               tests_executed=[dict(id="P3.7 metrics fixtures and dev rehearsal", status="PASS", evidence=TEST_LOG),
+                   dict(id="P3.7 one-use prediction capture", status="PASS", evidence=RUN)],
+               next_gate="Reviewer accepts audit; report ER5 independently. Do not reopen held-out.")
+    refresh_ledger_bindings(state)
+    dump_json(ROOT / STATUS, state)
+    print(f"P3.7 reported, {result['status']}, raw {full['raw_coverage']:.4%}, VALID {full['valid_coverage']:.4%}")
+
+
+if __name__ == "__main__":
+    main()

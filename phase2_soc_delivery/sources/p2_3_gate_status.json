@@ -1,0 +1,97 @@
+{
+  "status": "NEEDS_REVIEW",
+  "P2_1": "PASS",
+  "P2_2": "PASS",
+  "gates": {
+    "G01": {
+      "status": "PASS",
+      "reason": "Known source/spec/verified ZIP and every inherited P2.2 file are byte-identical.",
+      "evidence": "preflight.json; p2_3_verification.json"
+    },
+    "G02": {
+      "status": "PASS",
+      "reason": "Milestone-specific overlay corroborated against canonical split; old permissions/windows unchanged.",
+      "evidence": "../../manifests/p2_3_authorization.json; prevalidation_freeze.json"
+    },
+    "G03": {
+      "status": "PASS",
+      "reason": "Official raw archive/member SHA/CRC verified; channel/cell/sign checked by guarded inherited parser.",
+      "evidence": "raw_restore.json; raw_verification.json; source_access.jsonl"
+    },
+    "G04": {
+      "status": "PASS",
+      "reason": "All candidate plateaus have source row/Excel row/step/time/current/cadence and selection flags.",
+      "evidence": "../../manifests/p2_3_fit_segment_manifest.csv; d1_survey.json"
+    },
+    "G05": {
+      "status": "PASS",
+      "reason": "SP3 diagnostic limitations and edge lineage explicit; no SP3 parameters assigned as SP2.",
+      "evidence": "../../artifacts/ecm_sp3_pulse_diagnostic.json"
+    },
+    "G06": {
+      "status": "PASS",
+      "reason": "Analytic recurrence, alignment, units, rest/gaps/events/NaN/domain and synthetic recovery tests pass.",
+      "evidence": "tests_full.xml; p23_tests.log"
+    },
+    "G07": {
+      "status": "PASS",
+      "reason": "Bounded log-parameter optimization on DST only; no capacity/OCV/state fit.",
+      "evidence": "dst_fit_diagnostics.json; ../../configs/p2_3_ecm_policy.yaml"
+    },
+    "G08": {
+      "status": "PASS",
+      "reason": "Rank/condition/bounds/start variability and run-wise stability explicitly assessed.",
+      "evidence": "dst_fit_diagnostics.json; dst_run_stability.json"
+    },
+    "G09": {
+      "status": "PASS",
+      "reason": "Full frozen DST windows retained including cutoff.",
+      "evidence": "voltage_metrics.csv; extreme_residual_lineage.csv; *_voltage_replay.png"
+    },
+    "G10": {
+      "status": "NEEDS_REVIEW",
+      "reason": "Independent scientific review holds release: both FUDS runs show substantial localized terminal-cutoff voltage collapse that the fixed 1-RC/transferred OCV model does not reproduce (maximum residual approximately 0.47 V). Improved aggregate errors do not establish adequacy throughout the frozen domain. Explicit downstream domain/use review is required before P2.4.",
+      "evidence": "voltage_metrics.csv; model_adequacy.json; residual_review.json; ../../configs/p2_3_review_hold.json"
+    },
+    "G11": {
+      "status": "PASS",
+      "reason": "No held-out ECM content read and no validation rows in fitting; denied attempts are negative tests.",
+      "evidence": "source_access.jsonl; baseline_regression.json"
+    },
+    "G12": {
+      "status": "PASS",
+      "reason": "Fresh unchanged baseline76 plus every new P2.3 test; notebook03 execution counts complete.",
+      "evidence": "tests_full.xml; baseline_tests.log; p23_tests.log; notebook_03_readback.json"
+    },
+    "G13": {
+      "status": "PASS",
+      "reason": "Fresh source-only assembly/official raw restore/isolated kernel; independent numerical comparison and stage exit identities.",
+      "evidence": "p2_3_verification.json; clean_start.json; artifact_reproduction.json; *.stage.json"
+    },
+    "G14": {
+      "status": "PASS",
+      "reason": "Required artifacts/source verified; provisional ZIP CRC/all member hashes read back; final rebuilt ZIP must pass another readback before completion receipt.",
+      "evidence": "../../artifacts/p2_3_artifact_manifest.json; ../../manifests/p2_3_delivery_manifest.json; external P2_3_DELIVERY_SHA_RECEIPT.json"
+    }
+  },
+  "blockers": [
+    {
+      "gate": "G10",
+      "status": "NEEDS_REVIEW",
+      "reason": "Independent scientific review holds release: both FUDS runs show substantial localized terminal-cutoff voltage collapse that the fixed 1-RC/transferred OCV model does not reproduce (maximum residual approximately 0.47 V). Improved aggregate errors do not establish adequacy throughout the frozen domain. Explicit downstream domain/use review is required before P2.4.",
+      "evidence": "voltage_metrics.csv; model_adequacy.json; residual_review.json; ../../configs/p2_3_review_hold.json"
+    }
+  ],
+  "source_archive_sha256": "34af412228a96d0e38ba46eea7df613f443f46fbd64ff6f455a6acf1f125601f",
+  "baseline_source_sha256": "e1b1e53e9deb52f3d17c660e40660a5ef16ff8d73a96e72187ccd387574c45ed",
+  "baseline_verified_sha256": "101934ecc5a9bd89c8877a426a7346d1e89d3ffb752eef4ecdc365638ff8cd89",
+  "spec_sha256": "a2bd808a13653cb7c817467d43d42f32e8d961ea2114335c4abb5d4cae098b03",
+  "phase2_complete": false,
+  "soc_accuracy_evaluated": false,
+  "ER4_status": "NOT_EVALUATED",
+  "phase1_interface_status": "PHASE1_INTERFACE_PENDING",
+  "human_review_approval_required": true,
+  "heldout_ecm_content_reads": 0,
+  "next": "P2.4 only if independent user review approves",
+  "delivery_readback_completed": true
+}

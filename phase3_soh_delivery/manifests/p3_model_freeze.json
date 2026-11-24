@@ -1,0 +1,318 @@
+{
+  "revision": "p36-r1",
+  "spec_version": "1.2",
+  "generated_at": "2026-11-22T11:37:33+07:00",
+  "status": "MODEL_FROZEN",
+  "candidate_artifacts_locked": true,
+  "heldout_evaluation": "UNOPENED",
+  "heldout_open_allowed": true,
+  "development_rows": 106733,
+  "development_cells": 57,
+  "primary_features": [
+    "delta_q_350_358_ah",
+    "q_cc_ah",
+    "q_cv_ah",
+    "q_cv_over_q_cc"
+  ],
+  "input_hashes": {
+    "manifests/p3_split_manifest.json": "a364c48d2903bcdb42794502aff1facdd01de4d5b0322417fc3a721c8a66ef7a",
+    "manifests/p3_cv_fold_manifest.json": "45305db16fdf8efb29f52a1a0b3b4c7fb39d6416b356cab9a15b0e36998cd274",
+    "configs/p3_soh_reference_policy.yaml": "911037d6dbbca64581eeb1e5f6d74524f80a37c47e48fb407444047a686c5d61",
+    "manifests/p3_5_SHA256SUMS.txt": "3202f671b12d5dad6c40d44ca6645790883abd15ea27643fa34a80e80cd0f12e",
+    "configs/p3_feature_policy.yaml": "5f2d92d8c405a258dcceffc09a82dc68ce986d92bcefc5edf5c8df459ba4590d",
+    "artifacts/soh/feature_schema.json": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc",
+    "data/features/soh_feature_table.parquet": "1fd788eb75a1045f4d28ad6b87c87f3e93bf6ef2b3aa1884dd11cda338527188",
+    "data/staging/rt_batt_v2/conversion_manifest.json": "e5148ccbef65b968b784a3729e03a1589a96f33ccd50e244dca7b2ea14d66f3e"
+  },
+  "artifact_hashes": {
+    "manifests/p3_6_input_readback.json": "eac0204f8ca86cbf7d942c4aafb0eb94f8e24fa961ec71f856c3a913a2e89c39",
+    "manifests/p3_6_training.json": "a9ac5d1e451b235a7165984c7ed599f42c9c21752ec0090b8a26f4b87171ce5e",
+    "manifests/p3_6_resource_measurement.json": "780bf4b8569d0a451dc7bf4f2ccc2aef78e1107d3e662c5a17aa4185791d813b",
+    "manifests/p3_6_guard_calibration.json": "c7a831f44555f88324fe6fb7cda4a7545b07cdb9d27a8a81368a87dd4103a5e0",
+    "manifests/p3_6_preregistration.json": "43df3271bc99dbb9b0b5b7d3afd72669ae9e6573f362ad5a892df841656b993f",
+    "artifacts/soh/feature_schema.json": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc",
+    "artifacts/soh/ood_policy.json": "bc85165b0349a0ca155251af602a19e9aae11735507446d2c4e31b58f1c5fcea",
+    "artifacts/soh/model_card.md": "7832c1246e0aeacf1b7a9bf7e0798d4f3747d1f2b1e33744f33d2c929bb9adc5",
+    "reports/P3_6_CV_VALIDATION.csv": "c350224c46ffbf298cfdfa313b8ec55137e71728b46e8b08751158418fc6ca54",
+    "reports/P3_6_OOF_DEVELOPMENT.parquet": "234cc5c66a70f1cb46c50a5dd8edef7bdb927afde490b3e9aff1c905fbe64fea",
+    "reports/P3_6_WEIGHT_ABLATION.md": "029b4e5ee5fba0228728bf46baad9872c85bcc9ffd60a429308d8a15398bc2cd",
+    "reports/P3_6_MODEL_RESOURCE_BUDGET.md": "4fcb0980ec91c85fb4e2bb14775e1f9b7cdaf535b2b6649269a297ec5d5185f5",
+    "reports/P3_6_XGB_REFIT_AUDIT.md": "25ba36583e403f3a1864c4ec8c2019d64abf39bad985a73b086a8bbb93f38722",
+    "reports/P3_6_OOD_CALIBRATION.md": "f2c6a60883908d7c85ff756c1cd395cb8a7e5b375e2bc9f232466c89be1f4fe5",
+    "reports/P3_6_TEST_LOG.txt": "15a1c1564cbdcbd6a4f6c538192d7d7f76c68436f8318e74085718a7642c59bb",
+    "configs/p3_rf_training.yaml": "e4a1e002c25dc60385a41d81af0410a6501fe8f753c36cdc401a729b33968553",
+    "configs/p3_xgb_training.yaml": "44ffc9f88e6fc6f781e99922a10ec3120efb88c81c7b523aad0d08ce9919d5ec",
+    "configs/p3_training_requirements.txt": "9a66173397d9791a08da72b0c7dd6a88daf97a33e5c6a2bc2c651f9c1b800389",
+    "src/soh/evaluation_guard.py": "7d5f5e1c6ca879448f3f8941c39fd33278b77985923f5231a8211db1c6bfe3b2",
+    "tests/test_evaluation_guard.py": "d4da8c486c53ccb4588535bc5f4a83c08f7b6cbe3133bdf2b5cb1b37ef9c44a3",
+    "tests/test_p36.py": "6003cadb3ea3de022cc5a3203fabecca1bd303a3b86e68c0dd11daf06ae8d22e",
+    "scripts/p36_inputs.py": "9ea9379a0860910cc8c514a547523a8b252985451e135a3baea702025e9c07aa",
+    "scripts/train_p36.py": "b1627ab5a815a906cfb67d8e94aea0b14125003ab513fd4f3594a79e63f9b03d",
+    "scripts/calibrate_p36.py": "28df0536dda3316c29ae0c4ca406cb244297c4cbebb5712424857a95789d5196",
+    "scripts/measure_p36.py": "f7cc344f6514163a96eb1b1180c8518149b546c7fcaabf48592028acab949c5c",
+    "scripts/finalize_p36.py": "d86136cd9ff89235a39b5e5d89bcb12f99a1581157648e73f3a87919ece2c877",
+    "scripts/verify_p36.py": "5cd65df8c4599ad9a8197b141431c8aed9ef5c05949e0935e33bd72f210ecf98",
+    "reports/test_exposure_ledger.md": "60024743e0c3e67f3daae144e1f922ead3596d68f56a62308429bb6f2dcc4ed8",
+    "artifacts/soh/train_median_model.joblib": "0648eb3c6aa605acfc83d49e9dbe195bbcb6763aae96a69dff4d8d111eb6689f",
+    "artifacts/soh/ridge_model.joblib": "5c1ff8ae96fc650ff91549265e79dddc98f1837b589c1041a5a9e2c42c90cc48",
+    "artifacts/soh/rf_model.joblib": "9287ef0c874bb152390afa5c57c6ca1e982c42fb6d6a2a374fd8dd8905e3d9de",
+    "artifacts/soh/rf_unweighted_model.joblib": "128dda5f486cd7e2697158f461badb953f79407c439e808388cb51b37c80664c",
+    "artifacts/soh/xgb_model.joblib": "85fc6a0d6e170c562497ca959e889efe66e527d9f855641fb55aad03ba8bad87",
+    "artifacts/soh/voltage_window_only_model.joblib": "582261a5219a3c8b9c5421b71a40d78cbbb81512cb6ff74ced210005c2f90222",
+    "artifacts/soh/cc_cv_only_model.joblib": "e30bf691db76122e1ea8f820365ab7138fa41dc98f395239df3d120f1be6d6a9",
+    "artifacts/soh/phase_and_ratio_model.joblib": "6aacee5c4e8b12e6dfe95c9cd4d244103d6ce5d59c411cdf2846053a30c6f91a"
+  },
+  "models": {
+    "train_median": {
+      "path": "artifacts/soh/train_median_model.joblib",
+      "sha256": "0648eb3c6aa605acfc83d49e9dbe195bbcb6763aae96a69dff4d8d111eb6689f",
+      "bytes": 320,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 0.0
+    },
+    "ridge": {
+      "path": "artifacts/soh/ridge_model.joblib",
+      "sha256": "5c1ff8ae96fc650ff91549265e79dddc98f1837b589c1041a5a9e2c42c90cc48",
+      "bytes": 786,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 0.0,
+      "alpha": 100.0
+    },
+    "rf": {
+      "path": "artifacts/soh/rf_model.joblib",
+      "sha256": "9287ef0c874bb152390afa5c57c6ca1e982c42fb6d6a2a374fd8dd8905e3d9de",
+      "bytes": 28577815,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 5.684341886080802e-14,
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt"
+    },
+    "rf_unweighted": {
+      "path": "artifacts/soh/rf_unweighted_model.joblib",
+      "sha256": "128dda5f486cd7e2697158f461badb953f79407c439e808388cb51b37c80664c",
+      "bytes": 23114458,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 5.684341886080802e-14,
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt"
+    },
+    "xgb": {
+      "path": "artifacts/soh/xgb_model.joblib",
+      "sha256": "85fc6a0d6e170c562497ca959e889efe66e527d9f855641fb55aad03ba8bad87",
+      "bytes": 80933,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 0.0,
+      "n_estimators": 200
+    },
+    "voltage_window_only": {
+      "path": "artifacts/soh/voltage_window_only_model.joblib",
+      "sha256": "582261a5219a3c8b9c5421b71a40d78cbbb81512cb6ff74ced210005c2f90222",
+      "bytes": 12831839,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 5.684341886080802e-14,
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "features": [
+        "delta_q_350_358_ah"
+      ]
+    },
+    "cc_cv_only": {
+      "path": "artifacts/soh/cc_cv_only_model.joblib",
+      "sha256": "e30bf691db76122e1ea8f820365ab7138fa41dc98f395239df3d120f1be6d6a9",
+      "bytes": 26137223,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 4.263256414560601e-14,
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "features": [
+        "q_cc_ah",
+        "q_cv_ah"
+      ]
+    },
+    "phase_and_ratio": {
+      "path": "artifacts/soh/phase_and_ratio_model.joblib",
+      "sha256": "6aacee5c4e8b12e6dfe95c9cd4d244103d6ce5d59c411cdf2846053a30c6f91a",
+      "bytes": 26154316,
+      "refit_rows": 106733,
+      "refit_cells": 57,
+      "maximum_reload_absolute_difference_pp": 5.684341886080802e-14,
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "features": [
+        "q_cc_ah",
+        "q_cv_ah",
+        "q_cv_over_q_cc"
+      ]
+    }
+  },
+  "rf_selected": "rf_weighted-5",
+  "rf_budget_bytes": 50000000,
+  "rf_sample_weight_formula": "N/(C*n_c) on each fit only",
+  "model_runtime": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "cpu": "",
+    "logical_cores": 16,
+    "physical_ram_bytes": 16497901568,
+    "python": "3.11.9",
+    "libraries": {
+      "joblib": "1.5.2",
+      "numpy": "1.26.4",
+      "psutil": "7.1.3",
+      "pyarrow": "22.0.0",
+      "PyYAML": "6.0.3",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.15.3",
+      "threadpoolctl": "3.6.0",
+      "xgboost": "3.0.5"
+    },
+    "rf_n_jobs": 8,
+    "xgb_n_jobs": 8
+  },
+  "policy": {
+    "min_feature_violations": 2,
+    "sigma_quantile": 0.95,
+    "sigma_threshold_pp": 1.5453424556388986,
+    "primary_features": [
+      "delta_q_350_358_ah",
+      "q_cc_ah",
+      "q_cv_ah",
+      "q_cv_over_q_cc"
+    ],
+    "feature_bounds": {
+      "delta_q_350_358_ah": {
+        "weighted": [
+          0.01648545955011807,
+          0.04657805870691656
+        ],
+        "unweighted": [
+          0.016282811116859083,
+          0.0466939457411958
+        ],
+        "cells_with_finite": 57,
+        "rows_finite": 106733,
+        "missing": 0,
+        "min_finite_rows_per_cell": 1137
+      },
+      "q_cc_ah": {
+        "weighted": [
+          0.8491138416666667,
+          1.163289063888889
+        ],
+        "unweighted": [
+          0.8504108000000001,
+          1.1636307138888888
+        ],
+        "cells_with_finite": 57,
+        "rows_finite": 106733,
+        "missing": 0,
+        "min_finite_rows_per_cell": 1137
+      },
+      "q_cv_ah": {
+        "weighted": [
+          0.01691761875,
+          0.05986544694444444
+        ],
+        "unweighted": [
+          0.016605720416666667,
+          0.0602416775
+        ],
+        "cells_with_finite": 57,
+        "rows_finite": 106733,
+        "missing": 0,
+        "min_finite_rows_per_cell": 1137
+      },
+      "q_cv_over_q_cc": {
+        "weighted": [
+          0.017000508583444984,
+          0.060651853522500625
+        ],
+        "unweighted": [
+          0.016782933149028467,
+          0.060628467745765205
+        ],
+        "cells_with_finite": 57,
+        "rows_finite": 106733,
+        "missing": 0,
+        "min_finite_rows_per_cell": 1137
+      }
+    },
+    "reference_diagnostic_pp": 5,
+    "delta_max_pp": 5,
+    "resync_confirm_k": 2,
+    "resync_stability_pp": 2,
+    "max_confirmation_gap_cycles": 2,
+    "revision": "p36-r1",
+    "release_status": "CANDIDATE_PENDING_REVIEW",
+    "feature_quantile_method": "cell_equal_mass_left_inverse_empirical_cdf",
+    "tree_sigma": "population_sd_rf_tree_predictions_pp",
+    "status_priority": [
+      "STALE_INPUT",
+      "INSUFFICIENT_HISTORY",
+      "MISSING_FEATURE",
+      "OUT_OF_DOMAIN",
+      "MODEL_UNCERTAIN",
+      "SOH_JUMP_ANOMALY"
+    ],
+    "pending_on_nonvalid": "clear_keep_previous_baseline",
+    "confirmation_gap_unit": "source_cycle_id_difference",
+    "model_version_change": "discard_prior_model_state"
+  },
+  "xgb": {
+    "refit_strategy": "FIXED_CV_N_ESTIMATORS",
+    "n_estimators_final": 200,
+    "early_stopping": false,
+    "eval_set": null
+  },
+  "guard_sha256": "7d5f5e1c6ca879448f3f8941c39fd33278b77985923f5231a8211db1c6bfe3b2",
+  "reviewer_decisions": {
+    "D06": "APPROVED",
+    "D08": "APPROVED",
+    "D12": "APPROVED",
+    "D13": "APPROVED_WITH_CONDITIONS",
+    "D15": "APPROVED"
+  },
+  "er5_evaluation_configuration": {
+    "path": "configs/p3_er5_evaluation.json",
+    "sha256": "838e663ef5e2c3bce9826c103b7e5693d4187fdabb5c4c5f70c250f34556a203",
+    "status": "APPROVED",
+    "er5_evaluated": false
+  },
+  "feature_schema_sha256": "1c73315eb72bb51140865c396825931d0c0872771d3ec81b5328dd26755ed1dc",
+  "ood_policy_sha256": "bc85165b0349a0ca155251af602a19e9aae11735507446d2c4e31b58f1c5fcea",
+  "governance_approval": {
+    "reviewer": "Trịnh Quang Khải",
+    "reviewer_role": "Phụ trách Phase 3 / Reviewer",
+    "approval_evidence": "codex://threads/01a1f73a-0102-73f2-8e1a-fabc053f76bb",
+    "approved_at": "2026-11-22T15:57:44+07:00",
+    "turn_id": "01a20279-c6db-7411-884d-feadcadde7c8",
+    "message_id": "01a20279-c761-72d2-b204-996b3fca0fd6"
+  },
+  "candidate_snapshot": {
+    "path": "manifests/p36_r1_candidate_snapshot.json",
+    "sha256": "76654f841054f51796b86ec22e53fda5baf4826c69bbc97c0d5baadd1f9dbc9b"
+  },
+  "ledger_snapshot_prefix_bytes": 2824,
+  "frozen_at": "2026-11-22T16:01:21+07:00",
+  "review_addendum": {
+    "path": "reports/P3_6_D12_D13_REVIEW_ADDENDUM.md",
+    "sha256": "c45868c3bbcecc8db417061fadc16c6f3ba48bfca9e93abb5c9552ff01522cdc"
+  },
+  "d13_followup": "P3.8 wall-clock stale threshold pending evidence"
+}
