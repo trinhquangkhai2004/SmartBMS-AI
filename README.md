@@ -3,7 +3,7 @@
 > **Đề tài:** Nghiên cứu và phát triển hệ thống quản lý pin xe điện ứng dụng trí tuệ nhân tạo  
 > **Đơn vị:** Khoa Điện — Trường Đại học Bách khoa, Đại học Đà Nẵng (Lớp `22PFIEV2` · PBL5: Industrial Design Process)  
 > **Nhóm thực hiện:** Trịnh Quang Khải · Lê Thanh Lâm · Nguyễn Quang Trường · Đoàn Anh Khoa  
-> **Tài liệu nguồn thiết kế:** [PBL5 Final Project Logbook](https://docs.google.com/document/d/1GSKzZFmZwOwOVgl5kWV8mKFYUPT4FCpcLIsPtVXF9ec/edit?tab=t.0)
+
 
 [![Phase 1 Software](https://img.shields.io/badge/Phase_1_Software-110_pytest_PASS-brightgreen)](phase1_bms_software/docs/VERIFICATION.md)
 [![Phase 2 SoC](https://img.shields.io/badge/Phase_2_SoC-ER4__NOT__ASSESSABLE-orange)](phase2_soc_delivery/results/p26_diagnostic_report.md)
