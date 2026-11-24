@@ -1,4 +1,4 @@
-# SmartBMS-AI — Hệ thống Quản lý Pin Xe điện Ứng dụng Trí tuệ Nhân tạo (PBL5)
+# SmartBMS-AI — Hệ thống Quản lý Pin Xe điện Ứng dụng Trí tuệ Nhân tạo 
 
 > **Đề tài:** Nghiên cứu và phát triển hệ thống quản lý pin xe điện ứng dụng trí tuệ nhân tạo  
 > **Đơn vị:** Khoa Điện — Trường Đại học Bách khoa, Đại học Đà Nẵng 
