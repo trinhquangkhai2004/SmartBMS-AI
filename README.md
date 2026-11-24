@@ -1,7 +1,7 @@
 # SmartBMS-AI — Hệ thống Quản lý Pin Xe điện Ứng dụng Trí tuệ Nhân tạo (PBL5)
 
 > **Đề tài:** Nghiên cứu và phát triển hệ thống quản lý pin xe điện ứng dụng trí tuệ nhân tạo  
-> **Đơn vị:** Khoa Điện — Trường Đại học Bách khoa, Đại học Đà Nẵng (Lớp `22PFIEV2` · PBL5: Industrial Design Process)  
+> **Đơn vị:** Khoa Điện — Trường Đại học Bách khoa, Đại học Đà Nẵng 
 > **Nhóm thực hiện:** Trịnh Quang Khải · Lê Thanh Lâm · Nguyễn Quang Trường · Đoàn Anh Khoa  
 
 
